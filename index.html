@@ -540,6 +540,15 @@ footer{padding-block:48px 36px}
 .foot a:hover{color:var(--teal)}
 .foot p{color:var(--ink-2);font-size:15px;max-width:34ch;margin-top:14px}
 .foot-bottom{margin-top:36px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--ink-3)}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.foot h3{margin:0 0 14px;font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.foot ul li a{display:inline-block;padding:2px 0}
+.foot .foot-claim{font:500 clamp(20px,2vw,24px)/1.25 var(--f-display,inherit);letter-spacing:-.01em;color:var(--ink);max-width:22ch;margin-top:18px}
+.foot .foot-claim span{color:var(--teal)}
+.foot-brand p:not(.foot-claim){max-width:40ch}
+.foot-bottom .to-top{color:var(--ink-2);text-decoration:none}
+.foot-bottom .to-top:hover{color:var(--teal)}
+
 @media (max-width:760px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
 
 /* chapter rail */
@@ -977,7 +986,7 @@ footer{padding-block:48px 36px}
 </section>
 
 <!-- START + FAQ -->
-<section class="start" aria-labelledby="st-h">
+<section class="start" id="inizio" aria-labelledby="st-h">
   <div class="wrap start-grid">
     <div>
       <span class="eyebrow"><i></i>Come si parte</span>
@@ -1031,18 +1040,20 @@ footer{padding-block:48px 36px}
 </section>
 </main>
 
-<footer>
+<footer aria-labelledby="ft-h">
   <div class="wrap">
+    <h2 class="sr" id="ft-h">Informazioni su Octagon</h2>
     <div class="foot">
-      <div>
-        <a class="logo" href="#top"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="29.3,0 70.7,0 100,29.3 100,70.7 70.7,100 29.3,100 0,70.7 0,29.3" fill="#1F7A74"/><polygon points="29.3,0 70.7,0 100,29.3 50,50" fill="#D9D2C8"/><polygon points="100,70.7 70.7,100 50,50 100,29.3" fill="#E0613A"/><polygon points="29.3,100 0,70.7 50,50 70.7,100" fill="#8C7CE0"/><polygon points="36,26 64,26 74,36 74,64 64,74 36,74 26,64 26,36" fill="#F4EFE8"/></svg>octagon</a>
-        <p>Studio founder-led. Automatizziamo il lavoro operativo che si ripete. L'AI esegue, tu decidi.</p>
+      <div class="foot-brand">
+        <a class="logo" href="#top" aria-label="Octagon, torna all'inizio"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="29.3,0 70.7,0 100,29.3 100,70.7 70.7,100 29.3,100 0,70.7 0,29.3" fill="#1F7A74"/><polygon points="29.3,0 70.7,0 100,29.3 50,50" fill="#D9D2C8"/><polygon points="100,70.7 70.7,100 50,50 100,29.3" fill="#E0613A"/><polygon points="29.3,100 0,70.7 50,50 70.7,100" fill="#8C7CE0"/><polygon points="36,26 64,26 74,36 74,64 64,74 36,74 26,64 26,36" fill="#F4EFE8"/></svg>octagon</a>
+        <p class="foot-claim">Il lavoro che si ripete.<br>Lo esegue l'AI.<br><span>Lo approvi tu.</span></p>
+        <p>Octagon è uno studio founder-led. Costruiamo e gestiamo sistemi di agenti AI che si occupano del lavoro operativo delle piccole imprese: ogni azione che conta passa da una tua approvazione.</p>
       </div>
-      <div><h4>Octagon</h4><ul><li><a href="#ciclo">Come funziona</a></li><li><a href="#cancello">Il controllo</a></li><li><a href="#aree">Cosa fa</a></li><li><a href="#sistema">Tecnologia</a></li></ul></div>
-      <div><h4>Inizia</h4><ul><li><a href="#demo">Prenota una demo</a></li><li><a href="/pricing">Listino</a></li></ul></div>
-      <div><h4>Legale</h4><ul><li><a href="/privacy" data-route="/privacy">Privacy</a></li><li><a href="/cookie" data-route="/cookie">Cookie</a></li><li><a href="/termini" data-route="/termini">Termini</a></li></ul></div>
+      <nav aria-label="Il percorso"><h3>Il percorso</h3><ul><li><a href="#settimana">La tua settimana</a></li><li><a href="#ciclo">Come funziona</a></li><li><a href="#cancello">Il controllo umano</a></li><li><a href="#aree">Cosa fa</a></li><li><a href="#sistema">Tecnologia</a></li></ul></nav>
+      <nav aria-label="Lavora con noi"><h3>Lavora con noi</h3><ul><li><a href="#demo">Prenota una demo</a></li><li><a href="#inizio">Come si parte</a></li><li><a href="/pricing">Listino</a></li></ul></nav>
+      <nav aria-label="Note legali"><h3>Note legali</h3><ul><li><a href="/privacy">Privacy</a></li><li><a href="/cookie">Cookie</a></li><li><a href="/termini">Termini di servizio</a></li></ul></nav>
     </div>
-    <div class="foot-bottom"><span>© 2026 Octagon</span><span>The Human Edge</span></div>
+    <div class="foot-bottom"><span>© 2026 Octagon. Tutti i diritti riservati.</span><a class="to-top" href="#top">Torna su <span aria-hidden="true">↑</span></a></div>
   </div>
 </footer>
 <div class="toast" id="toast" role="status"></div>
@@ -1052,12 +1063,6 @@ footer{padding-block:48px 36px}
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const toast = (t) => { const el = $('#toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast._t); toast._t = setTimeout(() => el.classList.remove('on'), 2600); };
-
-/* routes that exist only on the live site */
-document.addEventListener('click', (e) => {
-  const a = e.target.closest('a[data-route]'); if (!a) return;
-  e.preventDefault(); toast('Sul sito pubblicato apre la pagina ' + a.dataset.route);
-});
 
 /* nav */
 const nav = $('#nav'), rail = $('#rail');
