@@ -13,16 +13,16 @@ AGGIORNATO = "1 ottobre 2026"
 AGGIORNATO_ISO = "2026-10-01"
 
 DATI = {
-    "titolare": None,        # es. "Mario Rossi, titolare della ditta individuale Octagon" o "Octagon S.r.l."
+    "titolare": "Edison Zoicaj",        # es. "Mario Rossi, titolare della ditta individuale Octagon" o "Octagon S.r.l."
     "piva": None,            # partita IVA
     "cf": None,              # codice fiscale (se diverso dalla P.IVA)
     "sede": None,            # indirizzo completo
-    "email": None,           # email per privacy e contatti
+    "email": "info@theoctagonai.com",           # email per privacy e contatti
     "pec": None,             # facoltativa: lasciare None per non mostrarla
     "foro": None,            # es. "Bologna"
-    "iva_listino": None,     # es. "IVA esclusa"
+    "iva_listino": "IVA esclusa",     # es. "IVA esclusa"
 }
-FACOLTATIVI = {"pec", "cf"}
+FACOLTATIVI = {"pec", "cf", "piva", "sede", "foro"}  # se assenti, le righe vengono omesse
 
 ETICHETTE = {
     "titolare": "nome e cognome o ragione sociale", "piva": "partita IVA", "cf": "codice fiscale",
@@ -38,6 +38,12 @@ def d(k):
             return f'<a class="dato" href="mailto:{html.escape(v)}">{html.escape(v)}</a>'
         return f'<span class="dato">{html.escape(v)}</span>'
     return f'<span class="dato todo">da completare: {ETICHETTE[k]}</span>'
+
+
+def foro_frase():
+    if DATI["foro"]:
+        return f'Per le controversie tra imprese è competente in via esclusiva il foro di {d("foro")}.'
+    return "Per le controversie tra imprese è competente il foro del luogo in cui ha sede il titolare."
 
 
 def mancanti():
@@ -186,10 +192,12 @@ def contact_button():
 def privacy():
     pec = f'<dt>PEC</dt><dd>{d("pec")}</dd>' if DATI["pec"] else ""
     cf = f'<dt>Codice fiscale</dt><dd>{d("cf")}</dd>' if DATI["cf"] else ""
+    piva = f'<dt>Partita IVA</dt><dd>{d("piva")}</dd>' if DATI["piva"] else ""
+    sede = f'<dt>Sede</dt><dd>{d("sede")}</dd>' if DATI["sede"] else ""
     s = [
         ("titolare", "Chi tratta i tuoi dati", f'''
 <p>Il titolare del trattamento è chi decide perché e come vengono usati i tuoi dati personali. Per questo sito e per i servizi di Octagon è:</p>
-<dl><dt>Titolare</dt><dd>{d("titolare")}</dd><dt>Partita IVA</dt><dd>{d("piva")}</dd>{cf}<dt>Sede</dt><dd>{d("sede")}</dd><dt>Email</dt><dd>{d("email")}</dd>{pec}</dl>
+<dl><dt>Titolare</dt><dd>{d("titolare")}</dd>{piva}{cf}{sede}<dt>Email</dt><dd>{d("email")}</dd>{pec}</dl>
 <p>Octagon è uno studio di piccole dimensioni e non è tenuto a nominare un responsabile della protezione dei dati (DPO). Per qualsiasi richiesta sui tuoi dati scrivi all'indirizzo email qui sopra: ti risponde direttamente il titolare.</p>'''),
         ("dati", "Quali dati raccogliamo", '''
 <h3>Quando visiti il sito</h3>
@@ -316,7 +324,7 @@ def cookie():
 def termini():
     s = [
         ("ambito", "Di cosa parlano questi termini", f'''
-<p>Questi termini regolano l'uso del sito theoctagonai.com e, insieme alla proposta commerciale che firmi, i servizi offerti da {d("titolare")} con il marchio Octagon (“Octagon”, “noi”).</p>
+<p>Questi termini regolano l'uso del sito theoctagonai.com e, insieme alla proposta commerciale che firmi, i servizi offerti da {d("titolare")} che opera con il marchio Octagon (“Octagon”, “noi”).</p>
 <p>I servizi sono rivolti a <strong>imprese e professionisti</strong>. Se agisci come consumatore restano comunque validi tutti i diritti che ti riconosce il Codice del consumo (D.Lgs. 206/2005), e nessuna clausola di questi termini li limita.</p>
 <p>Se la proposta firmata e questi termini dicono cose diverse, vale la proposta.</p>'''),
         ("sito", "Le informazioni sul sito", f'''
@@ -354,7 +362,7 @@ def termini():
         ("riservatezza", "Riservatezza e dati personali", '''
 <p>Trattiamo come riservate le informazioni sulla tua attività che conosciamo lavorando insieme e le usiamo solo per erogare il servizio. Quando i nostri sistemi trattano dati personali dei tuoi clienti agiamo come responsabile del trattamento, con un accordo scritto ai sensi dell'art. 28 del GDPR. Il resto è spiegato nell'<a href="/privacy">informativa privacy</a>.</p>'''),
         ("legge", "Legge applicabile e foro", f'''
-<p>Questi termini sono regolati dalla legge italiana. Per le controversie tra imprese è competente in via esclusiva il foro di {d("foro")}. Se sei un consumatore è competente il giudice del luogo in cui risiedi.</p>
+<p>Questi termini sono regolati dalla legge italiana. {foro_frase()} Se sei un consumatore è competente il giudice del luogo in cui risiedi.</p>
 <p>Puoi aggiornare questi termini solo con un accordo scritto; noi possiamo aggiornare questa pagina, ma le modifiche non si applicano ai contratti già in corso senza il tuo consenso. Versione in vigore dal {AGGIORNATO}.</p>'''),
     ]
     brief = [
