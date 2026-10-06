@@ -220,13 +220,13 @@ main.pricing button{cursor:pointer}
   </div>
 </footer>
 <script>
-const GO='/#demo';
+const GO='/#demo';const goPlan=c=>{const h=c&&c.querySelector('h3');return h?'/?piano='+encodeURIComponent(h.textContent.trim())+'#demo':GO;};
 function zig(w,h,top){const n=Math.max(18,Math.round(w/14)),d=7;let p=[];if(top){p.push('0 0',w+'px 0');for(let i=n;i>=0;i--){p.push((i*w/n).toFixed(1)+'px '+(h-(i%2?d:0))+'px');}}else{for(let i=0;i<=n;i++){p.push((i*w/n).toFixed(1)+'px '+(i%2?d:0)+'px');}p.push(w+'px '+h+'px','0 '+h+'px');}return 'polygon('+p.join(',')+')';}
-function tear(card){const t=card.querySelector('.half-top'),b=card.querySelector('.half-bot');if(!t||!b||matchMedia('(prefers-reduced-motion: reduce)').matches){location.href=GO;return;}
+function tear(card){const t=card.querySelector('.half-top'),b=card.querySelector('.half-bot');if(!t||!b||matchMedia('(prefers-reduced-motion: reduce)').matches){location.href=goPlan(card);return;}
   const tilt=card.querySelector('.tilt');if(tilt){tilt.classList.remove('live');tilt.style.transform='';}
   t.style.clipPath=zig(t.offsetWidth,t.offsetHeight,true);b.style.clipPath=zig(b.offsetWidth,b.offsetHeight,false);
   card.classList.add('ripping');setTimeout(()=>{card.classList.remove('ripping');card.classList.add('tearing');},170);
-  setTimeout(()=>{location.href=GO;},950);}
+  setTimeout(()=>{location.href=goPlan(card);},950);}
 document.addEventListener('click',e=>{const b=e.target.closest('main.pricing button');if(b){const c=b.closest('.tk');if(c){e.preventDefault();tear(c);}else location.href=GO;}});
 const nav=document.getElementById('nav'),menuBtn=document.getElementById('menuBtn'),sheet=document.getElementById('sheet');
 nav.classList.add('solid');

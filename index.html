@@ -527,6 +527,13 @@ form.demo h3{font-size:24px;letter-spacing:-.02em}
 .form-note{font-size:13px;color:var(--ink-3)}
 .form-state{padding:14px;border-radius:14px;font-size:14.5px}
 .form-state.ok{background:var(--teal-soft);color:#155D58}
+.form-state.err{background:#FBE9E3;color:#8E2F17}
+.form-state a{color:inherit;font-weight:600}
+.form-note a{color:inherit}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.plan-chip{display:flex;align-items:center;gap:8px;margin:0;padding:8px 8px 8px 14px;border-radius:999px;background:var(--teal-soft);color:#155D58;font-size:14px;width:fit-content}
+.plan-chip button{border:0;background:rgba(255,255,255,.7);color:inherit;width:26px;height:26px;border-radius:50%;font-size:16px;line-height:1;cursor:pointer}
+form.demo button[type=submit][aria-busy=true]{opacity:.7;cursor:progress}
 @media (max-width:980px){.cta-in{grid-template-columns:1fr}.cta-card::before{background:linear-gradient(0deg,rgba(244,239,232,.98) 0%,rgba(244,239,232,.92) 60%,rgba(244,239,232,.4) 100%)}}
 
 /* FOOTER */
@@ -1022,14 +1029,18 @@ footer{padding-block:48px 36px}
           <h2 id="cta-h">Che lavoro si ripete <span class="s">nella tua settimana?</span></h2>
           <p>Raccontacelo in 20 minuti. Ti diciamo cosa prende in carico il sistema, e cosa no.</p>
         </div>
-        <form class="demo" id="demoForm" novalidate>
+        <form class="demo" id="demoForm" action="/api/demo" method="post" data-endpoint="/api/demo" novalidate>
           <h3>Richiedi la demo</h3>
+          <p class="plan-chip" id="planChip" hidden>Piano di interesse: <b id="planName"></b> <button type="button" id="planClear" aria-label="Rimuovi il piano scelto">×</button></p>
+          <input type="hidden" name="plan" id="f-plan">
+          <input type="hidden" name="t" id="f-t">
+          <div class="hp" aria-hidden="true"><label for="f-web">Lascia vuoto questo campo</label><input id="f-web" name="website" tabindex="-1" autocomplete="off"></div>
           <div class="field"><label for="f-name">Nome</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
           <div class="field"><label for="f-mail">Email di lavoro</label><input id="f-mail" name="email" type="email" autocomplete="email" required><span class="err" id="e-mail"></span></div>
           <div class="field"><label for="f-biz">Attività</label><input id="f-biz" name="company" autocomplete="organization" placeholder="Es. negozio di abbigliamento"></div>
           <div class="field"><label for="f-work">Il lavoro che si ripete</label><textarea id="f-work" name="work" placeholder="Es. ogni settimana aggiorno a mano prezzi e annunci"></textarea></div>
           <button class="btn btn-primary" type="submit">Prenota una demo <span class="arr" aria-hidden="true">→</span></button>
-          <p class="form-note">Rispondiamo entro un giorno lavorativo.</p>
+          <p class="form-note">Rispondiamo entro un giorno lavorativo. Usiamo i tuoi dati solo per rispondere alla richiesta: <a href="/privacy">informativa privacy</a>.</p>
           <div id="formState" aria-live="polite"></div>
         </form>
       </div>
@@ -1352,17 +1363,40 @@ function setPart(k) {
 }
 setPart(active);
 
-/* demo form (no backend in this preview) */
-const form = $('#demoForm'), fstate = $('#formState');
-const ENDPOINT = form.dataset.endpoint || '';
+/* demo form → /api/demo (Resend → info@theoctagonai.com) */
+const form = $('#demoForm'), fstate = $('#formState'), fsub = form.querySelector('button[type=submit]');
+const ENDPOINT = form.dataset.endpoint;
+const MAIL = 'info@theoctagonai.com';
+const fT = $('#f-t'); fT.value = Date.now();
+const planIn = $('#f-plan'), planChip = $('#planChip');
+const setPlan = (p) => { planIn.value = p || ''; $('#planName').textContent = p || ''; planChip.hidden = !p; };
+try { const p = new URLSearchParams(location.search).get('piano'); if (p) setPlan(p.slice(0, 80)); } catch {}
+$('#planClear').addEventListener('click', () => { setPlan(''); $('#f-name').focus(); });
+const showState = (kind, html) => { fstate.className = 'form-state ' + kind; fstate.innerHTML = html; };
 form.addEventListener('submit', async (e) => {
-  e.preventDefault(); let ok = true;
-  const req = [['f-name', 'e-name', v => v.trim().length > 1, 'Scrivi il tuo nome.'], ['f-mail', 'e-mail', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()), "Serve un'email valida, per esempio nome@azienda.it."]];
+  e.preventDefault(); if (fsub.getAttribute('aria-busy') === 'true') return;
+  let ok = true;
+  const req = [['f-name', 'e-name', v => v.trim().length > 1, 'Scrivi il tuo nome.'], ['f-mail', 'e-mail', v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()), "Serve un'email valida, per esempio nome@azienda.it."]];
   req.forEach(([f, er, test, msg]) => { const inp = $('#' + f), bad = !test(inp.value); inp.closest('.field').classList.toggle('bad', bad); inp.setAttribute('aria-invalid', bad); $('#' + er).textContent = bad ? msg : ''; if (bad && ok) { inp.focus(); ok = false; } });
   if (!ok) return;
-  if (!ENDPOINT) { fstate.className = 'form-state ok'; fstate.textContent = "Richiesta pronta. In questa anteprima l'invio non è collegato: sul sito pubblicato arriverà a Octagon via email."; return; }
-  try { const r = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) }); if (!r.ok) throw 0; fstate.className = 'form-state ok'; fstate.textContent = 'Grazie. Ti scriviamo entro un giorno lavorativo per fissare la call.'; form.reset(); }
-  catch { fstate.className = 'form-state'; fstate.textContent = "Invio non riuscito. Riprova tra poco."; }
+  const label = fsub.innerHTML;
+  fsub.setAttribute('aria-busy', 'true'); fsub.disabled = true; fsub.textContent = 'Invio in corso…'; showState('', '');
+  try {
+    const r = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+    const data = await r.json().catch(() => ({}));
+    if (r.status === 422 && data.fields) {
+      Object.entries(data.fields).forEach(([k, msg]) => { const inp = $('#f-' + (k === 'email' ? 'mail' : k)), er = $('#e-' + (k === 'email' ? 'mail' : k)); if (inp && er) { inp.closest('.field').classList.add('bad'); inp.setAttribute('aria-invalid', true); er.textContent = msg; } });
+      throw new Error('invalid');
+    }
+    if (!r.ok || !data.ok) throw new Error('send');
+    const name = $('#f-name').value.trim().split(/\s+/)[0];
+    form.reset(); setPlan(''); fT.value = Date.now();
+    showState('ok', `Grazie${name ? ', ' + name.replace(/[<>&]/g, '') : ''}. La richiesta è arrivata: ti scriviamo entro un giorno lavorativo per fissare la demo.`);
+  } catch (err) {
+    if (err.message !== 'invalid') showState('err', `Invio non riuscito. Riprova tra poco oppure scrivici a <a href="mailto:${MAIL}?subject=Richiesta%20demo">${MAIL}</a>.`);
+  } finally {
+    fsub.disabled = false; fsub.removeAttribute('aria-busy'); fsub.innerHTML = label;
+  }
 });
 
 /* reveals */
