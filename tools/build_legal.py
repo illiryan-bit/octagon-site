@@ -110,7 +110,6 @@ def page(path, title, description, eyebrow, h1, lede, brief, sections):
       <a href="/#aree">Cosa fa</a>
       <a href="/#sistema">Tecnologia</a>
       <a href="/pricing">Listino</a>
-      <a href="/reti">Reti di partner</a>
     </nav>
     <a class="btn btn-dark nav-cta" href="/#demo">Prenota una demo <span class="arr" aria-hidden="true">→</span></a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet" aria-label="Apri il menu"><span></span></button>
@@ -123,7 +122,6 @@ def page(path, title, description, eyebrow, h1, lede, brief, sections):
   <a class="l" href="/#aree">Cosa fa</a>
   <a class="l" href="/#sistema">Tecnologia</a>
   <a class="l" href="/pricing">Listino</a>
-  <a class="l" href="/reti">Reti di partner</a>
   <a class="btn btn-primary" href="/#demo">Prenota una demo <span class="arr" aria-hidden="true">→</span></a>
 </div>
 

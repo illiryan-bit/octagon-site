@@ -24,10 +24,6 @@ Il sistema usa 46 workflow (38 attivi ogni giorno) e 8 agenti AI su infrastruttu
 ### Costruire
 - [Siti, negozi e app](https://theoctagonai.com/servizi/siti): Landing page, negozi Shopify, applicazioni su misura, collegati al sistema. Approvazione richiesta: ogni rilascio.
 
-## Reti di partner
-
-- [Reti di partner](https://theoctagonai.com/reti): Per i marchi con distributori, bar, negozi e partner in più paesi. Ogni partner riceve gli stessi servizi, con le regole e l'identità della casa madre: schede e listini allineati, contenuti nel marchio, campagne locali dentro un budget approvato. Si parte con un pilota di 3–5 partner per 90 giorni.
-
 ## Listino
 
 - [Listino](https://theoctagonai.com/pricing): pacchetti Starter (€599 di avvio, poi €99 al mese, 5 workflow attivi), Growth (€1.500, poi €299 al mese, 15 workflow), Scale (€2.499, poi €499 al mese, 24 workflow), Enterprise (da €3.999, canone su misura, 38 workflow). Prezzi IVA esclusa. Aggiunte mensili componibili; siti e negozi a progetto: landing page €799, negozio Shopify €1.500, applicazione su misura su preventivo.

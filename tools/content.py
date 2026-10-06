@@ -14,7 +14,7 @@ EMAIL = "info@theoctagonai.com"
 
 # Interruttore: la pagina Reti di partner è pronta ma la pubblicazione dipende da una tua scelta
 # (documento, «Da decidere»). Con False la pagina non viene generata né collegata.
-SHOW_RETI = True
+SHOW_RETI = False
 
 # Lingue servite dai dati strutturati (documento, sezione SEO)
 AREA_SERVED = ["Italia", "Spagna", "Stati Uniti"]
