@@ -75,7 +75,7 @@ footer{padding-block:48px 36px}
 .foot h3{margin:0 0 14px;font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
 .foot ul li a{display:inline-block;padding:2px 0}
 .foot .foot-claim{font:500 clamp(20px,2vw,24px)/1.25 var(--f-display,inherit);letter-spacing:-.01em;color:var(--ink);max-width:22ch;margin-top:18px}
-.foot .foot-claim span{color:var(--teal)}
+.foot .foot-claim span{color:#1B6F69}
 .foot-brand p:not(.foot-claim){max-width:40ch}
 .foot-bottom .to-top{color:var(--ink-2);text-decoration:none}
 .foot-bottom .to-top:hover{color:var(--teal)}

@@ -110,6 +110,7 @@ def page(path, title, description, eyebrow, h1, lede, brief, sections):
       <a href="/#aree">Cosa fa</a>
       <a href="/#sistema">Tecnologia</a>
       <a href="/pricing">Listino</a>
+      <a href="/reti">Reti di partner</a>
     </nav>
     <a class="btn btn-dark nav-cta" href="/#demo">Prenota una demo <span class="arr" aria-hidden="true">→</span></a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet" aria-label="Apri il menu"><span></span></button>
@@ -122,6 +123,7 @@ def page(path, title, description, eyebrow, h1, lede, brief, sections):
   <a class="l" href="/#aree">Cosa fa</a>
   <a class="l" href="/#sistema">Tecnologia</a>
   <a class="l" href="/pricing">Listino</a>
+  <a class="l" href="/reti">Reti di partner</a>
   <a class="btn btn-primary" href="/#demo">Prenota una demo <span class="arr" aria-hidden="true">→</span></a>
 </div>
 
@@ -156,7 +158,7 @@ def page(path, title, description, eyebrow, h1, lede, brief, sections):
       <div class="foot-brand">
         <a class="logo" href="/#top" aria-label="Octagon, vai alla home">{LOGO}octagon</a>
         <p class="foot-claim">Il lavoro che si ripete.<br>Lo esegue l'AI.<br><span>Lo approvi tu.</span></p>
-        <p>Octagon è uno studio founder-led. Costruiamo e gestiamo sistemi di agenti AI che si occupano del lavoro operativo delle piccole imprese: ogni azione che conta passa da una tua approvazione.</p>
+        <p>Octagon è uno studio founder-led. Costruiamo e gestiamo sistemi di agenti AI che si occupano del lavoro operativo di aziende e brand, in Italia e nel mondo: ogni azione che conta passa da una tua approvazione.</p>
       </div>
       <nav aria-label="Il percorso"><h3>Il percorso</h3><ul><li><a href="/#settimana">La tua settimana</a></li><li><a href="/#ciclo">Come funziona</a></li><li><a href="/#cancello">Il controllo umano</a></li><li><a href="/#aree">Cosa fa</a></li><li><a href="/#sistema">Tecnologia</a></li></ul></nav>
       <nav aria-label="Lavora con noi"><h3>Lavora con noi</h3><ul><li><a href="/#demo">Prenota una demo</a></li><li><a href="/#inizio">Come si parte</a></li><li><a href="/pricing">Listino</a></li></ul></nav>

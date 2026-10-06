@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cpolygon points=%2729.3,0 70.7,0 100,29.3 100,70.7 70.7,100 29.3,100 0,70.7 0,29.3%27 fill=%27%231F7A74%27/%3E%3C/svg%3E">
 <style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
-<title>OCTAGON</title>
-<meta name="description" content="Octagon prende in carico il lavoro operativo che si ripete. L'AI esegue, tu decidi: ogni azione che conta aspetta il tuo ok su Telegram.">
+<title>OCTAGON · Agenti AI per aziende, con il tuo ok</title>
+<meta name="description" content="Il lavoro che si ripete su negozio, Amazon, ricerca, social e pubblicità lo esegue l'AI. Ogni azione che conta parte solo con il tuo ok.">
 <link rel="canonical" href="https://theoctagonai.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Octagon">
 <meta property="og:url" content="https://theoctagonai.com/">
 <meta property="og:title" content="Octagon · L'AI esegue. Tu decidi.">
-<meta property="og:description" content="Octagon prende in carico il lavoro operativo che si ripete. Ogni azione che conta aspetta il tuo ok su Telegram.">
+<meta property="og:description" content="Il lavoro che si ripete su negozio, Amazon, ricerca, social e pubblicità lo esegue l'AI. Ogni azione che conta parte solo con il tuo ok.">
 <meta property="og:image" content="https://theoctagonai.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F4EFE8">
+<meta property="og:locale" content="it_IT">
+<!-- @jsonld:start --><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://theoctagonai.com/#org", "name": "Octagon", "url": "https://theoctagonai.com/", "logo": "https://theoctagonai.com/logo.png", "email": "info@theoctagonai.com", "description": "Octagon è uno studio founder-led che costruisce e gestisce sistemi di agenti AI per il lavoro operativo di aziende e brand. Ogni azione che conta passa da un'approvazione umana su Telegram."}, {"@type": "WebSite", "@id": "https://theoctagonai.com/#site", "url": "https://theoctagonai.com/", "name": "Octagon", "inLanguage": "it-IT", "publisher": {"@id": "https://theoctagonai.com/#org"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Devo cambiare gli strumenti che uso?", "acceptedAnswer": {"@type": "Answer", "text": "No. Octagon lavora sui canali e sugli strumenti che hai già. Con il sistema parli su Telegram."}}, {"@type": "Question", "name": "Cosa succede se l'AI sbaglia?", "acceptedAnswer": {"@type": "Answer", "text": "Prima di tutto la ferma una regola scritta nel codice, come un prezzo minimo o un limite di spesa. Poi ogni azione con una conseguenza aspetta il tuo ok. Nulla esce senza di te."}}, {"@type": "Question", "name": "Dove girano i flussi e dove restano i dati?", "acceptedAnswer": {"@type": "Answer", "text": "Su infrastruttura gestita da Octagon: orchestrazione, database e memoria sono self-hosted. Ti spieghiamo nel dettaglio cosa passa da servizi esterni durante la call."}}, {"@type": "Question", "name": "Lavorate anche con aziende grandi o con reti di negozi?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Lo stesso sistema serve un negozio singolo e un marchio con partner in più paesi: ogni sede ha le sue regole, il marchio resta uno."}}, {"@type": "Question", "name": "Foto e video: da dove arrivano?", "acceptedAnswer": {"@type": "Answer", "text": "Li creiamo in sede, sulla nostra infrastruttura, a partire dalle vostre foto e dalle regole visive del marchio. Nessun abbonamento a servizi esterni per ogni immagine."}}, {"@type": "Question", "name": "Fate anche siti e negozi online?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Landing page, negozi Shopify e applicazioni su misura, collegati allo stesso sistema. E gestiamo lo store su Amazon nello stesso sistema."}}, {"@type": "Question", "name": "Quanto costa?", "acceptedAnswer": {"@type": "Answer", "text": "Dipende da cosa prende in carico il sistema. Trovi le formule nel listino."}}]}]}</script><!-- @jsonld:end -->
 <link rel="preload" href="/fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/bricolage-grotesque-opsz.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 /* THE HUMAN EDGE · racconto "La tua settimana".
@@ -362,7 +364,7 @@ input[type=range]{width:100%;accent-color:var(--teal);height:28px;cursor:pointer
 .ar-key i{width:22px;height:8px;border-radius:4px;display:inline-block}
 .board{margin-top:clamp(32px,4vw,56px);display:flex;gap:10px;height:clamp(520px,44vw,600px)}
 .lane{--c:#5FB3A8;position:relative;flex:1 1 0;min-width:0;border-radius:26px;overflow:hidden;background:var(--card);transition:flex-grow .7s var(--ease);box-shadow:inset 0 0 0 1px rgba(16,20,24,.05)}
-.lane.open{flex-grow:5.4}
+.lane.open{flex-grow:8}
 .lane-tab{position:absolute;inset:0;width:100%;border:0;padding:0;margin:0;background:none;cursor:pointer;text-align:left;color:var(--ink);font:inherit}
 .lane.open .lane-tab{right:auto;width:84px;cursor:default}
 .ribbon{position:absolute;inset:0;background:
@@ -383,6 +385,9 @@ input[type=range]{width:100%;accent-color:var(--teal);height:28px;cursor:pointer
 .lane-body p{color:var(--ink-2);font-size:16.5px;max-width:52ch}
 .lane-body ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .lane-body li{padding:8px 13px;border-radius:999px;background:var(--paper);font-size:13.5px}
+.lane-link{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px;transition:transform .25s var(--ease)}
+.lane-link:hover{transform:translateX(3px)}
+.lane.dark .lane-link{background:var(--coral)}
 .lane-meta{margin-top:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .lane-meta div{padding:14px 16px;border-radius:16px;background:var(--paper);font-size:14px;line-height:1.45}
 .lane-meta div.okbox{background:var(--coral-soft);color:#7A2E15}
@@ -549,7 +554,7 @@ footer{padding-block:48px 36px}
 .foot h3{margin:0 0 14px;font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
 .foot ul li a{display:inline-block;padding:2px 0}
 .foot .foot-claim{font:500 clamp(20px,2vw,24px)/1.25 var(--f-display,inherit);letter-spacing:-.01em;color:var(--ink);max-width:22ch;margin-top:18px}
-.foot .foot-claim span{color:var(--teal)}
+.foot .foot-claim span{color:#1B6F69}
 .foot-brand p:not(.foot-claim){max-width:40ch}
 .foot-bottom .to-top{color:var(--ink-2);text-decoration:none}
 .foot-bottom .to-top:hover{color:var(--teal)}
@@ -597,6 +602,7 @@ footer{padding-block:48px 36px}
       <a href="#aree">Cosa fa</a>
       <a href="#sistema">Tecnologia</a>
       <a href="/pricing">Listino</a>
+      <a href="/reti">Reti di partner</a>
     </nav>
     <a class="btn btn-dark nav-cta" href="#demo">Prenota una demo <span class="arr" aria-hidden="true">→</span></a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="sheet" aria-label="Apri il menu"><span></span></button>
@@ -609,6 +615,7 @@ footer{padding-block:48px 36px}
   <a class="l" href="#aree">Cosa fa</a>
   <a class="l" href="#sistema">Tecnologia</a>
   <a class="l" href="/pricing">Listino</a>
+  <a class="l" href="/reti">Reti di partner</a>
   <a class="btn btn-primary" href="#demo">Prenota una demo <span class="arr" aria-hidden="true">→</span></a>
 </div>
 
@@ -636,9 +643,9 @@ footer{padding-block:48px 36px}
   <div class="hero-veil" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <span class="pill"><b></b>The Human Edge · automazione con supervisione umana</span>
+      <span class="pill"><b></b>The Human Edge · agenti AI con supervisione umana</span>
       <h1 id="h1">L'AI esegue.<span class="s">Tu decidi.</span></h1>
-      <p class="hero-sub">Octagon prende in carico il lavoro che si ripete (contenuti, catalogo, prezzi, campagne, richieste) sui canali che usi già. Prima di ogni azione che conta, ti chiede l'ok su Telegram.</p>
+      <p class="hero-sub">Octagon prende in carico il lavoro che si ripete su negozio, marketplace, ricerca, social e pubblicità, e crea in sede foto e video del tuo marchio. Prima di ogni azione che conta, ti chiede l'ok su Telegram.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="#demo">Prenota una demo <span class="arr" aria-hidden="true">→</span></a>
         <a class="btn btn-ghost" href="#settimana">Guarda la tua settimana</a>
@@ -681,7 +688,7 @@ footer{padding-block:48px 36px}
     <p class="big" id="manifesto">Ogni settimana, le stesse ore se ne vanno negli stessi lavori. Octagon se le riprende.</p>
     <div class="manifesto-note rv">
       <span class="eyebrow"><i></i>Per chi</span>
-      <p>Per le piccole imprese che vendono, pubblicano e rispondono ogni giorno, e hanno poco tempo per farlo a mano.</p>
+      <p>Per aziende e brand di ogni dimensione: dal negozio indipendente al marchio internazionale con distributori e punti vendita nel mondo. Ovunque si vende, si pubblica e si risponde ogni giorno.</p>
       <p>Tu tieni le decisioni. Il resto lo fa un sistema che conosce il tuo modo di lavorare.</p>
     </div>
   </div>
@@ -902,16 +909,18 @@ footer{padding-block:48px 36px}
     <div class="ar-head">
       <div>
         <span class="eyebrow"><i></i>Cosa fa</span>
-        <h2 class="h2 rv" id="ar-h" style="margin-top:14px">Sette corsie.<br><span class="s">Un solo sistema.</span></h2>
-        <p class="lede">Sei corsie per il lavoro operativo, una per siti e negozi. Ognuna ha le sue regole e ti dice dove serve il tuo ok. Apri una corsia.</p>
+        <h2 class="h2 rv" id="ar-h" style="margin-top:14px">Dieci servizi.<br><span class="s">Un solo sistema.</span></h2>
+        <p class="lede">Quattro aree: vendere, farsi trovare, comunicare, costruire. Ogni servizio ha le sue regole e ti dice dove serve il tuo ok. Apri un servizio.</p>
       </div>
       <div class="ar-key" aria-hidden="true">
-        <span><i style="background:linear-gradient(90deg,#5FB3A8,#8C7CE0,#F0B08A)"></i>automazione</span>
-        <span><i style="background:#101418"></i>siti e negozi</span>
+        <span><i style="background:#4FA89A"></i>vendere</span>
+        <span><i style="background:#7FA7E0"></i>farsi trovare</span>
+        <span><i style="background:#8C7CE0"></i>comunicare</span>
+        <span><i style="background:#101418"></i>costruire</span>
         <span><i style="background:var(--coral);width:10px;height:10px;border-radius:3px;rotate:22.5deg"></i>serve il tuo ok</span>
       </div>
     </div>
-    <div class="board rv" id="board"></div>
+    <div class="board rv" id="board"><!-- @services:start --><div class="lane open" style="--c:#5FB3A8"><button class="lane-tab" type="button" id="lt0" aria-expanded="true" aria-controls="lb0"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">01</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Automazione</span></button><div class="lane-body" id="lb0" role="region" aria-labelledby="lt0"><span class="k">Vendere · 01</span><h3>Automazione operativa</h3><p>Ordini, catalogo, prezzi, documenti e richieste preparati dal sistema.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Prezzi, pubblicazioni, invii ai clienti.</div><div><b>Cosa sostituisce</b>Ore di lavoro a mano ogni settimana.</div></div><a class="lane-link" href="/servizi/automazione">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#8FD3CC"><button class="lane-tab" type="button" id="lt1" aria-expanded="false" aria-controls="lb1"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">02</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Shopify</span></button><div class="lane-body" id="lb1" role="region" aria-labelledby="lt1"><span class="k">Vendere · 02</span><h3>Negozio Shopify</h3><p>Recensioni, traduzioni, upsell, moduli e chat svolti dal sistema, senza app a pagamento.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Ogni modifica al negozio.</div><div><b>Cosa sostituisce</b>Le app a pagamento, tema escluso.</div></div><a class="lane-link" href="/servizi/shopify">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#F0B08A"><button class="lane-tab" type="button" id="lt2" aria-expanded="false" aria-controls="lb2"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">03</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Amazon</span></button><div class="lane-body" id="lb2" role="region" aria-labelledby="lt2"><span class="k">Vendere · 03</span><h3>Amazon</h3><p>Schede e contenuti A+, prezzi e Buy Box, scorte, recensioni, collegati allo store Shopify.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Prezzi, schede, spesa in Amazon Ads.</div><div><b>Cosa sostituisce</b>Gestione esterna dello store.</div></div><a class="lane-link" href="/servizi/amazon">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#7FA7E0"><button class="lane-tab" type="button" id="lt3" aria-expanded="false" aria-controls="lb3"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">04</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">SEO e visibilità AI</span></button><div class="lane-body" id="lb3" role="region" aria-labelledby="lt3"><span class="k">Farsi trovare · 04</span><h3>SEO e visibilità AI</h3><p>Testi, pagine e dati strutturati per Google e per gli assistenti AI, in più lingue.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Ogni lotto di modifiche.</div><div><b>Cosa sostituisce</b>Agenzia SEO e strumenti in abbonamento.</div></div><a class="lane-link" href="/servizi/seo-visibilita-ai">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#A9C3EE"><button class="lane-tab" type="button" id="lt4" aria-expanded="false" aria-controls="lb4"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">05</span><span class="lane-t">Analisi di mercato</span></button><div class="lane-body" id="lb4" role="region" aria-labelledby="lt4"><span class="k">Farsi trovare · 05</span><h3>Analisi di mercato</h3><p>Concorrenti, prezzi, recensioni e risultati, in un report ogni lunedì.</p><div class="lane-meta"><div class=""><b>Il tuo ok</b>Nessuno: solo lettura.</div><div><b>Cosa sostituisce</b>Strumenti di monitoraggio in abbonamento.</div></div><a class="lane-link" href="/servizi/analisi">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#B3A6EE"><button class="lane-tab" type="button" id="lt5" aria-expanded="false" aria-controls="lb5"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">06</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Social e shop</span></button><div class="lane-body" id="lb5" role="region" aria-labelledby="lt5"><span class="k">Comunicare · 06</span><h3>Social e shop</h3><p>Piano editoriale, pubblicazione su Instagram, Facebook, TikTok e LinkedIn, catalogo shop sincronizzato.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Ogni post prima che esca.</div><div><b>Cosa sostituisce</b>Social media manager esterno.</div></div><a class="lane-link" href="/servizi/social">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#8C7CE0"><button class="lane-tab" type="button" id="lt6" aria-expanded="false" aria-controls="lb6"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">07</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Campagne</span></button><div class="lane-body" id="lb6" role="region" aria-labelledby="lt6"><span class="k">Comunicare · 07</span><h3>Campagne</h3><p>Meta, Google, TikTok e Amazon Ads dentro un limite di spesa fissato da te.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Ogni variazione di budget.</div><div><b>Cosa sostituisce</b>Gestione campagne in agenzia.</div></div><a class="lane-link" href="/servizi/campagne">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#D9A7E8"><button class="lane-tab" type="button" id="lt7" aria-expanded="false" aria-controls="lb7"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">08</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Foto e video</span></button><div class="lane-body" id="lb7" role="region" aria-labelledby="lt7"><span class="k">Comunicare · 08</span><h3>Foto e video in sede</h3><p>Foto prodotto, scene e video brevi creati sulla nostra infrastruttura, senza costo per singolo file.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Ogni contenuto prima dell&#x27;uso.</div><div><b>Cosa sostituisce</b>Servizi di generazione a pagamento, servizi fotografici ripetuti.</div></div><a class="lane-link" href="/servizi/fotovideo">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane" style="--c:#F5C6A5"><button class="lane-tab" type="button" id="lt8" aria-expanded="false" aria-controls="lb8"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">09</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Clienti e traduzioni</span></button><div class="lane-body" id="lb8" role="region" aria-labelledby="lt8"><span class="k">Comunicare · 09</span><h3>Servizio clienti e traduzioni</h3><p>Bozze di risposta, preventivi, testi tradotti in cinque lingue.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Ogni risposta prima dell&#x27;invio.</div><div><b>Cosa sostituisce</b>Chat a pagamento, traduttori per ogni testo.</div></div><a class="lane-link" href="/servizi/clienti">Apri il servizio <span aria-hidden="true">→</span></a></div></div><div class="lane dark" style="--c:#101418"><button class="lane-tab" type="button" id="lt9" aria-expanded="false" aria-controls="lb9"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">10</span><span class="lane-ok" aria-hidden="true"></span><span class="lane-t">Siti, negozi e app</span></button><div class="lane-body" id="lb9" role="region" aria-labelledby="lt9"><span class="k">Costruire · 10</span><h3>Siti, negozi e app</h3><p>Landing page, negozi Shopify, applicazioni su misura, collegati al sistema.</p><div class="lane-meta"><div class="okbox"><b>Serve il tuo ok</b>Ogni rilascio.</div><div><b>Collegato a</b>Il tuo dominio, Shopify</div></div><a class="lane-link" href="/servizi/siti">Apri il servizio <span aria-hidden="true">→</span></a></div></div><!-- @services:end --></div>
   </div>
 </section>
 
@@ -939,7 +948,9 @@ footer{padding-block:48px 36px}
           <span class="k">Dove esce</span>
           <div class="w-out" data-w="o" data-c="#1F7A74"><b><i style="background:#1F7A74"></i>Negozio</b><div class="tools"><span>Shopify</span></div></div>
           <div class="w-out" data-w="o" data-c="#F0B08A"><b><i style="background:#F0B08A"></i>Marketplace</b><div class="tools"><span>Amazon</span><span>Etsy</span><span>Vinted</span><span>Grailed</span></div></div>
-          <div class="w-out" data-w="o" data-c="#E0613A"><b><i style="background:#E0613A"></i>Pubblicità</b><div class="tools"><span>Meta</span><span>Google</span><span>TikTok</span></div></div>
+          <div class="w-out" data-w="o" data-c="#7FA7E0"><b><i style="background:#7FA7E0"></i>Ricerca</b><div class="tools"><span>Google</span><span>Assistenti AI</span></div></div>
+          <div class="w-out" data-w="o" data-c="#B3A6EE"><b><i style="background:#B3A6EE"></i>Social</b><div class="tools"><span>Instagram</span><span>Facebook</span><span>TikTok</span><span>LinkedIn</span></div></div>
+          <div class="w-out" data-w="o" data-c="#E0613A"><b><i style="background:#E0613A"></i>Pubblicità</b><div class="tools"><span>Meta</span><span>Google</span><span>TikTok</span><span>Amazon Ads</span></div></div>
           <div class="w-out" data-w="o" data-c="#8C7CE0"><b><i style="background:#8C7CE0"></i>Email</b><div class="tools"><span>Klaviyo</span></div></div>
         </div>
       </div>
@@ -1008,7 +1019,9 @@ footer{padding-block:48px 36px}
         <details><summary>Devo cambiare gli strumenti che uso?<span class="pl" aria-hidden="true">+</span></summary><p>No. Octagon lavora sui canali e sugli strumenti che hai già. Con il sistema parli su Telegram.</p></details>
         <details><summary>Cosa succede se l'AI sbaglia?<span class="pl" aria-hidden="true">+</span></summary><p>Prima di tutto la ferma una regola scritta nel codice, come un prezzo minimo o un limite di spesa. Poi ogni azione con una conseguenza aspetta il tuo ok. Nulla esce senza di te.</p></details>
         <details><summary>Dove girano i flussi e dove restano i dati?<span class="pl" aria-hidden="true">+</span></summary><p>Su infrastruttura gestita da Octagon: orchestrazione, database e memoria sono self-hosted. Ti spieghiamo nel dettaglio cosa passa da servizi esterni durante la call.</p></details>
-        <details><summary>Fate anche siti e negozi online?<span class="pl" aria-hidden="true">+</span></summary><p>Sì. Landing page, negozi Shopify e applicazioni su misura, collegati allo stesso sistema.</p></details>
+        <details><summary>Lavorate anche con aziende grandi o con reti di negozi?<span class="pl" aria-hidden="true">+</span></summary><p>Sì. Lo stesso sistema serve un negozio singolo e un marchio con partner in più paesi: ogni sede ha le sue regole, il marchio resta uno.</p></details>
+        <details><summary>Foto e video: da dove arrivano?<span class="pl" aria-hidden="true">+</span></summary><p>Li creiamo in sede, sulla nostra infrastruttura, a partire dalle vostre foto e dalle regole visive del marchio. Nessun abbonamento a servizi esterni per ogni immagine.</p></details>
+        <details><summary>Fate anche siti e negozi online?<span class="pl" aria-hidden="true">+</span></summary><p>Sì. Landing page, negozi Shopify e applicazioni su misura, collegati allo stesso sistema. E gestiamo lo store su Amazon nello stesso sistema.</p></details>
         <details><summary>Quanto costa?<span class="pl" aria-hidden="true">+</span></summary><p>Dipende da cosa prende in carico il sistema. Trovi le formule nel <a href="/pricing">listino</a>.</p></details>
       </div>
     </div>
@@ -1056,7 +1069,7 @@ footer{padding-block:48px 36px}
       <div class="foot-brand">
         <a class="logo" href="#top" aria-label="Octagon, torna all'inizio"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="29.3,0 70.7,0 100,29.3 100,70.7 70.7,100 29.3,100 0,70.7 0,29.3" fill="#1F7A74"/><polygon points="29.3,0 70.7,0 100,29.3 50,50" fill="#D9D2C8"/><polygon points="100,70.7 70.7,100 50,50 100,29.3" fill="#E0613A"/><polygon points="29.3,100 0,70.7 50,50 70.7,100" fill="#8C7CE0"/><polygon points="36,26 64,26 74,36 74,64 64,74 36,74 26,64 26,36" fill="#F4EFE8"/></svg>octagon</a>
         <p class="foot-claim">Il lavoro che si ripete.<br>Lo esegue l'AI.<br><span>Lo approvi tu.</span></p>
-        <p>Octagon è uno studio founder-led. Costruiamo e gestiamo sistemi di agenti AI che si occupano del lavoro operativo delle piccole imprese: ogni azione che conta passa da una tua approvazione.</p>
+        <p>Octagon è uno studio founder-led. Costruiamo e gestiamo sistemi di agenti AI che si occupano del lavoro operativo di aziende e brand, in Italia e nel mondo: ogni azione che conta passa da una tua approvazione.</p>
       </div>
       <nav aria-label="Il percorso"><h3>Il percorso</h3><ul><li><a href="#settimana">La tua settimana</a></li><li><a href="#ciclo">Come funziona</a></li><li><a href="#cancello">Il controllo umano</a></li><li><a href="#aree">Cosa fa</a></li><li><a href="#sistema">Tecnologia</a></li></ul></nav>
       <nav aria-label="Lavora con noi"><h3>Lavora con noi</h3><ul><li><a href="#demo">Prenota una demo</a></li><li><a href="#inizio">Come si parte</a></li><li><a href="/pricing">Listino</a></li></ul></nav>
@@ -1260,25 +1273,8 @@ const selectTab = (t) => {
 tabs.forEach((t, i) => { t.addEventListener('click', () => selectTab(t)); t.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); selectTab(n); } }); });
 renderSim(false);
 
-/* areas — seven lanes */
-const AREAS = [
-  { t: 'Operatività', c: '#5FB3A8', ok: true, p: 'Un assistente su Telegram sempre attivo e workflow che si sorvegliano da soli: se qualcosa si rompe, il sistema lo segnala e prova a ripararlo.', k: ['Assistente Telegram', 'Workflow automatici', 'Auto-riparazione'], you: 'Quando un\'azione tocca clienti, prezzi o spesa.', ex: '«Aggiorna le disponibilità della nuova collezione», scritto su Telegram e fatto dal sistema.' },
-  { t: 'Mercato e report', c: '#7FA7E0', ok: false, p: 'Concorrenti, prezzi, tendenze e SEO letti con regolarità. Ti arrivano report chiari, non cruscotti da interpretare.', k: ['Concorrenti', 'Prezzi e tendenze', 'SEO', 'Report automatici'], you: 'Nessuno: è solo lettura. Le proposte che ne nascono passano dal controllo.', ex: 'Il punto settimanale su concorrenti e prezzi, direttamente nella tua chat.' },
-  { t: 'Contenuti', c: '#8C7CE0', ok: true, p: 'Da una foto a immagini, testi e video per ogni canale, nel tono del tuo marchio.', k: ['Foto prodotto', 'Testi per canale', 'Video verticali'], you: 'Prima di ogni pubblicazione.', ex: 'Da una foto prodotto: post, didascalie e un video verticale in bozza.' },
-  { t: 'Advertising', c: '#E0613A', ok: true, p: 'Campagne su Meta, Google e TikTok seguite e corrette ogni giorno, sempre dentro il limite di spesa che hai fissato.', k: ['Meta', 'Google', 'TikTok', 'Limite di spesa'], you: 'Prima di spendere o cambiare budget.', ex: 'Proposta: spostare budget sulla campagna che rende di più, dentro il tuo limite.' },
-  { t: 'Marketplace', c: '#F0B08A', ok: true, p: 'Annunci allineati e ordini sincronizzati tra negozio e marketplace.', k: ['Amazon', 'Etsy', 'Vinted', 'Grailed', 'Ordini sincronizzati'], you: 'Prima di cambiare prezzi o annunci.', ex: 'Nuovo prezzo proposto, sempre sopra il minimo che hai fissato.' },
-  { t: 'Email', c: '#8FD3CC', ok: true, p: 'Campagne, automazioni e segmenti gestiti con Klaviyo.', k: ['Klaviyo', 'Automazioni', 'Segmenti'], you: 'Prima di ogni invio.', ex: 'Una campagna di rientro per i clienti inattivi, pronta da approvare.' },
-  { t: 'Siti e negozi', c: '#101418', ok: true, dark: true, p: 'La seconda linea di Octagon: landing page, negozi Shopify e applicazioni su misura, collegati allo stesso sistema.', k: ['Landing page', 'Negozi Shopify', 'Applicazioni su misura'], you: 'Prima di andare online.', ex: 'Una landing page per un lancio, già collegata a contenuti e campagne.' }
-];
+/* areas — dieci servizi: l'HTML è generato da tools/build_pages.py dentro #board */
 const board = $('#board');
-board.innerHTML = AREAS.map((a, i) => `<div class="lane${i === 0 ? ' open' : ''}${a.dark ? ' dark' : ''}" style="--c:${a.c}">
-  <button class="lane-tab" type="button" id="lt${i}" aria-expanded="${i === 0}" aria-controls="lb${i}"><span class="ribbon" aria-hidden="true"></span><span class="lane-n">${String(i + 1).padStart(2, '0')}</span>${a.ok ? '<span class="lane-ok" aria-hidden="true"></span>' : ''}<span class="lane-t">${a.t}</span></button>
-  <div class="lane-body" id="lb${i}" role="region" aria-labelledby="lt${i}">
-    <span class="k">${i === 6 ? 'Web creation' : 'Automazione'} · corsia ${String(i + 1).padStart(2, '0')}</span>
-    <h3>${a.t}</h3><p>${a.p}</p>
-    <ul>${a.k.map(k => `<li>${k}</li>`).join('')}</ul>
-    <div class="lane-meta"><div class="${a.ok ? 'okbox' : ''}"><b>${a.ok ? 'Serve il tuo ok' : 'Il tuo ok'}</b>${a.you}</div><div><b>Esempio</b>${a.ex}</div></div>
-  </div></div>`).join('');
 const lanes = $$('.lane', board);
 lanes.forEach((ln, i) => ln.querySelector('.lane-tab').addEventListener('click', () => {
   const mobile = innerWidth <= 900, isOpen = ln.classList.contains('open');
