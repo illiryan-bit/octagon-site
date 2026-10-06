@@ -157,47 +157,71 @@ em.s,.s{font-family:var(--f-serif);font-style:italic;font-weight:400;letter-spac
 .manifesto-note .eyebrow{margin-bottom:4px}
 @media (max-width:860px){.manifesto-grid{grid-template-columns:1fr}}
 
-/* WEEK */
+/* WEEK — cinque righe: lavoro a mano → nastro nell'ottagono → lavoro del sistema → il tuo ok.
+   Tutto il contenuto è leggibile senza JS; l'animazione (classe .wk-anim) parte riga per riga quando entra in vista. */
 .week{padding-block:clamp(40px,6vw,80px)}
 .week-card{background:var(--card);border-radius:var(--r-lg);padding:clamp(24px,4vw,56px);position:relative;overflow:hidden}
-.week-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px}
-.toggle{display:inline-flex;padding:5px;border-radius:999px;background:var(--paper);position:relative}
-.toggle button{position:relative;z-index:1;min-height:46px;padding:0 20px;border:0;border-radius:999px;background:transparent;font:600 15px var(--f-body);cursor:pointer;color:var(--ink-2);transition:color .3s}
-.toggle button[aria-pressed="true"]{color:#fff}
-.toggle .knob{position:absolute;top:5px;bottom:5px;left:5px;border-radius:999px;background:var(--ink);transition:transform .45s var(--ease),width .45s var(--ease)}
-.week-stage{position:relative;margin-top:clamp(28px,4vw,48px)}
-.week-ribbon{position:absolute;left:0;top:118px;width:100%;height:80px;pointer-events:none}
-.week-ribbon path{fill:none;stroke-linecap:round;stroke-width:12;transition:stroke-dashoffset 1.6s var(--ease),opacity .6s}
-.days{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.day{display:flex;flex-direction:column;gap:12px;min-width:0}
-.day-name{font:500 12.5px/1 var(--f-mono);letter-spacing:.14em;color:var(--ink-3);display:flex;justify-content:space-between;align-items:center}
-.day-name .gate{width:26px;height:26px;opacity:0;transform:scale(.5);transition:opacity .4s,transform .5s var(--ease)}
-.chore{padding:16px;border-radius:18px;background:var(--paper);font-size:14.5px;line-height:1.45;min-height:92px;transition:color .5s,background .5s}
-.chore small{display:block;font:500 11px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
-.done{margin-top:86px;padding:16px;border-radius:18px;background:var(--teal-soft);font-size:14.5px;line-height:1.45;transform:translateY(12px);opacity:.0;transition:opacity .5s,transform .6s var(--ease)}
-.done b{display:block;margin-bottom:4px;font-size:15px}
-.okchip{align-self:flex-start;padding:8px 12px;border-radius:10px;background:var(--coral-soft);color:var(--coral-ink);font-size:13px;font-weight:600;opacity:0;transition:opacity .5s .2s}
-.week[data-mode="con"] .chore{color:var(--ink-3);background:#F7F4EF}
-.week[data-mode="con"] .chore span{text-decoration:line-through;text-decoration-color:rgba(16,20,24,.35)}
-.week[data-mode="con"] .done{opacity:1;transform:none}
-.week[data-mode="con"] .okchip{opacity:1}
-.week[data-mode="con"] .day-name .gate{opacity:1;transform:none}
-.week[data-mode="prima"] .week-ribbon path{stroke-dashoffset:1400}
-.week-foot{margin-top:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;padding-top:22px;border-top:1px solid var(--line)}
-.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:14px;color:var(--ink-2)}
-.legend span{display:flex;align-items:center;gap:8px}
-.legend i{width:22px;height:8px;border-radius:4px;display:inline-block}
-.week-sum{font:500 14px/1.4 var(--f-mono);color:var(--ink-2)}
+.week-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:end}
+.week-top .lede{margin:0}
+.week .h2{font-size:clamp(40px,4.4vw,66px)}
+.wk-head,.wk-row{display:grid;grid-template-columns:118px minmax(0,1fr) clamp(96px,11vw,170px) minmax(0,1.15fr) 190px;gap:0 18px;align-items:center}
+.wk-head{margin-top:clamp(32px,4vw,52px);padding-bottom:12px;border-bottom:1px solid var(--line);font:500 11.5px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.wk-head span:last-child{color:var(--coral-ink)}
+.wk-rows{list-style:none;margin:0;padding:0}
+.wk-row{padding-block:16px;border-bottom:1px solid var(--line)}
+.wk-day{font:500 12.5px/1.2 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0}
+.wk-k{display:none}
+.wk-before{padding:16px 18px;border-radius:18px;background:var(--paper);color:var(--ink-2)}
+.wk-before p,.wk-after p{margin:0;font-size:15px;line-height:1.45}
+.wk-flow{position:relative;height:64px;color:var(--c)}
+.wk-flow svg{position:absolute;overflow:visible}
+.wk-flow .h{inset:0;width:100%;height:100%}
+.wk-flow .v{display:none}
+.wk-flow .rb{fill:none;stroke:currentColor;stroke-linecap:round;stroke-dasharray:260;stroke-dashoffset:0}
+.wk-flow .rb.a{stroke-width:9;opacity:.55}
+.wk-flow .rb.b{stroke-width:4;opacity:.8}
+.wk-flow .node{left:50%;top:50%;width:34px;height:34px;transform:translate(-50%,-50%)}
+.wk-flow .node polygon{fill:#fff;stroke:currentColor;stroke-width:2.5}
+.wk-flow .node polygon.in{fill:currentColor;stroke:none;opacity:.9}
+.wk-after{position:relative;padding:16px 18px 16px 22px;border-radius:18px;background:color-mix(in oklab,var(--c) 14%,white);box-shadow:inset 0 0 0 1px color-mix(in oklab,var(--c) 30%,white)}
+.wk-after::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:5px;border-radius:0 4px 4px 0;background:var(--c)}
+.wk-after b{display:block;font:700 17px/1.25 var(--f-display);letter-spacing:-.01em;margin-bottom:4px}
+.wk-after a{display:inline-flex;gap:6px;margin-top:8px;font-size:13.5px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid currentColor}
+.wk-after a:hover{color:var(--teal)}
+.wk-ok{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:var(--coral-soft);color:#7A2E15;font-size:14px;font-weight:600;line-height:1.3}
+.wk-ok .d{flex:none;width:14px;height:14px;border-radius:3px;rotate:22.5deg;background:var(--coral);box-shadow:0 0 0 4px rgba(224,97,58,.18)}
+.week-foot{margin-top:clamp(24px,3vw,36px);display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center}
+.week-sum{margin:0;font-size:16px;color:var(--ink-2);max-width:62ch}
 .week-sum b{color:var(--ink)}
+.wk-cta{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+.wk-cta:hover{background:#000}
+/* animazione riga per riga (solo con JS e movimento consentito) */
+.wk-anim .wk-row .wk-before{transition:background .6s,color .6s}
+.wk-anim .wk-row .rb{transition:stroke-dashoffset 1s var(--ease) .15s}
+.wk-anim .wk-row .node{transition:transform .5s var(--ease) .45s}
+.wk-anim .wk-row .wk-after{transition:opacity .6s .7s,transform .7s var(--ease) .7s}
+.wk-anim .wk-row .wk-ok{transition:opacity .5s 1.05s,transform .6s var(--ease) 1.05s}
+.wk-anim .wk-row:not(.in) .rb{stroke-dashoffset:260}
+.wk-anim .wk-row:not(.in) .node{transform:translate(-50%,-50%) scale(.4)}
+.wk-anim .wk-row:not(.in) .wk-after{opacity:0;transform:translateX(-14px)}
+.wk-anim .wk-row:not(.in) .wk-ok{opacity:0;transform:scale(.92)}
+.wk-anim .wk-row.in .wk-before{background:#F8F5F0;color:var(--ink-3)}
+@media (max-width:1100px){.wk-head,.wk-row{grid-template-columns:96px minmax(0,1fr) 84px minmax(0,1.15fr) 160px;gap:0 12px}}
 @media (max-width:900px){
-  .days{grid-template-columns:1fr;gap:10px}
-  .week-ribbon{display:none}
-  .day{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 10px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-  .day-name{grid-column:1/-1}
-  .chore{min-height:0}
-  .done{margin-top:0;opacity:.35;transform:none}
-  .okchip{grid-column:2}
-  .week[data-mode="prima"] .okchip{display:none}
+  .week-top{grid-template-columns:1fr}
+  .wk-head{display:none}
+  .wk-row{grid-template-columns:1fr;gap:0;padding-block:22px}
+  .wk-day{margin-bottom:10px;color:var(--ink)}
+  .wk-k{display:block;font:500 10.5px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+  .wk-flow{height:52px}
+  .wk-flow .h{display:none}
+  .wk-flow .v{display:block;left:24px;top:0;width:40px;height:100%}
+  .wk-flow .node{left:44px;width:28px;height:28px}
+  .wk-ok{margin-top:8px;align-self:start}
+  .wk-ok .wk-k{display:none}
+  .wk-anim .wk-row:not(.in) .wk-after{transform:translateY(-10px)}
+}
+@media (prefers-reduced-motion:reduce){.wk-anim .wk-row .wk-after,.wk-anim .wk-row .wk-ok{opacity:1!important;transform:none!important}}
 }
 
 /* PRINCIPLES */
@@ -571,6 +595,8 @@ footer{padding-block:48px 36px}
 .rail a.on i{background:var(--coral);transform:rotate(22.5deg) scale(1.35)}
 .rail a.on span{opacity:1;transform:none;color:var(--ink)}
 @media (max-width:1540px){.rail{display:none}}
+.links a{white-space:nowrap}
+@media (max-width:1240px) and (min-width:981px){.links a{padding:9px 10px;font-size:13.5px}.nav-cta{padding:0 18px}}
 
 /* reveal */
 .rv{transform:translateY(26px);transition:transform .9s var(--ease)}
@@ -694,65 +720,57 @@ footer{padding-block:48px 36px}
 </section>
 
 <!-- WEEK -->
-<section class="week" id="settimana" data-mode="prima" aria-labelledby="wk-h">
+<section class="week" id="settimana" aria-labelledby="wk-h">
   <div class="wrap">
     <div class="week-card rv">
       <div class="week-top">
         <div style="display:flex;flex-direction:column;gap:14px">
           <span class="eyebrow"><i></i>La tua settimana</span>
-          <h2 class="h2" id="wk-h">Cinque giorni.<br><span class="s">Prima e con Octagon.</span></h2>
+          <h2 class="h2" id="wk-h">Il lavoro passa al sistema.<br><span class="s">Le decisioni restano a te.</span></h2>
         </div>
-        <div class="toggle" role="group" aria-label="Mostra la settimana">
-          <span class="knob" id="knob" aria-hidden="true"></span>
-          <button type="button" data-mode="prima" aria-pressed="true">Prima, a mano</button>
-          <button type="button" data-mode="con" aria-pressed="false">Con Octagon</button>
-        </div>
+        <p class="lede">Cinque lavori che tornano ogni settimana. A sinistra come li fai oggi, a destra cosa fa Octagon. Il rombo coral segna il punto in cui il sistema si ferma e aspetta il tuo ok su Telegram.</p>
       </div>
-
-      <div class="week-stage">
-        <svg class="week-ribbon" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0 40 C 150 5 250 75 400 40 S 650 5 800 40 S 1050 75 1200 40" stroke="#5FB3A8" stroke-opacity=".55" stroke-dasharray="1400" stroke-dashoffset="0"/>
-          <path d="M0 56 C 160 22 260 88 410 56 S 660 22 810 56 S 1060 88 1200 56" stroke="#8C7CE0" stroke-opacity=".4" stroke-dasharray="1400" stroke-dashoffset="0" style="transition-delay:.15s"/>
-        </svg>
-        <div class="days">
-          <div class="day">
-            <div class="day-name">LUNEDÌ</div>
-            <div class="chore"><small>A mano</small><span>Aggiornare catalogo e schede prodotto, una per una</span></div>
-            <div class="done"><b>Fatto dal sistema</b>Schede e annunci allineati su negozio e marketplace.</div>
-          </div>
-          <div class="day">
-            <div class="day-name">MARTEDÌ <svg class="gate" viewBox="0 0 100 100" aria-hidden="true"><polygon points="29.3,4 70.7,4 96,29.3 96,70.7 70.7,96 29.3,96 4,70.7 4,29.3" fill="#E0613A"/><path d="M32 52 L45 64 L70 38" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="chore"><small>A mano</small><span>Preparare i post e i video della settimana</span></div>
-            <div class="done"><b>Pronti in bozza</b>Testi, immagini e video verticali da una foto.</div>
-            <div class="okchip">1 ok su Telegram</div>
-          </div>
-          <div class="day">
-            <div class="day-name">MERCOLEDÌ <svg class="gate" viewBox="0 0 100 100" aria-hidden="true"><polygon points="29.3,4 70.7,4 96,29.3 96,70.7 70.7,96 29.3,96 4,70.7 4,29.3" fill="#E0613A"/><path d="M32 52 L45 64 L70 38" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="chore"><small>A mano</small><span>Controllare i prezzi dei concorrenti</span></div>
-            <div class="done"><b>Letti ogni giorno</b>Proposta di prezzo, sempre sopra il minimo.</div>
-            <div class="okchip">1 ok su Telegram</div>
-          </div>
-          <div class="day">
-            <div class="day-name">GIOVEDÌ</div>
-            <div class="chore"><small>A mano</small><span>Seguire e correggere le campagne</span></div>
-            <div class="done"><b>Ottimizzate</b>Meta, Google e TikTok, dentro il limite di spesa.</div>
-          </div>
-          <div class="day">
-            <div class="day-name">VENERDÌ <svg class="gate" viewBox="0 0 100 100" aria-hidden="true"><polygon points="29.3,4 70.7,4 96,29.3 96,70.7 70.7,96 29.3,96 4,70.7 4,29.3" fill="#E0613A"/><path d="M32 52 L45 64 L70 38" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div class="chore"><small>A mano</small><span>Rispondere a richieste e preventivi arretrati</span></div>
-            <div class="done"><b>Risposte pronte</b>Bozze di risposta e preventivo per ogni richiesta.</div>
-            <div class="okchip">1 ok su Telegram</div>
-          </div>
-        </div>
-      </div>
-
+      <div class="wk-head" aria-hidden="true"><span></span><span>Oggi, a mano</span><span></span><span>Con Octagon</span><span>Il tuo ok</span></div>
+      <ol class="wk-rows">
+        <li class="wk-row" style="--c:#5FB3A8;--i:0">
+          <h3 class="wk-day">Lunedì</h3>
+          <div class="wk-before"><span class="wk-k">Oggi, a mano</span><p>Aggiornare catalogo e schede prodotto, una per una.</p></div>
+          <div class="wk-flow" aria-hidden="true"><svg class="h" viewBox="0 0 200 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M0 32 C 40 12, 60 52, 100 32 S 160 12, 200 32"/><path class="rb b" d="M0 38 C 42 20, 62 58, 100 38 S 158 18, 200 38"/></svg><svg class="node" viewBox="0 0 40 40" focusable="false"><polygon points="36.6,26.9 26.9,36.6 13.1,36.6 3.4,26.9 3.4,13.1 13.1,3.4 26.9,3.4 36.6,13.1"/><polygon class="in" points="28.3,23.4 23.4,28.3 16.6,28.3 11.7,23.4 11.7,16.6 16.6,11.7 23.4,11.7 28.3,16.6"/></svg><svg class="v" viewBox="0 0 40 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M20 0 C 28 20, 12 42, 20 64"/><path class="rb b" d="M24 0 C 32 22, 16 44, 24 64"/></svg></div>
+          <div class="wk-after"><span class="wk-k">Con Octagon</span><b>Schede allineate</b><p>Negozio e marketplace aggiornati dal sistema.</p><a href="/servizi/automazione">Automazione operativa <span aria-hidden="true">→</span></a></div>
+          <div class="wk-ok"><span class="wk-k">Il tuo ok</span><span class="d" aria-hidden="true"></span><span class="t">Prima di pubblicare</span></div>
+        </li>
+        <li class="wk-row" style="--c:#8C7CE0;--i:1">
+          <h3 class="wk-day">Martedì</h3>
+          <div class="wk-before"><span class="wk-k">Oggi, a mano</span><p>Preparare i post e i video della settimana.</p></div>
+          <div class="wk-flow" aria-hidden="true"><svg class="h" viewBox="0 0 200 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M0 32 C 40 12, 60 52, 100 32 S 160 12, 200 32"/><path class="rb b" d="M0 38 C 42 20, 62 58, 100 38 S 158 18, 200 38"/></svg><svg class="node" viewBox="0 0 40 40" focusable="false"><polygon points="36.6,26.9 26.9,36.6 13.1,36.6 3.4,26.9 3.4,13.1 13.1,3.4 26.9,3.4 36.6,13.1"/><polygon class="in" points="28.3,23.4 23.4,28.3 16.6,28.3 11.7,23.4 11.7,16.6 16.6,11.7 23.4,11.7 28.3,16.6"/></svg><svg class="v" viewBox="0 0 40 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M20 0 C 28 20, 12 42, 20 64"/><path class="rb b" d="M24 0 C 32 22, 16 44, 24 64"/></svg></div>
+          <div class="wk-after"><span class="wk-k">Con Octagon</span><b>Post e video in bozza</b><p>Testi, foto e video brevi nel tono del marchio.</p><a href="/servizi/social">Social e shop <span aria-hidden="true">→</span></a></div>
+          <div class="wk-ok"><span class="wk-k">Il tuo ok</span><span class="d" aria-hidden="true"></span><span class="t">Prima che un post esca</span></div>
+        </li>
+        <li class="wk-row" style="--c:#7FA7E0;--i:2">
+          <h3 class="wk-day">Mercoledì</h3>
+          <div class="wk-before"><span class="wk-k">Oggi, a mano</span><p>Controllare a mano i prezzi dei concorrenti.</p></div>
+          <div class="wk-flow" aria-hidden="true"><svg class="h" viewBox="0 0 200 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M0 32 C 40 12, 60 52, 100 32 S 160 12, 200 32"/><path class="rb b" d="M0 38 C 42 20, 62 58, 100 38 S 158 18, 200 38"/></svg><svg class="node" viewBox="0 0 40 40" focusable="false"><polygon points="36.6,26.9 26.9,36.6 13.1,36.6 3.4,26.9 3.4,13.1 13.1,3.4 26.9,3.4 36.6,13.1"/><polygon class="in" points="28.3,23.4 23.4,28.3 16.6,28.3 11.7,23.4 11.7,16.6 16.6,11.7 23.4,11.7 28.3,16.6"/></svg><svg class="v" viewBox="0 0 40 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M20 0 C 28 20, 12 42, 20 64"/><path class="rb b" d="M24 0 C 32 22, 16 44, 24 64"/></svg></div>
+          <div class="wk-after"><span class="wk-k">Con Octagon</span><b>Prezzi letti e confrontati</b><p>Una proposta di prezzo, sempre sopra il tuo minimo.</p><a href="/servizi/analisi">Analisi di mercato <span aria-hidden="true">→</span></a></div>
+          <div class="wk-ok"><span class="wk-k">Il tuo ok</span><span class="d" aria-hidden="true"></span><span class="t">Prima di cambiare un prezzo</span></div>
+        </li>
+        <li class="wk-row" style="--c:#F0B08A;--i:3">
+          <h3 class="wk-day">Giovedì</h3>
+          <div class="wk-before"><span class="wk-k">Oggi, a mano</span><p>Seguire e correggere le campagne ogni giorno.</p></div>
+          <div class="wk-flow" aria-hidden="true"><svg class="h" viewBox="0 0 200 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M0 32 C 40 12, 60 52, 100 32 S 160 12, 200 32"/><path class="rb b" d="M0 38 C 42 20, 62 58, 100 38 S 158 18, 200 38"/></svg><svg class="node" viewBox="0 0 40 40" focusable="false"><polygon points="36.6,26.9 26.9,36.6 13.1,36.6 3.4,26.9 3.4,13.1 13.1,3.4 26.9,3.4 36.6,13.1"/><polygon class="in" points="28.3,23.4 23.4,28.3 16.6,28.3 11.7,23.4 11.7,16.6 16.6,11.7 23.4,11.7 28.3,16.6"/></svg><svg class="v" viewBox="0 0 40 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M20 0 C 28 20, 12 42, 20 64"/><path class="rb b" d="M24 0 C 32 22, 16 44, 24 64"/></svg></div>
+          <div class="wk-after"><span class="wk-k">Con Octagon</span><b>Campagne seguite</b><p>Meta, Google e TikTok, dentro il limite di spesa.</p><a href="/servizi/campagne">Campagne <span aria-hidden="true">→</span></a></div>
+          <div class="wk-ok"><span class="wk-k">Il tuo ok</span><span class="d" aria-hidden="true"></span><span class="t">Se cambia il budget</span></div>
+        </li>
+        <li class="wk-row" style="--c:#5FB3A8;--i:4">
+          <h3 class="wk-day">Venerdì</h3>
+          <div class="wk-before"><span class="wk-k">Oggi, a mano</span><p>Rispondere a richieste e preventivi arretrati.</p></div>
+          <div class="wk-flow" aria-hidden="true"><svg class="h" viewBox="0 0 200 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M0 32 C 40 12, 60 52, 100 32 S 160 12, 200 32"/><path class="rb b" d="M0 38 C 42 20, 62 58, 100 38 S 158 18, 200 38"/></svg><svg class="node" viewBox="0 0 40 40" focusable="false"><polygon points="36.6,26.9 26.9,36.6 13.1,36.6 3.4,26.9 3.4,13.1 13.1,3.4 26.9,3.4 36.6,13.1"/><polygon class="in" points="28.3,23.4 23.4,28.3 16.6,28.3 11.7,23.4 11.7,16.6 16.6,11.7 23.4,11.7 28.3,16.6"/></svg><svg class="v" viewBox="0 0 40 64" preserveAspectRatio="none" focusable="false"><path class="rb a" d="M20 0 C 28 20, 12 42, 20 64"/><path class="rb b" d="M24 0 C 32 22, 16 44, 24 64"/></svg></div>
+          <div class="wk-after"><span class="wk-k">Con Octagon</span><b>Risposte pronte</b><p>Una bozza di risposta e di preventivo per ogni richiesta.</p><a href="/servizi/clienti">Servizio clienti <span aria-hidden="true">→</span></a></div>
+          <div class="wk-ok"><span class="wk-k">Il tuo ok</span><span class="d" aria-hidden="true"></span><span class="t">Prima di ogni invio</span></div>
+        </li>
+      </ol>
       <div class="week-foot">
-        <div class="legend">
-          <span><i style="background:#E6DFD5"></i>lavoro a mano</span>
-          <span><i style="background:var(--mint)"></i>fatto dal sistema</span>
-          <span><i style="background:var(--coral)"></i>il tuo ok</span>
-        </div>
-        <p class="week-sum" id="weekSum" aria-live="polite">Cinque lavori ripetuti, tutti a mano.</p>
+        <p class="week-sum"><b>Cinque lavori presi in carico.</b> Ogni azione che tocca clienti, prezzi o spesa parte solo dopo il tuo ok.</p>
+        <a class="wk-cta" href="#cancello">Guarda come funziona l'ok <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -1136,20 +1154,13 @@ const lightWords = () => {
   wEls.forEach((w, i) => w.classList.toggle('dim', i >= n));
 };
 
-/* week */
-const week = $('#settimana'), knob = $('#knob'), wkBtns = $$('.toggle button', week), weekSum = $('#weekSum');
-const placeKnob = () => { const b = wkBtns.find(x => x.getAttribute('aria-pressed') === 'true'); knob.style.width = b.offsetWidth + 'px'; knob.style.transform = `translateX(${b.offsetLeft - 5}px)`; };
-const setWeek = (m) => {
-  week.dataset.mode = m;
-  wkBtns.forEach(b => b.setAttribute('aria-pressed', b.dataset.mode === m));
-  weekSum.innerHTML = m === 'con' ? 'Cinque lavori presi in carico. A te restano <b>3 ok</b> su Telegram.' : 'Cinque lavori ripetuti, tutti a mano.';
-  placeKnob();
-};
-wkBtns.forEach(b => b.addEventListener('click', () => { week._touched = true; setWeek(b.dataset.mode); }));
-addEventListener('resize', placeKnob); document.fonts && document.fonts.ready.then(placeKnob); placeKnob();
-new IntersectionObserver((ents, o) => {
-  if (ents[0].isIntersecting) { o.disconnect(); setTimeout(() => { if (!week._touched) setWeek('con'); }, RM ? 0 : 1400); }
-}, { threshold: .45 }).observe(week);
+/* week — righe che si animano quando entrano in vista; senza JS o con movimento ridotto restano nello stato finale */
+const week = $('#settimana');
+if (!RM && 'IntersectionObserver' in window) {
+  week.classList.add('wk-anim');
+  const wkIO = new IntersectionObserver((ents) => ents.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); wkIO.unobserve(en.target); } }), { threshold: .55 });
+  $$('.wk-row', week).forEach(r => wkIO.observe(r));
+}
 
 /* journey (pinned fly-through) */
 const jr = $('#viaggio'), L = $$('.jl', jr), steps = $$('.j-step', jr), dots = $$('.j-prog i', jr);
