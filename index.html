@@ -564,12 +564,19 @@ form.demo h3{font-size:24px;letter-spacing:-.02em}
 .field.bad select,.sub.bad select{border-color:#C24A2A}
 fieldset.field{border:0;margin:0;padding:0;min-width:0}
 fieldset.field legend{font-size:13.5px;font-weight:600;padding:0;margin-bottom:6px}
-.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;border-radius:16px;background:var(--paper)}
-.seg label{position:relative;display:block;cursor:pointer}
-.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
-.seg span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;padding:6px 10px;border-radius:12px;font-size:14.5px;font-weight:600;color:var(--ink-2);transition:background .2s,color .2s}
-.seg input:checked+span{background:var(--ink);color:#fff}
-.seg input:focus-visible+span{outline:3px solid var(--lilac);outline-offset:2px}
+.kseg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kseg label{position:relative;display:block;cursor:pointer}
+.kseg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.kseg span{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 12px;border-radius:14px;font-size:14.5px;font-weight:700;white-space:nowrap;transition:background .2s,color .2s,box-shadow .2s,transform .2s}
+.kseg span::before{content:"";width:16px;height:16px;flex:none;border-radius:50%;box-shadow:inset 0 0 0 2px currentColor;transition:background .2s,box-shadow .2s}
+.kseg label:nth-child(1) span{--c1:#C4502B;--c2:#E0613A;--soft:#FBE3D8;color:#9A3A1C}
+.kseg label:nth-child(2) span{--c1:#166B61;--c2:#1F8A78;--soft:#DDEFEB;color:#155D58}
+.kseg span{background:var(--soft);box-shadow:inset 0 0 0 1.5px color-mix(in oklab,var(--c2) 45%,white)}
+.kseg label:hover span{transform:translateY(-1px)}
+.kseg input:checked+span{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;box-shadow:0 12px 26px -12px var(--c1)}
+.kseg input:checked+span::before{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.2l2.6 2.6L12 5.4' stroke='%23101418' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat;box-shadow:none}
+.kseg input:focus-visible+span{outline:3px solid var(--lilac);outline-offset:2px}
+@media (max-width:560px){.kseg{grid-template-columns:1fr;gap:8px}.kseg span{justify-content:flex-start;padding:0 16px}}
 .slot-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
 .slot-grid .sub{display:flex;flex-direction:column;gap:6px;min-width:0}
 .slot-grid label{font-size:12.5px;color:var(--ink-3);font-weight:500}
@@ -1094,7 +1101,7 @@ footer{padding-block:48px 36px}
           <div class="field"><label for="f-mail">Email di lavoro</label><input id="f-mail" name="email" type="email" autocomplete="email" required><span class="err" id="e-mail"></span></div>
           <div class="field"><label for="f-biz">Attività</label><input id="f-biz" name="company" autocomplete="organization" placeholder="Es. negozio di abbigliamento"></div>
           <fieldset class="field kind"><legend>Cosa ti serve</legend>
-            <div class="seg"><label><input type="radio" name="kind" value="demo" checked><span>Una demo</span></label><label><input type="radio" name="kind" value="offerta"><span>Un'offerta su misura</span></label></div>
+            <div class="kseg"><label><input type="radio" name="kind" value="demo" checked><span>Una demo</span></label><label><input type="radio" name="kind" value="offerta"><span>Offerta su misura</span></label></div>
           </fieldset>
           <fieldset class="field slot"><legend>Quando ti chiamiamo</legend>
             <div class="slot-grid">
