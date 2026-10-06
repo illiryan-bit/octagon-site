@@ -551,6 +551,24 @@ form.demo h3{font-size:24px;letter-spacing:-.02em}
 .field input,.field textarea{font:400 16px/1.4 var(--f-body);padding:13px 14px;border-radius:14px;border:1px solid var(--line);background:#fff;color:var(--ink);width:100%}
 .field textarea{min-height:92px;resize:vertical}
 .field input:focus,.field textarea:focus{outline:2px solid var(--teal);outline-offset:0;border-color:var(--teal)}
+.field select{font:400 16px/1.4 var(--f-body);padding:13px 40px 13px 14px;border-radius:14px;border:1px solid var(--line);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233A414A' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--ink);width:100%;appearance:none;-webkit-appearance:none}
+.field select:disabled{color:var(--ink-3);background-color:#F8F5F0}
+.field select:focus{outline:2px solid var(--teal);outline-offset:0;border-color:var(--teal)}
+.field.bad select,.sub.bad select{border-color:#C24A2A}
+fieldset.field{border:0;margin:0;padding:0;min-width:0}
+fieldset.field legend{font-size:13.5px;font-weight:600;padding:0;margin-bottom:6px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;border-radius:16px;background:var(--paper)}
+.seg label{position:relative;display:block;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;padding:6px 10px;border-radius:12px;font-size:14.5px;font-weight:600;color:var(--ink-2);transition:background .2s,color .2s}
+.seg input:checked+span{background:var(--ink);color:#fff}
+.seg input:focus-visible+span{outline:3px solid var(--lilac);outline-offset:2px}
+.slot-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.slot-grid .sub{display:flex;flex-direction:column;gap:6px;min-width:0}
+.slot-grid label{font-size:12.5px;color:var(--ink-3);font-weight:500}
+.slot-grid .err{font-size:13px;color:#A8321A}
+@media (max-width:480px){.slot-grid{grid-template-columns:1fr}}
+.slot-note{margin:8px 0 0;font-size:13px;color:var(--ink-3);line-height:1.45}
 .field .err{font-size:13px;color:#A8321A;min-height:0}
 .field.bad input,.field.bad textarea{border-color:#C24A2A}
 .form-note{font-size:13px;color:var(--ink-3)}
@@ -1060,7 +1078,7 @@ footer{padding-block:48px 36px}
           <p>Raccontacelo in 20 minuti. Ti diciamo cosa prende in carico il sistema, e cosa no.</p>
         </div>
         <form class="demo" id="demoForm" action="/api/demo" method="post" data-endpoint="/api/demo" novalidate>
-          <h3>Richiedi la demo</h3>
+          <h3>Fissa una call di 20 minuti</h3>
           <p class="plan-chip" id="planChip" hidden>Piano di interesse: <b id="planName"></b> <button type="button" id="planClear" aria-label="Rimuovi il piano scelto">×</button></p>
           <input type="hidden" name="plan" id="f-plan">
           <input type="hidden" name="t" id="f-t">
@@ -1068,8 +1086,18 @@ footer{padding-block:48px 36px}
           <div class="field"><label for="f-name">Nome</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name"></span></div>
           <div class="field"><label for="f-mail">Email di lavoro</label><input id="f-mail" name="email" type="email" autocomplete="email" required><span class="err" id="e-mail"></span></div>
           <div class="field"><label for="f-biz">Attività</label><input id="f-biz" name="company" autocomplete="organization" placeholder="Es. negozio di abbigliamento"></div>
+          <fieldset class="field kind"><legend>Cosa ti serve</legend>
+            <div class="seg"><label><input type="radio" name="kind" value="demo" checked><span>Una demo</span></label><label><input type="radio" name="kind" value="offerta"><span>Un'offerta su misura</span></label></div>
+          </fieldset>
+          <fieldset class="field slot"><legend>Quando ti chiamiamo</legend>
+            <div class="slot-grid">
+              <div class="sub"><label for="f-day">Giorno</label><select id="f-day" name="day" required aria-describedby="slotNote e-day"><option value="">Scegli il giorno</option></select><span class="err" id="e-day"></span></div>
+              <div class="sub"><label for="f-time">Orario</label><select id="f-time" name="time" required aria-describedby="slotNote e-time" disabled><option value="">Prima il giorno</option></select><span class="err" id="e-time"></span></div>
+            </div>
+            <p class="slot-note" id="slotNote">Dal lunedì al venerdì, dalle 14:00 alle 18:00, ora italiana. Ti confermiamo l'appuntamento per email.</p>
+          </fieldset>
           <div class="field"><label for="f-work">Il lavoro che si ripete</label><textarea id="f-work" name="work" placeholder="Es. ogni settimana aggiorno a mano prezzi e annunci"></textarea></div>
-          <button class="btn btn-primary" type="submit">Prenota una demo <span class="arr" aria-hidden="true">→</span></button>
+          <button class="btn btn-primary" type="submit">Prenota la call <span class="arr" aria-hidden="true">→</span></button>
           <p class="form-note">Rispondiamo entro un giorno lavorativo. Usiamo i tuoi dati solo per rispondere alla richiesta: <a href="/privacy">informativa privacy</a>.</p>
           <p class="form-note">Preferisci scriverci? <a class="wa-inline" href="https://wa.me/393496899846?text=Ciao%20Octagon%2C%20vorrei%20sapere%20cosa%20pu%C3%B2%20prendere%20in%20carico%20il%20sistema%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener">Scrivici su WhatsApp<span class="sr"> (si apre in una nuova finestra)</span></a>.</p>
           <div id="formState" aria-live="polite"></div>
@@ -1380,11 +1408,32 @@ const setPlan = (p) => { planIn.value = p || ''; $('#planName').textContent = p 
 try { const p = new URLSearchParams(location.search).get('piano'); if (p) setPlan(p.slice(0, 80)); } catch {}
 $('#planClear').addEventListener('click', () => { setPlan(''); $('#f-name').focus(); });
 const showState = (kind, html) => { fstate.className = 'form-state ' + kind; fstate.innerHTML = html; };
+/* slot delle call: lun–ven, 14:00–17:40 ogni 20 minuti, ora italiana; dal giorno lavorativo successivo, per 10 giorni lavorativi.
+   Le stesse regole sono verificate dal server in api/demo.js. */
+const HOLIDAYS = ['2026-11-01','2026-12-08','2026-12-25','2026-12-26','2027-01-01','2027-01-06','2027-03-29','2027-04-25','2027-05-01','2027-06-02','2027-08-15','2027-11-01','2027-12-08','2027-12-25','2027-12-26'];
+const SLOT_TIMES = []; for (let m = 14 * 60; m <= 17 * 60 + 40; m += 20) SLOT_TIMES.push(String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'));
+const romeToday = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+const fmtDay = (iso, long) => new Intl.DateTimeFormat('it-IT', { timeZone: 'UTC', weekday: long ? 'long' : 'short', day: 'numeric', month: long ? 'long' : 'short' }).format(new Date(iso + 'T12:00:00Z'));
+const nextDays = (n = 10) => {
+  const out = []; let d = new Date(romeToday() + 'T12:00:00Z');
+  while (out.length < n) { d = new Date(d.getTime() + 864e5); const iso = d.toISOString().slice(0, 10), wd = d.getUTCDay(); if (wd > 0 && wd < 6 && !HOLIDAYS.includes(iso)) out.push(iso); }
+  return out;
+};
+const daySel = $('#f-day'), timeSel = $('#f-time');
+daySel.insertAdjacentHTML('beforeend', nextDays().map(d => `<option value="${d}">${fmtDay(d).replace(/^\w/, c => c.toUpperCase())}</option>`).join(''));
+const fillTimes = () => {
+  const has = !!daySel.value; timeSel.disabled = !has;
+  timeSel.innerHTML = has ? '<option value="">Scegli l\'orario</option>' + SLOT_TIMES.map(t => `<option value="${t}">${t}</option>`).join('') : '<option value="">Prima il giorno</option>';
+};
+daySel.addEventListener('change', () => { fillTimes(); daySel.closest('.sub').classList.remove('bad'); $('#e-day').textContent = ''; if (daySel.value) timeSel.focus(); });
+timeSel.addEventListener('change', () => { timeSel.closest('.sub').classList.remove('bad'); $('#e-time').textContent = ''; });
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault(); if (fsub.getAttribute('aria-busy') === 'true') return;
   let ok = true;
   const req = [['f-name', 'e-name', v => v.trim().length > 1, 'Scrivi il tuo nome.'], ['f-mail', 'e-mail', v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()), "Serve un'email valida, per esempio nome@azienda.it."]];
   req.forEach(([f, er, test, msg]) => { const inp = $('#' + f), bad = !test(inp.value); inp.closest('.field').classList.toggle('bad', bad); inp.setAttribute('aria-invalid', bad); $('#' + er).textContent = bad ? msg : ''; if (bad && ok) { inp.focus(); ok = false; } });
+  [[daySel, 'e-day', 'Scegli il giorno della call.'], [timeSel, 'e-time', "Scegli l'orario."]].forEach(([sel, er, msg]) => { const bad = !sel.value; sel.closest('.sub').classList.toggle('bad', bad); sel.setAttribute('aria-invalid', bad); $('#' + er).textContent = bad ? msg : ''; if (bad && ok) { (sel.disabled ? daySel : sel).focus(); ok = false; } });
   if (!ok) return;
   const label = fsub.innerHTML;
   fsub.setAttribute('aria-busy', 'true'); fsub.disabled = true; fsub.textContent = 'Invio in corso…'; showState('', '');
@@ -1392,13 +1441,13 @@ form.addEventListener('submit', async (e) => {
     const r = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
     const data = await r.json().catch(() => ({}));
     if (r.status === 422 && data.fields) {
-      Object.entries(data.fields).forEach(([k, msg]) => { const inp = $('#f-' + (k === 'email' ? 'mail' : k)), er = $('#e-' + (k === 'email' ? 'mail' : k)); if (inp && er) { inp.closest('.field').classList.add('bad'); inp.setAttribute('aria-invalid', true); er.textContent = msg; } });
+      Object.entries(data.fields).forEach(([k, msg]) => { const inp = $('#f-' + (k === 'email' ? 'mail' : k)), er = $('#e-' + (k === 'email' ? 'mail' : k)); if (inp && er) { (inp.closest('.sub') || inp.closest('.field')).classList.add('bad'); inp.setAttribute('aria-invalid', true); er.textContent = msg; } });
       throw new Error('invalid');
     }
     if (!r.ok || !data.ok) throw new Error('send');
-    const name = $('#f-name').value.trim().split(/\s+/)[0];
-    form.reset(); setPlan(''); fT.value = Date.now();
-    showState('ok', `Grazie${name ? ', ' + name.replace(/[<>&]/g, '') : ''}. La richiesta è arrivata: ti scriviamo entro un giorno lavorativo per fissare la demo.`);
+    const name = $('#f-name').value.trim().split(/\s+/)[0], when = `${fmtDay(daySel.value, true)} alle ${timeSel.value}`;
+    form.reset(); setPlan(''); fillTimes(); fT.value = Date.now();
+    showState('ok', `Grazie${name ? ', ' + name.replace(/[<>&]/g, '') : ''}. Richiesta ricevuta per ${when} (ora italiana). Ti abbiamo mandato un riepilogo per email: ti confermiamo la call entro un giorno lavorativo.`);
   } catch (err) {
     if (err.message !== 'invalid') showState('err', `Invio non riuscito. Riprova tra poco oppure scrivici a <a href="mailto:${MAIL}?subject=Richiesta%20demo">${MAIL}</a> o <a href="${document.querySelector('.wa-fab').href}" target="_blank" rel="noopener">su WhatsApp</a>.`);
   } finally {
