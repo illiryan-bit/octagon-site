@@ -129,3 +129,7 @@ def area(key):
 
 def services_in(key):
     return [s for s in SERVICES if s["area"] == key]
+
+# WhatsApp Business: pulsante «Scrivici su WhatsApp» (link wa.me, nessun server in mezzo)
+WHATSAPP = "393496899846"
+WHATSAPP_TEXT = "Ciao Octagon, vorrei sapere cosa può prendere in carico il sistema per la mia attività."

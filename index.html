@@ -584,6 +584,7 @@ footer{padding-block:48px 36px}
   .rv{transform:none}
 }
 </style>
+<link rel="stylesheet" href="/wa.css"><!-- @wa-css -->
 </head>
 <body>
 <a class="skip" href="#main">Vai al contenuto</a>
@@ -1052,6 +1053,7 @@ footer{padding-block:48px 36px}
           <div class="field"><label for="f-work">Il lavoro che si ripete</label><textarea id="f-work" name="work" placeholder="Es. ogni settimana aggiorno a mano prezzi e annunci"></textarea></div>
           <button class="btn btn-primary" type="submit">Prenota una demo <span class="arr" aria-hidden="true">→</span></button>
           <p class="form-note">Rispondiamo entro un giorno lavorativo. Usiamo i tuoi dati solo per rispondere alla richiesta: <a href="/privacy">informativa privacy</a>.</p>
+          <p class="form-note">Preferisci scriverci? <a class="wa-inline" href="https://wa.me/393496899846?text=Ciao%20Octagon%2C%20vorrei%20sapere%20cosa%20pu%C3%B2%20prendere%20in%20carico%20il%20sistema%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener">Scrivici su WhatsApp<span class="sr"> (si apre in una nuova finestra)</span></a>.</p>
           <div id="formState" aria-live="polite"></div>
         </form>
       </div>
@@ -1387,7 +1389,7 @@ form.addEventListener('submit', async (e) => {
     form.reset(); setPlan(''); fT.value = Date.now();
     showState('ok', `Grazie${name ? ', ' + name.replace(/[<>&]/g, '') : ''}. La richiesta è arrivata: ti scriviamo entro un giorno lavorativo per fissare la demo.`);
   } catch (err) {
-    if (err.message !== 'invalid') showState('err', `Invio non riuscito. Riprova tra poco oppure scrivici a <a href="mailto:${MAIL}?subject=Richiesta%20demo">${MAIL}</a>.`);
+    if (err.message !== 'invalid') showState('err', `Invio non riuscito. Riprova tra poco oppure scrivici a <a href="mailto:${MAIL}?subject=Richiesta%20demo">${MAIL}</a> o <a href="${document.querySelector('.wa-fab').href}" target="_blank" rel="noopener">su WhatsApp</a>.`);
   } finally {
     fsub.disabled = false; fsub.removeAttribute('aria-busy'); fsub.innerHTML = label;
   }
@@ -1404,5 +1406,6 @@ addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimat
 addEventListener('resize', frame); frame();
 })();
 </script>
+<!-- @wa:start --><a class="wa-fab" href="https://wa.me/393496899846?text=Ciao%20Octagon%2C%20vorrei%20sapere%20cosa%20pu%C3%B2%20prendere%20in%20carico%20il%20sistema%20per%20la%20mia%20attivit%C3%A0." target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp (si apre in una nuova finestra)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.8A8.5 8.5 0 1 1 21 11.5z"/><circle cx="8.6" cy="11.5" r=".6" fill="currentColor"/><circle cx="12.4" cy="11.5" r=".6" fill="currentColor"/><circle cx="16.2" cy="11.5" r=".6" fill="currentColor"/></svg><span>Scrivici su WhatsApp</span></a><!-- @wa:end -->
 </body>
 </html>

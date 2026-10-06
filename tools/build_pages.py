@@ -15,7 +15,7 @@ from urllib.parse import quote
 import html, json, re, sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from content import (SITE, EMAIL, SHOW_RETI, AREA_SERVED, AREAS, SERVICES, RETI, HOME_FAQ, area, services_in)
+from content import (WHATSAPP, WHATSAPP_TEXT, SITE, EMAIL, SHOW_RETI, AREA_SERVED, AREAS, SERVICES, RETI, HOME_FAQ, area, services_in)
 from build_legal import LOGO, foot_bottom, PAGINE
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -269,6 +269,29 @@ def home_jsonld():
     return f'<script type="application/ld+json">{json.dumps(g, ensure_ascii=False)}</script>'
 
 
+def wa_url():
+    return f"https://wa.me/{WHATSAPP}?text={quote(WHATSAPP_TEXT)}"
+
+
+WA_ICON = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+           '<path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.8A8.5 8.5 0 1 1 21 11.5z"/>'
+           '<circle cx="8.6" cy="11.5" r=".6" fill="currentColor"/><circle cx="12.4" cy="11.5" r=".6" fill="currentColor"/><circle cx="16.2" cy="11.5" r=".6" fill="currentColor"/></svg>')
+
+
+def wa_fab():
+    return (f'<a class="wa-fab" href="{wa_url()}" target="_blank" rel="noopener" '
+            f'aria-label="Scrivici su WhatsApp (si apre in una nuova finestra)">{WA_ICON}<span>Scrivici su WhatsApp</span></a>')
+
+
+def add_wa(text):
+    """Foglio di stile in testa e pulsante prima di </body>, tra marcatori (idempotente)."""
+    if "<!-- @wa-css -->" not in text:
+        text = text.replace("</head>", '<link rel="stylesheet" href="/wa.css"><!-- @wa-css -->\n</head>', 1)
+    if "<!-- @wa:start -->" not in text:
+        text = text.replace("</body>", "<!-- @wa:start --><!-- @wa:end -->\n</body>", 1)
+    return splice(text, "<!-- @wa:start -->", "<!-- @wa:end -->", wa_fab())
+
+
 def splice(text, start, end, inner):
     a, b = text.index(start) + len(start), text.index(end)
     return text[:a] + inner + text[b:]
@@ -347,10 +370,10 @@ def pricing_jsonld():
 if __name__ == "__main__":
     (ROOT / "servizi").mkdir(exist_ok=True)
     for s in SERVICES:
-        (ROOT / "servizi" / f"{s['slug']}.html").write_text(service_page(s))
+        (ROOT / "servizi" / f"{s['slug']}.html").write_text(add_wa(service_page(s)))
     reti = ROOT / "reti.html"
     if SHOW_RETI:
-        reti.write_text(reti_page())
+        reti.write_text(add_wa(reti_page()))
     elif reti.exists():
         reti.unlink()
 
@@ -359,18 +382,21 @@ if __name__ == "__main__":
     t = splice(t, "<!-- @services:start -->", "<!-- @services:end -->", board_html())
     t = splice(t, "<!-- @jsonld:start -->", "<!-- @jsonld:end -->", home_jsonld())
     t = update_nav(t)
+    t = add_wa(t)
+    t = re.sub(r'<a class="wa-inline"[^>]*href="[^"]*"', lambda m: re.sub(r'href="[^"]*"', f'href="{wa_url()}"', m.group(0)), t)
     idx.write_text(t)
 
     pr = ROOT / "pricing.html"
     t = pr.read_text()
     t = splice(t, "<!-- @jsonld:start -->", "<!-- @jsonld:end -->", pricing_jsonld())
     t = update_nav(t)
+    t = add_wa(t)
     t = re.sub(r'<div data-reti-row.*?</a></div></div>', lambda m: m.group(0) if SHOW_RETI else "", t, flags=re.S)
     pr.write_text(t)
 
     for name in ("privacy.html", "cookie.html", "termini.html"):
         f = ROOT / name
-        f.write_text(update_nav(f.read_text()))
+        f.write_text(add_wa(update_nav(f.read_text())))
 
     (ROOT / "llms.txt").write_text(llms_txt())
     (ROOT / "sitemap.xml").write_text(sitemap())

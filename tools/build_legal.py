@@ -9,8 +9,8 @@ from pathlib import Path
 import html, re
 
 ROOT = Path(__file__).resolve().parent.parent
-AGGIORNATO = "1 ottobre 2026"
-AGGIORNATO_ISO = "2026-10-01"
+AGGIORNATO = "7 ottobre 2026"
+AGGIORNATO_ISO = "2026-10-07"
 
 DATI = {
     "titolare": "Edison Zoicaj",        # es. "Mario Rossi, titolare della ditta individuale Octagon" o "Octagon S.r.l."
@@ -206,7 +206,7 @@ def privacy():
 <h3>Quando chiedi una demo</h3>
 <p>Con il modulo “Prenota una demo” ci invii il tuo <strong>nome</strong> e la tua <strong>email di lavoro</strong>, che sono obbligatori, e se vuoi il nome della tua <strong>attività</strong> e una descrizione del <strong>lavoro che si ripete</strong>. Ti chiediamo di non inserire nella descrizione dati personali di altre persone né dati particolari (salute, opinioni politiche o religiose e simili): per capire il tuo caso non servono.</p>
 <h3>Quando ci scrivi o diventi cliente</h3>
-<p>Se ci contatti via email o Telegram trattiamo i dati che ci comunichi e quelli necessari per risponderti. Se diventi cliente trattiamo anche i dati per la fatturazione e la gestione del contratto (nome o ragione sociale, partita IVA, indirizzo, recapiti di chi lavora con noi).</p>'''),
+<p>Se ci contatti via email, WhatsApp o Telegram trattiamo i dati che ci comunichi e quelli necessari per risponderti. Se diventi cliente trattiamo anche i dati per la fatturazione e la gestione del contratto (nome o ragione sociale, partita IVA, indirizzo, recapiti di chi lavora con noi).</p>'''),
         ("finalita", "Perché li usiamo e su quale base", '''
 <div class="tbl"><table>
 <thead><tr><th scope="col">Finalità</th><th scope="col">Dati</th><th scope="col">Base giuridica (GDPR)</th></tr></thead>
@@ -228,6 +228,7 @@ def privacy():
 <li><strong>Resend</strong> (Plus Five Five, Inc., Stati Uniti): inoltra a Octagon via email le richieste inviate con il modulo demo.</li>
 <li>Il fornitore della nostra <strong>casella di posta</strong>, dove ricevi e conserviamo la corrispondenza.</li>
 <li><strong>Telegram</strong>, solo se scegli di scriverci lì: in quel caso si applica anche l'informativa privacy di Telegram.</li>
+<li><strong>WhatsApp</strong> (WhatsApp Ireland Limited, gruppo Meta), solo se scegli di scriverci lì dal pulsante del sito: in quel caso si applica anche l'informativa privacy di WhatsApp.</li>
 <li>Il nostro <strong>commercialista</strong>, per i soli dati di fatturazione dei clienti.</li>
 </ul>
 <p>Possiamo comunicare i dati alle autorità solo quando la legge lo impone.</p>'''),
@@ -293,7 +294,7 @@ def cookie():
 <p class="note">Per questo non vedi un banner dei cookie: secondo le <a href="https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876" rel="noopener">Linee guida del Garante del 10 giugno 2021</a>, il consenso serve solo per i cookie non tecnici, e qui non ce ne sono.</p>'''),
         ("terzi", "Servizi di terze parti", '''
 <p>Il sito non incorpora video, mappe, pulsanti social o caratteri caricati da altri server. L'unico fornitore coinvolto quando visiti una pagina è <strong>Vercel</strong>, che ospita il sito e registra i dati tecnici di ogni richiesta, come l'indirizzo IP, per farlo funzionare e proteggerlo. Vercel non installa cookie sulle pagine pubbliche di questo sito. I dettagli sono nell'<a href="/privacy">informativa privacy</a>.</p>
-<p>Se segui un link verso un altro sito o servizio, come Telegram, valgono le sue regole sui cookie.</p>'''),
+<p>Se segui un link verso un altro sito o servizio, come Telegram o WhatsApp, valgono le sue regole sui cookie.</p>'''),
         ("verifica", "Come puoi verificarlo", '''
 <p>Non devi fidarti sulla parola. Apri gli strumenti per sviluppatori del browser (F12 su computer), vai su <strong>Applicazione</strong> o <strong>Archiviazione</strong> e guarda le voci Cookie e Memoria locale per theoctagonai.com: sono vuote. Nella scheda <strong>Rete</strong> vedrai solo richieste verso il nostro dominio.</p>'''),
         ("gestione", "Come gestire i cookie nel browser", '''
