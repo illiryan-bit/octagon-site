@@ -113,6 +113,9 @@ RETI = dict(
 )
 
 HOME_FAQ = [
+    ("Che cos'è Octagon?", "Octagon è uno studio founder-led che costruisce e gestisce sistemi di agenti AI per il lavoro operativo di aziende e brand: negozio online, Amazon, SEO, social, campagne, foto e video, servizio clienti. Il sistema prepara il lavoro; ogni azione che conta parte solo dopo la tua approvazione su Telegram."),
+    ("Con quali piattaforme lavorate?", "Shopify, Amazon, Etsy, Vinted e Grailed; Google e gli assistenti AI; Instagram, Facebook, TikTok e LinkedIn; Meta, Google, TikTok e Amazon Ads; Klaviyo per l'email. Se usi strumenti diversi, lo verifichiamo nella call prima di iniziare."),
+    ("Quanto tempo serve per partire?", "Si parte da una call di 20 minuti e da un solo lavoro ripetuto. Con il pacchetto Starter l'avvio richiede 3–5 giorni; nei pacchetti più ampi la configurazione la seguiamo noi."),
     ("Devo cambiare gli strumenti che uso?", "No. Octagon lavora sui canali e sugli strumenti che hai già. Con il sistema parli su Telegram."),
     ("Cosa succede se l'AI sbaglia?", "Prima di tutto la ferma una regola scritta nel codice, come un prezzo minimo o un limite di spesa. Poi ogni azione con una conseguenza aspetta il tuo ok. Nulla esce senza di te."),
     ("Dove girano i flussi e dove restano i dati?", "Su infrastruttura gestita da Octagon: orchestrazione, database e memoria sono self-hosted. Ti spieghiamo nel dettaglio cosa passa da servizi esterni durante la call."),
