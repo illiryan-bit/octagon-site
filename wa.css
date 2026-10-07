@@ -27,3 +27,7 @@
 @media (max-width:1160px) and (min-width:981px){.links{gap:0}.links a{padding:9px 6px;font-size:12.5px}.nav-in{gap:8px}.nav-cta{padding:0 14px;font-size:14px}.nav-cta .arr{display:none}.lang a{min-width:34px;padding:0 6px}}
 @media (max-width:980px){.lang{margin-right:4px}}
 @media print{.lang{display:none}}
+/* Pulsanti d'azione: stesso verde dei pulsanti delle schede del listino (al posto del nero) */
+.btn-dark,.wk-cta,.lane:not(.dark) .lane-link{background:linear-gradient(135deg,#166B61 0%,#1F8A78 100%);color:#fff;border:0;box-shadow:0 12px 28px -12px rgba(31,122,116,.9),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn-dark:hover,.wk-cta:hover,.lane:not(.dark) .lane-link:hover{background:linear-gradient(135deg,#1A7A6E 0%,#25A08B 100%);color:#fff}
+.btn-dark:focus-visible,.wk-cta:focus-visible,.lane-link:focus-visible{outline:3px solid #8FD3CC;outline-offset:3px}
