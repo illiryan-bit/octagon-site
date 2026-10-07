@@ -210,7 +210,10 @@ Esempio di richiesta di approvazione su Telegram
 The Human Edge · agenti AI con supervisione umana
 = The Human Edge · AI agents with human oversight
 
-L'AI esegue.
+@index.html: L’
+= 
+
+AI esegue.
 = AI executes.
 
 Tu decidi.
