@@ -87,6 +87,7 @@ def page(path, title, description, eyebrow, h1, lede, brief, sections):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{html.escape(title)} · Octagon</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cpolygon points=%2729.3,0 70.7,0 100,29.3 100,70.7 70.7,100 29.3,100 0,70.7 0,29.3%27 fill=%27%231F7A74%27/%3E%3C/svg%3E">
 <meta name="description" content="{html.escape(description)}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Octagon"><meta property="og:url" content="{url}">
@@ -226,7 +227,7 @@ def privacy():
 <ul>
 <li><strong>Vercel Inc.</strong> (Stati Uniti): ospita il sito e registra i dati tecnici di navigazione.</li>
 <li><strong>Resend</strong> (Plus Five Five, Inc., Stati Uniti): inoltra a Octagon via email le richieste inviate con il modulo demo.</li>
-<li>Il fornitore della nostra <strong>casella di posta</strong>, dove ricevi e conserviamo la corrispondenza.</li>
+<li>Il fornitore della nostra <strong>casella di posta</strong>, dove riceviamo e conserviamo la corrispondenza.</li>
 <li><strong>Telegram</strong>, solo se scegli di scriverci lì: in quel caso si applica anche l'informativa privacy di Telegram.</li>
 <li><strong>WhatsApp</strong> (WhatsApp Ireland Limited, gruppo Meta), solo se scegli di scriverci lì dal pulsante del sito: in quel caso si applica anche l'informativa privacy di WhatsApp.</li>
 <li>Il nostro <strong>commercialista</strong>, per i soli dati di fatturazione dei clienti.</li>

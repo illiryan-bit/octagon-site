@@ -17,6 +17,7 @@ import html, json, re, sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from content import (WHATSAPP, WHATSAPP_TEXT, SITE, EMAIL, SHOW_RETI, AREA_SERVED, AREAS, SERVICES, RETI, HOME_FAQ, area, services_in)
 from build_legal import LOGO, foot_bottom, PAGINE
+from i18n import add_lang, PAGES, full
 
 ROOT = Path(__file__).resolve().parent.parent
 E = html.escape
@@ -159,7 +160,7 @@ def service_page(s):
   <div class="wrap">
     <ol class="crumbs" aria-label="Percorso"><li><a href="/">Home</a></li><li><a href="/#aree">Cosa fa</a></li><li>{aname}</li></ol>
     <p class="eyebrow"><i aria-hidden="true" style="background:{acol}"></i>Servizio · {aname}</p>
-    <h1>{E(s["name"])}</h1>
+    <h1>{E(s["h1"])}</h1>
     <p class="lede">{E(s["desc"])}</p>
     {ok_tag}
     <div class="ctas"><a class="btn btn-primary" href="/?piano={plan}#demo">Parliamone <span class="arr" aria-hidden="true">→</span></a><a class="btn btn-ghost" href="/pricing">Vedi il listino</a></div>
@@ -194,7 +195,7 @@ def service_page(s):
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Cosa fa", "item": SITE + "/#aree"},
             {"@type": "ListItem", "position": 3, "name": s["name"], "item": SITE + path}]}]}]
-    return chrome(path, s["title"], s["desc"], main, ld)
+    return add_lang(chrome(path, s["title"], s["desc"], main, ld), path)
 
 
 def reti_page():
@@ -324,9 +325,15 @@ def llms_txt():
 
 
 def sitemap():
-    paths = ["/", "/pricing"] + [f"/servizi/{s['slug']}" for s in SERVICES] + (["/reti"] if SHOW_RETI else []) + ["/privacy", "/cookie", "/termini"]
-    urls = "".join(f"<url><loc>{SITE}{'' if p == '/' else p}{'/' if p == '/' else ''}</loc></url>" for p in paths)
-    return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n'
+    """Ogni pagina in italiano e in inglese, con le alternative di lingua (hreflang) dichiarate."""
+    paths = ["/", "/pricing"] + [f"/servizi/{s['slug']}" for s in SERVICES] + ["/privacy", "/cookie", "/termini"]
+    def alts(p):
+        return (f'<xhtml:link rel="alternate" hreflang="it" href="{full(p)}"/>'
+                f'<xhtml:link rel="alternate" hreflang="en" href="{full(PAGES[p])}"/>'
+                f'<xhtml:link rel="alternate" hreflang="x-default" href="{full(p)}"/>')
+    urls = "".join(f"<url><loc>{full(u)}</loc>{alts(p)}</url>" for p in paths for u in (p, PAGES[p]))
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            f'xmlns:xhtml="http://www.w3.org/1999/xhtml">{urls}</urlset>\n')
 
 
 def update_nav(text):
@@ -384,7 +391,7 @@ if __name__ == "__main__":
     t = update_nav(t)
     t = add_wa(t)
     t = re.sub(r'<a class="wa-inline"[^>]*href="[^"]*"', lambda m: re.sub(r'href="[^"]*"', f'href="{wa_url()}"', m.group(0)), t)
-    idx.write_text(t)
+    idx.write_text(add_lang(t, "/"))
 
     pr = ROOT / "pricing.html"
     t = pr.read_text()
@@ -392,11 +399,11 @@ if __name__ == "__main__":
     t = update_nav(t)
     t = add_wa(t)
     t = re.sub(r'<div data-reti-row.*?</a></div></div>', lambda m: m.group(0) if SHOW_RETI else "", t, flags=re.S)
-    pr.write_text(t)
+    pr.write_text(add_lang(t, "/pricing"))
 
     for name in ("privacy.html", "cookie.html", "termini.html"):
         f = ROOT / name
-        f.write_text(add_wa(update_nav(f.read_text())))
+        f.write_text(add_lang(add_wa(update_nav(f.read_text())), "/" + {"privacy.html": "privacy", "cookie.html": "cookie", "termini.html": "termini"}[name]))
 
     (ROOT / "llms.txt").write_text(llms_txt())
     (ROOT / "sitemap.xml").write_text(sitemap())

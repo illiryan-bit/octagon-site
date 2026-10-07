@@ -37,3 +37,31 @@ Il sistema usa 46 workflow (38 attivi ogni giorno) e 8 agenti AI su infrastruttu
 
 - [Privacy](https://theoctagonai.com/privacy)
 - [Termini di servizio](https://theoctagonai.com/termini)
+
+## English
+
+> Octagon is a founder-led studio that builds and runs AI agent systems for the operational work of companies and brands, from the independent store to the international brand with distributors and retail locations. The system prepares the work; every action that matters goes out only after a person approves it on Telegram.
+
+The system runs 46 workflows (38 active every day) and 8 AI agents on infrastructure managed by Octagon. Rules written in code, such as a minimum price or a spending limit, stop out-of-bounds proposals before they reach the person.
+
+### Sell
+- [Operations automation](https://theoctagonai.com/en/services/automation): Orders, catalog, prices, documents and inquiries prepared by the system. Approval required: prices, publishing, messages to customers.
+- [Shopify store](https://theoctagonai.com/en/services/shopify): Reviews, translations, upsells, forms and chat handled by the system, with no paid apps. Approval required: every change to the store.
+- [Amazon](https://theoctagonai.com/en/services/amazon): Listings and A+ content, pricing and the Buy Box, inventory, reviews, connected to your Shopify store. Approval required: prices, listings, Amazon Ads spend.
+
+### Get found
+- [SEO and AI visibility](https://theoctagonai.com/en/services/seo-ai-visibility): Copy, pages and structured data for Google and AI assistants, in multiple languages. Approval required: every batch of changes.
+- [Market analysis](https://theoctagonai.com/en/services/market-analysis): Competitors, prices, reviews and results, in a report every Monday. Read-only: no actions taken.
+
+### Communicate
+- [Social and shop](https://theoctagonai.com/en/services/social): Content plan, publishing on Instagram, Facebook, TikTok and LinkedIn, synced shop catalog. Approval required: every post before it goes live.
+- [Ad campaigns](https://theoctagonai.com/en/services/ads): Meta, Google, TikTok and Amazon Ads within a spending limit you set. Approval required: every budget change.
+- [In-house photo and video](https://theoctagonai.com/en/services/photo-video): Product photos, scenes and short videos created on our own infrastructure, with no per-file cost. Approval required: every asset before it's used.
+- [Customer service and translation](https://theoctagonai.com/en/services/customer-service): Draft replies, quotes, copy translated into five languages. Approval required: every reply before it's sent.
+
+### Build
+- [Websites, stores and apps](https://theoctagonai.com/en/services/websites): Landing pages, Shopify stores, custom applications, connected to the system. Approval required: every release.
+
+- [Pricing](https://theoctagonai.com/en/pricing): Starter (€599 setup, then €99/month, 5 active workflows), Growth (€1,500, then €299/month, 15 workflows), Scale (€2,499, then €499/month, 24 workflows), Enterprise (from €3,999, custom monthly fee, 38 workflows). Prices exclude VAT. Monthly add-ons; websites and stores by project: landing page €799, Shopify store €1,500, custom application on quote.
+- Book a demo: https://theoctagonai.com/en#demo
+- [Privacy](https://theoctagonai.com/en/privacy) · [Cookies](https://theoctagonai.com/en/cookies) · [Terms](https://theoctagonai.com/en/terms)

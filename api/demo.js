@@ -10,6 +10,12 @@ const FROM = process.env.MAIL_FROM || 'Octagon <sito@theoctagonai.com>';
 const EMAIL_RE = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]{2,}$/;
 const LIMITS = { name: 120, email: 200, company: 200, work: 4000, plan: 80 };
 const KINDS = { demo: 'Demo', offerta: 'Offerta su misura' };
+const KINDS_EN = { demo: 'demo', offerta: 'custom offer' };
+// Testi rivolti a chi compila il modulo: italiano dal sito /, inglese dal sito /en (campo nascosto lang)
+const MSG = {
+  it: { name: 'Scrivi il tuo nome.', email: "Serve un'email valida.", day: 'Scegli il giorno della call.', time: "Scegli l'orario.", range: 'Scegli un orario tra le 14:00 e le 17:40.', busy: 'Questo giorno non è disponibile: scegline un altro.' },
+  en: { name: 'Please enter your name.', email: 'Please enter a valid email.', day: 'Choose the day of the call.', time: 'Choose a time.', range: 'Choose a time between 14:00 and 17:40.', busy: 'This day is not available: please choose another one.' },
+};
 
 // Slot delle call: lun–ven, 14:00–17:40 ogni 20 minuti (durata 20'), ora italiana, dal giorno lavorativo successivo
 // fino a 21 giorni. Le stesse regole sono nel modulo (index.html).
@@ -27,7 +33,7 @@ function slotDate(day, time) {
   if (day <= today || t - Date.now() > 21 * 864e5) return null;
   return new Date(t);
 }
-const dayLabel = (day) => new Intl.DateTimeFormat('it-IT', { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(day + 'T12:00:00Z'));
+const dayLabel = (day, loc = 'it-IT') => new Intl.DateTimeFormat(loc, { timeZone: 'UTC', weekday: 'long', day: 'numeric', month: 'long' }).format(new Date(day + 'T12:00:00Z'));
 const icsDate = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
 const icsText = (v) => String(v).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
 function ics({ start, summary, description, attendee }) {
@@ -88,15 +94,17 @@ module.exports = async (req, res) => {
     kind: KINDS[b.kind] ? b.kind : 'demo',
     day: clean(b.day, 10),
     time: clean(b.time, 5),
+    lang: b.lang === 'en' ? 'en' : 'it',
   };
+  const M = MSG[d.lang];
   const start = slotDate(d.day, d.time);
   const errors = {};
-  if (d.name.length < 2) errors.name = 'Scrivi il tuo nome.';
-  if (!EMAIL_RE.test(d.email)) errors.email = "Serve un'email valida.";
-  if (!d.day) errors.day = 'Scegli il giorno della call.';
-  if (!d.time) errors.time = "Scegli l'orario.";
-  else if (!SLOT_TIMES.has(d.time)) errors.time = 'Scegli un orario tra le 14:00 e le 17:40.';
-  if (d.day && !errors.time && !start) errors.day = 'Questo giorno non è disponibile: scegline un altro.';
+  if (d.name.length < 2) errors.name = M.name;
+  if (!EMAIL_RE.test(d.email)) errors.email = M.email;
+  if (!d.day) errors.day = M.day;
+  if (!d.time) errors.time = M.time;
+  else if (!SLOT_TIMES.has(d.time)) errors.time = M.range;
+  if (d.day && !errors.time && !start) errors.day = M.busy;
   if (Object.keys(errors).length) return send(res, 422, { ok: false, error: 'invalid', fields: errors });
 
   if (!process.env.RESEND_API_KEY) {
@@ -106,7 +114,7 @@ module.exports = async (req, res) => {
 
   const when = new Intl.DateTimeFormat('it-IT', { dateStyle: 'full', timeStyle: 'short', timeZone: 'Europe/Rome' }).format(new Date());
   const kind = KINDS[d.kind], slot = `${dayLabel(d.day)} alle ${d.time}`;
-  const rows = [['Richiesta', kind], ['Call', `${slot} (ora italiana, 20 minuti)`], ['Nome', d.name], ['Email', d.email], ['Attività', d.company || '—'], ['Piano di interesse', d.plan || '—']];
+  const rows = [['Richiesta', kind], ['Call', `${slot} (ora italiana, 20 minuti)`], ['Nome', d.name], ['Email', d.email], ['Attività', d.company || '—'], ['Piano di interesse', d.plan || '—'], ['Lingua del sito', d.lang === 'en' ? 'Inglese (/en)' : 'Italiano']];
   const text = `Nuova richiesta dal sito (${kind}) — ${when}\n\n` +
     rows.map(([k, v]) => `${k}: ${v}`).join('\n') +
     `\n\nIl lavoro che si ripete:\n${d.work || '—'}\n\nRispondi a questa email per scrivere direttamente a ${d.name}.`;
@@ -127,7 +135,7 @@ module.exports = async (req, res) => {
   try {
     const r = await resend({
       from: FROM, to: [TO], reply_to: d.email,
-      subject: `${kind}: ${d.name}${d.company ? ' — ' + d.company : ''} · ${slot}`.slice(0, 180),
+      subject: `${d.lang === 'en' ? '[EN] ' : ''}${kind}: ${d.name}${d.company ? ' — ' + d.company : ''} · ${slot}`.slice(0, 180),
       text, html, attachments: [{ filename: 'call-octagon.ics', content: invite }],
     });
     if (!r.ok) {
@@ -136,10 +144,21 @@ module.exports = async (req, res) => {
     }
     // Riepilogo a chi ha fatto la richiesta: non blocca la risposta se fallisce.
     const first = d.name.split(/\s+/)[0];
-    const cText = `Ciao ${first},\n\nabbiamo ricevuto la tua richiesta (${kind.toLowerCase()}) per una call di 20 minuti ${slot}, ora italiana.\n\nTi confermiamo l'appuntamento entro un giorno lavorativo. Se l'orario non va più bene, rispondi a questa email.\n\nOctagon\nhttps://theoctagonai.com`;
-    const cHtml = `<div style="font-family:Arial,Helvetica,sans-serif;color:#1b1b1b;max-width:520px;font-size:15px;line-height:1.55"><p style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1F7A74;margin:0 0 10px">Octagon</p><p>Ciao ${esc(first)},</p><p>abbiamo ricevuto la tua richiesta (${esc(kind.toLowerCase())}) per una call di 20 minuti:</p><p style="background:#F4EFE8;border-radius:10px;padding:12px 14px;font-weight:bold">${esc(slot)}, ora italiana</p><p>Ti confermiamo l'appuntamento entro un giorno lavorativo. Se l'orario non va più bene, rispondi a questa email.</p><p style="color:#666;font-size:13px">Octagon · <a href="https://theoctagonai.com">theoctagonai.com</a></p></div>`;
+    let cText, cHtml, cSubject;
+    const box = (t) => `<p style="background:#F4EFE8;border-radius:10px;padding:12px 14px;font-weight:bold">${esc(t)}</p>`;
+    const wrap = (inner) => `<div style="font-family:Arial,Helvetica,sans-serif;color:#1b1b1b;max-width:520px;font-size:15px;line-height:1.55"><p style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#1F7A74;margin:0 0 10px">Octagon</p>${inner}</div>`;
+    if (d.lang === 'en') {
+      const slotEn = `${dayLabel(d.day, 'en-GB')} at ${d.time}`, kindEn = KINDS_EN[d.kind];
+      cSubject = `Request received: call on ${slotEn}`;
+      cText = `Hi ${first},\n\nwe've received your request (${kindEn}) for a 20-minute call on ${slotEn}, Italian time (Rome).\n\nWe'll confirm the appointment within one business day. If the time no longer works for you, just reply to this email.\n\nOctagon\nhttps://theoctagonai.com/en`;
+      cHtml = wrap(`<p>Hi ${esc(first)},</p><p>we've received your request (${esc(kindEn)}) for a 20-minute call:</p>${box(slotEn + ', Italian time (Rome)')}<p>We'll confirm the appointment within one business day. If the time no longer works for you, just reply to this email.</p><p style="color:#666;font-size:13px">Octagon · <a href="https://theoctagonai.com/en">theoctagonai.com</a></p>`);
+    } else {
+      cSubject = `Richiesta ricevuta: call ${slot}`;
+      cText = `Ciao ${first},\n\nabbiamo ricevuto la tua richiesta (${kind.toLowerCase()}) per una call di 20 minuti ${slot}, ora italiana.\n\nTi confermiamo l'appuntamento entro un giorno lavorativo. Se l'orario non va più bene, rispondi a questa email.\n\nOctagon\nhttps://theoctagonai.com`;
+      cHtml = wrap(`<p>Ciao ${esc(first)},</p><p>abbiamo ricevuto la tua richiesta (${esc(kind.toLowerCase())}) per una call di 20 minuti:</p>${box(slot + ', ora italiana')}<p>Ti confermiamo l'appuntamento entro un giorno lavorativo. Se l'orario non va più bene, rispondi a questa email.</p><p style="color:#666;font-size:13px">Octagon · <a href="https://theoctagonai.com">theoctagonai.com</a></p>`);
+    }
     try {
-      const c = await resend({ from: FROM, to: [d.email], reply_to: TO, subject: `Richiesta ricevuta: call ${slot}`.slice(0, 180), text: cText, html: cHtml });
+      const c = await resend({ from: FROM, to: [d.email], reply_to: TO, subject: cSubject.slice(0, 180), text: cText, html: cHtml });
       if (!c.ok) console.error('[demo] riepilogo', c.status, (await c.text()).slice(0, 300));
     } catch (e) { console.error('[demo] riepilogo rete', e && e.message); }
     return send(res, 200, { ok: true });

@@ -100,6 +100,22 @@ SERVICES = [
          desc="Landing page, negozi Shopify e applicazioni su misura, collegati allo stesso sistema di agenti AI. Ogni rilascio passa dal tuo ok."),
 ]
 
+# Titolo H1 delle pagine servizio: descrittivo, con le parole che le persone cercano
+H1 = {
+    "automazione": "Automazione operativa con agenti AI",
+    "shopify": "Negozio Shopify senza app a pagamento",
+    "amazon": "Gestione dello store Amazon con agenti AI",
+    "seo-visibilita-ai": "SEO e visibilità sugli assistenti AI",
+    "analisi": "Analisi di mercato, ogni lunedì",
+    "social": "Social e shop gestiti con agenti AI",
+    "campagne": "Campagne Meta, Google, TikTok e Amazon Ads",
+    "fotovideo": "Foto e video di prodotto, creati in sede",
+    "clienti": "Servizio clienti e traduzioni con agenti AI",
+    "siti": "Siti, negozi Shopify e app su misura",
+}
+for _s in SERVICES:
+    _s["h1"] = H1[_s["slug"]]
+
 RETI = dict(
     title="Un sistema per tutta la rete di partner · OCTAGON",
     desc="Gli stessi servizi per distributori e punti vendita in più paesi, con il marchio e le regole della casa madre.",

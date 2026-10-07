@@ -1,0 +1,2745 @@
+# Dizionario italiano → inglese del sito OCTAGON (usato da tools/build_en.py).
+# Formato: riga italiana, poi riga "= " con l'inglese, poi una riga vuota.
+# "@pagina.html: testo" vale solo per quella pagina. [js:*] e [js:pagina.html]: sostituzioni letterali negli script.
+# [same]: testi identici nelle due lingue (nomi propri, marchi, codici).
+# Inglese americano, tono diretto e professionale; i nomi di piattaforme e i numeri restano quelli italiani.
+
+[same]
+octagon
+Octagon
+OCTAGON
+ITA
+ENG
+Italiano
+English
+Telegram
+Shopify
+Amazon
+Amazon Ads
+Etsy
+Vinted
+Grailed
+Google
+Instagram
+Facebook
+TikTok
+LinkedIn
+Meta
+Klaviyo
+Email
+Email marketing (Klaviyo)
+Demo
+Input
+Social
+Marketplace
+Manifesto
+Home
+Privacy
+Starter
+Growth
+Scale
+Enterprise
+Octagon AI
+Landing page
+TELEGRAM · 09:12
+×
+OCT·STARTER·2026
+OCT-STA-26
+OCT·GROWTH·2026
+OCT-GRO-26
+OCT·SCALE·2026
+OCT-SCA-26
+OCT·ENTERPRISE·2026
+OCT-ENT-26
+OCT·LANDING·2026
+OCT-LAN-26
+OCT·SHOPIFY·2026
+OCT-SHO-26
+OCT·WEBAPP·2026
+OCT-WEB-26
+Amazon:
+Edison Zoicaj
+info@theoctagonai.com
+Vercel Inc.
+Vercel
+Resend
+WhatsApp
+Data Privacy Framework
+EU-U.S. Data Privacy Framework
+dataprivacyframework.gov
+localStorage
+Google Chrome
+Safari
+Mozilla Firefox
+Microsoft Edge
+No
+cookie policy
+Cookie policy · Octagon
+Octagon · Edison Zoicaj
+Shopify, Amazon
+
+[text]
+# ---------- navigazione e struttura comune ----------
+OCTAGON · Agenti AI per aziende, con il tuo ok
+= OCTAGON · AI agents for business, with human approval
+
+Vai al contenuto
+= Skip to content
+
+La tua settimana
+= Your week
+
+Come funziona
+= How it works
+
+Il controllo
+= Control
+
+Cosa fa
+= What it does
+
+Tecnologia
+= Technology
+
+Listino
+= Pricing
+
+Prenota una demo
+= Book a demo
+
+Prenota una demo →
+= Book a demo →
+
+Settimana
+= Week
+
+Dentro
+= Inside
+
+Il ciclo
+= The cycle
+
+Il sistema
+= The system
+
+Octagon, torna all'inizio
+= Octagon, back to top
+
+Octagon, vai alla home
+= Octagon, go to the home page
+
+Principale
+= Main
+
+Apri il menu
+= Open menu
+
+Capitoli
+= Chapters
+
+Servizi
+= Services
+
+Percorso
+= Breadcrumb
+
+Informazioni su Octagon
+= About Octagon
+
+Il lavoro che si ripete.
+= The work that repeats.
+
+Lo esegue l'AI.
+= AI does it.
+
+Lo approvi tu.
+= You approve it.
+
+Octagon è uno studio founder-led. Costruiamo e gestiamo sistemi di agenti AI che si occupano del lavoro operativo di aziende e brand, in Italia e nel mondo: ogni azione che conta passa da una tua approvazione.
+= Octagon is a founder-led studio. We build and run AI agent systems that handle the operational work of companies and brands, in Italy and worldwide: every action that matters goes through your approval.
+
+Il percorso
+= The journey
+
+Il controllo umano
+= Human control
+
+Lavora con noi
+= Work with us
+
+Come si parte
+= How to get started
+
+Note legali
+= Legal
+
+Cookie
+= Cookies
+
+Termini di servizio
+= Terms of service
+
+© 2026 Octagon · Edison Zoicaj. Tutti i diritti riservati.
+= © 2026 Octagon · Edison Zoicaj. All rights reserved.
+
+Torna su
+= Back to top
+
+Scrivici su WhatsApp
+= Message us on WhatsApp
+
+Scrivici su WhatsApp (si apre in una nuova finestra)
+= Message us on WhatsApp (opens in a new window)
+
+(si apre in una nuova finestra)
+= (opens in a new window)
+
+# ---------- home: testa e hero ----------
+Il lavoro che si ripete su negozio, Amazon, ricerca, social e pubblicità lo esegue l'AI. Ogni azione che conta parte solo con il tuo ok.
+= AI agents handle the repetitive work across your online store, Amazon, search, social media and advertising. Every action that matters goes out only with your approval.
+
+Octagon · L'AI esegue. Tu decidi.
+= Octagon · AI executes. You decide.
+
+Il sistema oggi
+= The system today
+
+Esempio di richiesta di approvazione su Telegram
+= Example of an approval request on Telegram
+
+The Human Edge · agenti AI con supervisione umana
+= The Human Edge · AI agents with human oversight
+
+L'AI esegue.
+= AI executes.
+
+Tu decidi.
+= You decide.
+
+Octagon prende in carico il lavoro che si ripete su negozio, marketplace, ricerca, social e pubblicità, e crea in sede foto e video del tuo marchio. Prima di ogni azione che conta, ti chiede l'ok su Telegram.
+= Octagon takes on the repetitive work across your online store, marketplaces, search, social media and advertising, and creates photos and videos of your brand in-house. Before any action that matters, it asks for your OK on Telegram.
+
+Guarda la tua settimana
+= See your week
+
+workflow costruiti
+= workflows built
+
+attivi ogni giorno
+= active every day
+
+agenti AI
+= AI agents
+
+su Telegram · esempio
+= on Telegram · example
+
+Serve il tuo ok
+= Your OK needed
+
+Vorrei abbassare il prezzo della giacca da
+= I'd like to lower the jacket price from
+
+@index.html: a
+= to
+
+. Resta sopra il minimo che hai fissato. Procedo?
+= . It stays above the minimum you set. Shall I go ahead?
+
+margine rispettato
+= margin respected
+
+Approva
+= Approve
+
+Rifiuta
+= Reject
+
+Rivedi l'esempio
+= Replay the example
+
+Scorri
+= Scroll
+
+Ogni settimana, le stesse ore se ne vanno negli stessi lavori. Octagon se le riprende.
+= Every week, the same hours go into the same tasks. Octagon takes them back.
+
+Per chi
+= Who it's for
+
+Per aziende e brand di ogni dimensione: dal negozio indipendente al marchio internazionale con distributori e punti vendita nel mondo. Ovunque si vende, si pubblica e si risponde ogni giorno.
+= For companies and brands of every size: from the independent store to the international brand with distributors and retail locations around the world. Wherever selling, publishing and answering customers happen every day.
+
+Tu tieni le decisioni. Il resto lo fa un sistema che conosce il tuo modo di lavorare.
+= You keep the decisions. The rest is handled by a system that knows how you work.
+
+# ---------- home: la tua settimana ----------
+Il lavoro passa al sistema.
+= The work goes to the system.
+
+Le decisioni restano a te.
+= The decisions stay with you.
+
+Cinque lavori che tornano ogni settimana. A sinistra come li fai oggi, a destra cosa fa Octagon. Il rombo coral segna il punto in cui il sistema si ferma e aspetta il tuo ok su Telegram.
+= Five tasks that come back every week. On the left, how you handle them today; on the right, what Octagon does. The coral diamond marks the point where the system stops and waits for your OK on Telegram.
+
+Oggi, a mano
+= Today, by hand
+
+Con Octagon
+= With Octagon
+
+Il tuo ok
+= Your OK
+
+Lunedì
+= Monday
+
+Martedì
+= Tuesday
+
+Mercoledì
+= Wednesday
+
+Giovedì
+= Thursday
+
+Venerdì
+= Friday
+
+Aggiornare catalogo e schede prodotto, una per una.
+= Updating the catalog and product listings, one by one.
+
+Schede allineate
+= Listings in sync
+
+Negozio e marketplace aggiornati dal sistema.
+= Store and marketplaces updated by the system.
+
+Automazione operativa
+= Operations automation
+
+Prima di pubblicare
+= Before publishing
+
+Preparare i post e i video della settimana.
+= Preparing the week's posts and videos.
+
+Post e video in bozza
+= Posts and videos in draft
+
+Testi, foto e video brevi nel tono del marchio.
+= Copy, photos and short videos in your brand's voice.
+
+Social e shop
+= Social and shop
+
+Prima che un post esca
+= Before a post goes live
+
+Controllare a mano i prezzi dei concorrenti.
+= Checking competitor prices by hand.
+
+Prezzi letti e confrontati
+= Prices tracked and compared
+
+Una proposta di prezzo, sempre sopra il tuo minimo.
+= A price proposal, always above your minimum.
+
+Analisi di mercato
+= Market analysis
+
+Prima di cambiare un prezzo
+= Before a price changes
+
+Seguire e correggere le campagne ogni giorno.
+= Monitoring and adjusting campaigns every day.
+
+Campagne seguite
+= Campaigns managed
+
+Meta, Google e TikTok, dentro il limite di spesa.
+= Meta, Google and TikTok, within your spending limit.
+
+Campagne
+= Ad campaigns
+
+Se cambia il budget
+= If the budget changes
+
+Rispondere a richieste e preventivi arretrati.
+= Catching up on unanswered inquiries and quotes.
+
+Risposte pronte
+= Replies ready
+
+Una bozza di risposta e di preventivo per ogni richiesta.
+= A draft reply and quote for every inquiry.
+
+Servizio clienti
+= Customer service
+
+Prima di ogni invio
+= Before anything is sent
+
+Cinque lavori presi in carico.
+= Five tasks off your plate.
+
+Ogni azione che tocca clienti, prezzi o spesa parte solo dopo il tuo ok.
+= Every action that touches customers, prices or spend goes out only after your OK.
+
+Guarda come funziona l'ok
+= See how the OK works
+
+Cosa cambia
+= What changes
+
+per te.
+= for you.
+
+Non devi imparare un software. Lavori come lavoreresti con un collaboratore di fiducia: gli chiedi, controlli, decidi.
+= You don't have to learn new software. You work as you would with a trusted colleague: you ask, you check, you decide.
+
+SCRIVI
+= ASK
+
+Scrivi, non configuri.
+= You ask. You don't configure.
+
+Chiedi su Telegram come faresti con una persona. Un messaggio, una foto, un vocale. Niente pannelli, niente moduli.
+= Ask on Telegram as you would ask a person. A message, a photo, a voice note. No dashboards, no forms.
+
+DECIDI
+= DECIDE
+
+Decidi, non esegui.
+= You decide. You don't execute.
+
+Il lavoro arriva pronto. A te resta un sì o un no, con un tocco.
+= The work arrives ready. All that's left for you is a yes or a no, with one tap.
+
+CONTROLLI
+= CONTROL
+
+Controlli, non rincorri.
+= You stay in control. You don't chase.
+
+Limiti di spesa, prezzi minimi e regole di marchio li fissi una volta. Il sistema li rispetta sempre.
+= You set spending limits, minimum prices and brand rules once. The system always respects them.
+
+# ---------- home: dentro Octagon ----------
+Automazione
+= Automation
+
+Analisi
+= Analysis
+
+solo lettura
+= read-only
+
+tuo ok
+= your OK
+
+Clienti
+= Customers
+
+Dentro Octagon
+= Inside Octagon
+
+Dentro Octagon · 1
+= Inside Octagon · 1
+
+Dentro Octagon · 2
+= Inside Octagon · 2
+
+Dentro Octagon · 3
+= Inside Octagon · 3
+
+Il lavoro entra.
+= Work comes in.
+
+Da dove arriva già.
+= From where it already arrives.
+
+Un messaggio, una foto, un vocale, un ordine. Octagon li raccoglie dai canali che usi già, senza moduli e senza app nuove.
+= A message, a photo, a voice note, an order. Octagon collects them from the channels you already use, with no forms and no new apps.
+
+Gli agenti lo preparano.
+= The agents prepare it.
+
+Niente esce ancora.
+= Nothing goes out yet.
+
+Ogni richiesta va all'agente giusto, che la prepara con il contesto e lo storico. Il lavoro è pronto, ma niente esce ancora.
+= Each request goes to the right agent, which prepares it using context and history. The work is ready, but nothing goes out yet.
+
+Si divide in corsie.
+= It splits into lanes.
+
+Una per ogni lavoro.
+= One for each job.
+
+Ogni lavoro prende la sua corsia, con le sue regole. Dove c'è una conseguenza per clienti, prezzi o spesa, la corsia si ferma e aspetta il tuo ok.
+= Each job takes its own lane, with its own rules. Wherever there's a consequence for customers, prices or spend, the lane stops and waits for your OK.
+
+«Mi prepari i post per la nuova collezione?»
+= “Can you prepare the posts for the new collection?”
+
+6 foto della giacca in lino
+= 6 photos of the linen jacket
+
+FOTO · DA TELEGRAM
+= PHOTOS · FROM TELEGRAM
+
+Vocale · richiesta di preventivo
+= Voice note · quote request
+
+VOCALE · 0:14
+= VOICE NOTE · 0:14
+
+Nuovo ordine dal negozio
+= New order from the store
+
+NEGOZIO ONLINE
+= ONLINE STORE
+
+In preparazione
+= In progress
+
+esempio
+= example
+
+Agente contenuti
+= Content agent
+
+3 post e 1 video verticale in bozza
+= 3 posts and 1 vertical video in draft
+
+Agente prezzi
+= Pricing agent
+
+Proposta: giacca da €42 a €38
+= Proposal: jacket from €42 to €38
+
+Agente catalogo
+= Catalog agent
+
+Scheda prodotto e annunci pronti
+= Product page and listings ready
+
+Agente risposte
+= Replies agent
+
+Bozza di preventivo per il cliente
+= Draft quote for the customer
+
+Nulla è ancora uscito: aspetta il tuo ok.
+= Nothing has gone out yet: it's waiting for your OK.
+
+I nastri del lavoro entrano nell'ottagono
+= Ribbons of work flow into the octagon
+
+Dentro l'ottagono: una stanza luminosa, i nastri si raccolgono
+= Inside the octagon: a bright room where the ribbons gather
+
+I nastri si dividono in corsie colorate, una per ogni tipo di lavoro
+= The ribbons split into colored lanes, one for each type of work
+
+Tipo di azione
+= Type of action
+
+Nastri colorati si posano in vetrine di vetro e le accendono, come lavoro che prende forma
+= Colored ribbons settle into glass display cases and light them up, like work taking shape
+
+# ---------- home: ciclo e controllo ----------
+Un ciclo continuo.
+= A continuous cycle.
+
+Un solo punto in cui si ferma.
+= One single point where it stops.
+
+Sei passaggi, sempre gli stessi. Il quarto è tuo: finché non approvi, nulla esce.
+= Six steps, always the same. The fourth one is yours: until you approve, nothing goes out.
+
+Una richiesta su Telegram, una foto, un vocale, un ordine.
+= A request on Telegram, a photo, a voice note, an order.
+
+Mercato, concorrenti, storico e tendenze.
+= Market, competitors, history and trends.
+
+Creazione
+= Creation
+
+Contenuti, testi, video, schede, campagne.
+= Content, copy, videos, listings, campaigns.
+
+Approvazione
+= Approval
+
+Ti arriva su Telegram. Approvi o rifiuti.
+= It reaches you on Telegram. You approve or reject.
+
+L'AI si ferma qui
+= The AI stops here
+
+Pubblicazione
+= Publishing
+
+Sui tuoi canali, organici e a pagamento.
+= On your channels, organic and paid.
+
+Misura
+= Measurement
+
+Cosa ha funzionato torna nel giro successivo.
+= What worked feeds the next round.
+
+Il sesto passaggio riapre il primo: il sistema impara da quello che hai approvato.
+= The sixth step feeds back into the first: the system learns from what you approved.
+
+Qui l'AI si ferma.
+= This is where the AI stops.
+
+Sempre.
+= Always.
+
+Pubblicare, cambiare un prezzo, rispondere a un cliente, spendere in pubblicità: ogni azione con una conseguenza passa da due controlli. Prova a spostare la regola.
+= Publishing, changing a price, replying to a customer, spending on ads: every action with a consequence goes through two checks. Try moving the rule.
+
+1 · Le regole, scritte nel codice
+= 1 · Rules, written in code
+
+Prezzi minimi e limiti di spesa li fissi tu. Una proposta che li supera viene fermata prima, senza stime.
+= You set minimum prices and spending limits. A proposal that breaks them is stopped up front, with no guesswork.
+
+2 · Il tuo ok, su Telegram
+= 2 · Your OK, on Telegram
+
+Nessun modello può approvare al posto tuo. Ogni decisione resta registrata.
+= No model can approve on your behalf. Every decision is logged.
+
+Simulatore del controllo
+= Control simulator
+
+Prezzo
+= Price
+
+Campagna
+= Campaign
+
+L'AI propone
+= The AI proposes
+
+Nuovo prezzo della giacca
+= New jacket price
+
+La tua regola
+= Your rule
+
+Prezzo minimo
+= Minimum price
+
+Registro decisioni
+= Decision log
+
+Nessuna decisione ancora. Approva, rifiuta o sposta la regola.
+= No decisions yet. Approve, reject or move the rule.
+
+# ---------- home: cosa fa (dieci servizi) ----------
+Dieci servizi.
+= Ten services.
+
+Un solo sistema.
+= One system.
+
+Agenti AI per vendere, farsi trovare, comunicare e costruire: dieci servizi per e-commerce e brand, ognuno con le sue regole e con il punto preciso in cui serve il tuo ok. Apri un servizio.
+= AI agents to sell, get found, communicate and build: ten services for e-commerce and brands, each with its own rules and the exact point where your OK is needed. Open a service.
+
+vendere
+= sell
+
+farsi trovare
+= get found
+
+comunicare
+= communicate
+
+costruire
+= build
+
+serve il tuo ok
+= your OK needed
+
+Vendere
+= Sell
+
+Farsi trovare
+= Get found
+
+Comunicare
+= Communicate
+
+Costruire
+= Build
+
+Vendere · 01
+= Sell · 01
+
+Vendere · 02
+= Sell · 02
+
+Vendere · 03
+= Sell · 03
+
+Farsi trovare · 04
+= Get found · 04
+
+Farsi trovare · 05
+= Get found · 05
+
+Comunicare · 06
+= Communicate · 06
+
+Comunicare · 07
+= Communicate · 07
+
+Comunicare · 08
+= Communicate · 08
+
+Comunicare · 09
+= Communicate · 09
+
+Costruire · 10
+= Build · 10
+
+Ordini, catalogo, prezzi, documenti e richieste preparati dal sistema.
+= Orders, catalog, prices, documents and inquiries prepared by the system.
+
+Prezzi, pubblicazioni, invii ai clienti.
+= Prices, publishing, messages to customers.
+
+Cosa sostituisce
+= What it replaces
+
+Ore di lavoro a mano ogni settimana.
+= Hours of manual work every week.
+
+Apri il servizio
+= Open the service
+
+Negozio Shopify
+= Shopify store
+
+Recensioni, traduzioni, upsell, moduli e chat svolti dal sistema, senza app a pagamento.
+= Reviews, translations, upsells, forms and chat handled by the system, with no paid apps.
+
+Ogni modifica al negozio.
+= Every change to the store.
+
+Le app a pagamento, tema escluso.
+= Paid apps, excluding the theme.
+
+Schede e contenuti A+, prezzi e Buy Box, scorte, recensioni, collegati allo store Shopify.
+= Listings and A+ content, pricing and the Buy Box, inventory, reviews, connected to your Shopify store.
+
+Prezzi, schede, spesa in Amazon Ads.
+= Prices, listings, Amazon Ads spend.
+
+Gestione esterna dello store.
+= Outsourced store management.
+
+SEO e visibilità AI
+= SEO and AI visibility
+
+Testi, pagine e dati strutturati per Google e per gli assistenti AI, in più lingue.
+= Copy, pages and structured data for Google and AI assistants, in multiple languages.
+
+Ogni lotto di modifiche.
+= Every batch of changes.
+
+Agenzia SEO e strumenti in abbonamento.
+= SEO agency and subscription tools.
+
+Concorrenti, prezzi, recensioni e risultati, in un report ogni lunedì.
+= Competitors, prices, reviews and results, in a report every Monday.
+
+Nessuno: solo lettura.
+= None: read-only.
+
+Strumenti di monitoraggio in abbonamento.
+= Subscription monitoring tools.
+
+Piano editoriale, pubblicazione su Instagram, Facebook, TikTok e LinkedIn, catalogo shop sincronizzato.
+= Content plan, publishing on Instagram, Facebook, TikTok and LinkedIn, synced shop catalog.
+
+Ogni post prima che esca.
+= Every post before it goes live.
+
+Social media manager esterno.
+= External social media manager.
+
+Meta, Google, TikTok e Amazon Ads dentro un limite di spesa fissato da te.
+= Meta, Google, TikTok and Amazon Ads within a spending limit you set.
+
+Ogni variazione di budget.
+= Every budget change.
+
+Gestione campagne in agenzia.
+= Agency campaign management.
+
+Foto e video
+= Photo and video
+
+Foto e video in sede
+= In-house photo and video
+
+Foto prodotto, scene e video brevi creati sulla nostra infrastruttura, senza costo per singolo file.
+= Product photos, scenes and short videos created on our own infrastructure, with no per-file cost.
+
+Ogni contenuto prima dell'uso.
+= Every asset before it's used.
+
+Servizi di generazione a pagamento, servizi fotografici ripetuti.
+= Paid generation services, repeated photo shoots.
+
+Clienti e traduzioni
+= Customers and translation
+
+Servizio clienti e traduzioni
+= Customer service and translation
+
+Bozze di risposta, preventivi, testi tradotti in cinque lingue.
+= Draft replies, quotes, copy translated into five languages.
+
+Ogni risposta prima dell'invio.
+= Every reply before it's sent.
+
+Chat a pagamento, traduttori per ogni testo.
+= Paid chat tools, translators for every text.
+
+Siti, negozi e app
+= Websites, stores and apps
+
+Landing page, negozi Shopify, applicazioni su misura, collegati al sistema.
+= Landing pages, Shopify stores, custom applications, connected to the system.
+
+Ogni rilascio.
+= Every release.
+
+Collegato a
+= Connected to
+
+Il tuo dominio, Shopify
+= Your domain, Shopify
+
+Il tuo dominio
+= Your domain
+
+# ---------- home: canali ----------
+Nessuna piattaforma nuova
+= No new platform
+
+I tuoi strumenti restano.
+= Your tools stay.
+
+Octagon li collega.
+= Octagon connects them.
+
+Non sposti il lavoro altrove e non impari un pannello. Con il sistema parli su Telegram; quello che approvi esce dove vendi e comunichi già.
+= You don't move your work elsewhere or learn a new dashboard. You talk to the system on Telegram; what you approve goes out where you already sell and communicate.
+
+Da dove arriva
+= Where it comes from
+
+messaggi, foto, vocali
+= messages, photos, voice notes
+
+Il tuo negozio
+= Your store
+
+ordini e richieste
+= orders and inquiries
+
+I tuoi dati
+= Your data
+
+vendite e campagne
+= sales and campaigns
+
+Passa dal tuo ok
+= Goes through your OK
+
+Dove esce
+= Where it goes out
+
+Negozio
+= Store
+
+Ricerca
+= Search
+
+Assistenti AI
+= AI assistants
+
+Pubblicità
+= Advertising
+
+Usi strumenti diversi? Nella call verifichiamo se si collegano, prima di iniziare.
+= Using different tools? On the call we check whether they connect, before we start.
+
+Dopo il tuo ok
+= After your OK
+
+Il lavoro prende forma.
+= The work takes shape.
+
+E torna come dato.
+= And comes back as data.
+
+Quello che hai approvato esce sui tuoi canali. Poi il sistema misura cosa ha funzionato e lo usa nel giro successivo.
+= What you approved goes out on your channels. Then the system measures what worked and uses it in the next round.
+
+# ---------- home: il sistema ----------
+Otto parti.
+= Eight parts.
+
+Nessuna scatola nera.
+= No black box.
+
+L'ottagono non è solo un simbolo: è il sistema. Una piattaforma proprietaria in otto parti, costruita e gestita da Octagon su infrastruttura propria. Toccane una per vedere cosa fa, e cosa cambia per te.
+= The octagon isn't just a symbol: it is the system. A proprietary platform in eight parts, built and run by Octagon on its own infrastructure. Tap one to see what it does, and what it changes for you.
+
+L'ottagono di Octagon diviso nelle sue otto parti: Telegram, regole, n8n, agenti, memoria, storico, code, Docker. Il lavoro entra da sinistra ed esce a destra.
+= The Octagon octagon divided into its eight parts: Telegram, rules, n8n, agents, memory, history, queues, Docker. Work enters on the left and exits on the right.
+
+Parti del sistema
+= Parts of the system
+
+I TUOI CANALI
+= YOUR CHANNELS
+
+NEGOZIO · SOCIAL · ADV · EMAIL
+= STORE · SOCIAL · ADS · EMAIL
+
+Il perimetro è di Octagon: infrastruttura, database e flussi sono nostri, non affittati a una piattaforma generica.
+= The perimeter belongs to Octagon: infrastructure, databases and workflows are ours, not rented from a generic platform.
+
+# ---------- home: come si parte e FAQ ----------
+Si comincia
+= It starts
+
+da un lavoro.
+= with one task.
+
+Una call di 20 minuti
+= A 20-minute call
+
+Ci racconti la tua settimana. Ti diciamo cosa può prendere in carico il sistema, e cosa no.
+= You tell us about your week. We tell you what the system can take on, and what it can't.
+
+Le tue regole
+= Your rules
+
+Fissiamo insieme prezzi minimi, limiti di spesa e tono di marchio.
+= Together we set minimum prices, spending limits and brand voice.
+
+Il primo flusso, con il tuo ok
+= The first workflow, with your OK
+
+Partiamo da un lavoro ripetuto. Tu approvi da Telegram fin dal primo giorno.
+= We start with one repetitive task. You approve from Telegram from day one.
+
+Domande
+= Questions
+
+Che cos'è Octagon?
+= What is Octagon?
+
+Octagon è uno studio founder-led che costruisce e gestisce sistemi di agenti AI per il lavoro operativo di aziende e brand: negozio online, Amazon, SEO, social, campagne, foto e video, servizio clienti. Il sistema prepara il lavoro; ogni azione che conta parte solo dopo la tua approvazione su Telegram.
+= Octagon is a founder-led studio that builds and runs AI agent systems for the operational work of companies and brands: online store, Amazon, SEO, social media, ad campaigns, photo and video, customer service. The system prepares the work; every action that matters goes out only after your approval on Telegram.
+
+Con quali piattaforme lavorate?
+= Which platforms do you work with?
+
+Shopify, Amazon, Etsy, Vinted e Grailed; Google e gli assistenti AI; Instagram, Facebook, TikTok e LinkedIn; Meta, Google, TikTok e Amazon Ads; Klaviyo per l'email. Se usi strumenti diversi, lo verifichiamo nella call prima di iniziare.
+= Shopify, Amazon, Etsy, Vinted and Grailed; Google and AI assistants; Instagram, Facebook, TikTok and LinkedIn; Meta, Google, TikTok and Amazon Ads; Klaviyo for email. If you use different tools, we check them on the call before we start.
+
+Quanto tempo serve per partire?
+= How long does it take to get started?
+
+Si parte da una call di 20 minuti e da un solo lavoro ripetuto. Con il pacchetto Starter l'avvio richiede 3–5 giorni; nei pacchetti più ampi la configurazione la seguiamo noi.
+= It starts with a 20-minute call and a single repetitive task. With the Starter package, setup takes 3–5 days; with the larger packages, we handle the configuration for you.
+
+Devo cambiare gli strumenti che uso?
+= Do I have to change the tools I use?
+
+No. Octagon lavora sui canali e sugli strumenti che hai già. Con il sistema parli su Telegram.
+= No. Octagon works on the channels and tools you already have. You talk to the system on Telegram.
+
+Cosa succede se l'AI sbaglia?
+= What happens if the AI gets it wrong?
+
+Prima di tutto la ferma una regola scritta nel codice, come un prezzo minimo o un limite di spesa. Poi ogni azione con una conseguenza aspetta il tuo ok. Nulla esce senza di te.
+= First, a rule written in code stops it, such as a minimum price or a spending limit. Then every action with a consequence waits for your OK. Nothing goes out without you.
+
+Dove girano i flussi e dove restano i dati?
+= Where do the workflows run, and where does the data stay?
+
+Su infrastruttura gestita da Octagon: orchestrazione, database e memoria sono self-hosted. Ti spieghiamo nel dettaglio cosa passa da servizi esterni durante la call.
+= On infrastructure managed by Octagon: orchestration, databases and memory are self-hosted. On the call, we explain in detail what goes through external services.
+
+Lavorate anche con aziende grandi o con reti di negozi?
+= Do you also work with large companies or retail networks?
+
+Sì. Lo stesso sistema serve un negozio singolo e un marchio con partner in più paesi: ogni sede ha le sue regole, il marchio resta uno.
+= Yes. The same system serves a single store and a brand with partners in several countries: each location has its own rules, and the brand stays one.
+
+Foto e video: da dove arrivano?
+= Photo and video: where do they come from?
+
+Li creiamo in sede, sulla nostra infrastruttura, a partire dalle vostre foto e dalle regole visive del marchio. Nessun abbonamento a servizi esterni per ogni immagine.
+= We create them in-house, on our own infrastructure, starting from your photos and your brand's visual guidelines. No subscription to external services for every image.
+
+Fate anche siti e negozi online?
+= Do you also build websites and online stores?
+
+Sì. Landing page, negozi Shopify e applicazioni su misura, collegati allo stesso sistema. E gestiamo lo store su Amazon nello stesso sistema.
+= Yes. Landing pages, Shopify stores and custom applications, connected to the same system. And we run your Amazon store in the same system.
+
+Quanto costa?
+= How much does it cost?
+
+Dipende da cosa prende in carico il sistema. Trovi le formule nel
+= It depends on what the system takes on. You'll find the packages in our
+
+Dipende da cosa prende in carico il sistema. Trovi le formule nel listino.
+= It depends on what the system takes on. You'll find the packages in our price list.
+
+listino
+= price list
+
+Octagon è uno studio founder-led che costruisce e gestisce sistemi di agenti AI per il lavoro operativo di aziende e brand. Ogni azione che conta passa da un'approvazione umana su Telegram.
+= Octagon is a founder-led studio that builds and runs AI agent systems for the operational work of companies and brands. Every action that matters goes through human approval on Telegram.
+
+# ---------- home: modulo ----------
+Che lavoro si ripete
+= What work repeats
+
+nella tua settimana?
+= in your week?
+
+Raccontacelo in 20 minuti. Ti diciamo cosa prende in carico il sistema, e cosa no.
+= Tell us in 20 minutes. We'll tell you what the system takes on, and what it doesn't.
+
+Fissa una call di 20 minuti
+= Book a 20-minute call
+
+Piano di interesse:
+= Plan of interest:
+
+Rimuovi il piano scelto
+= Remove the selected plan
+
+Lascia vuoto questo campo
+= Leave this field empty
+
+Nome
+= Name
+
+Email di lavoro
+= Work email
+
+Attività
+= Business
+
+Es. negozio di abbigliamento
+= E.g. clothing store
+
+Cosa ti serve
+= What you need
+
+Una demo
+= A demo
+
+Offerta su misura
+= Custom offer
+
+Quando ti chiamiamo
+= When should we call you?
+
+Giorno
+= Day
+
+Scegli il giorno
+= Choose a day
+
+Orario
+= Time
+
+Prima il giorno
+= Pick a day first
+
+Dal lunedì al venerdì, dalle 14:00 alle 18:00, ora italiana. Ti confermiamo l'appuntamento per email.
+= Monday to Friday, 14:00–18:00 Italian time (Rome). We'll confirm the appointment by email.
+
+Il lavoro che si ripete
+= The repetitive work
+
+Es. ogni settimana aggiorno a mano prezzi e annunci
+= E.g. every week I update prices and listings by hand
+
+Prenota la call
+= Book the call
+
+Rispondiamo entro un giorno lavorativo. Usiamo i tuoi dati solo per rispondere alla richiesta:
+= We reply within one business day. We use your data only to respond to your request:
+
+informativa privacy
+= privacy policy
+
+Preferisci scriverci?
+= Prefer to message us?
+
+# ---------- listino ----------
+Listino OCTAGON · Prezzi chiari, scritti per intero
+= OCTAGON pricing · Clear prices, written in full
+
+Pacchetti da €599 di avvio e €99 al mese, aggiunte componibili, siti e negozi. Nessun costo nascosto.
+= Packages from €599 setup and €99 per month, mix-and-match add-ons, websites and online stores. No hidden costs.
+
+Un prezzo chiaro, scritto per intero.
+= A clear price, written in full.
+
+Un costo di avvio una tantum, poi un canone mensile. Nessun costo nascosto e nessun vincolo: si disdice quando si vuole, passati i primi tre mesi.
+= A one-time setup fee, then a monthly fee. No hidden costs and no lock-in: cancel whenever you like after the first three months.
+
+Il primo lavoro ricorrente tolto di mano.
+= Your first recurring task, off your hands.
+
+una tantum
+= one-time
+
+poi
+= then
+
+€99/mese
+= €99/month
+
+€299/mese
+= €299/month
+
+€499/mese
+= €499/month
+
+€79/mese
+= €79/month
+
+€59/mese
+= €59/month
+
+5 workflow attivi
+= 5 active workflows
+
+15 workflow attivi
+= 15 active workflows
+
+24 workflow attivi
+= 24 active workflows
+
+38 workflow attivi
+= 38 active workflows
+
+Lavori ricorrenti che il sistema svolge per te, ognuno con le sue regole.
+= Recurring tasks the system handles for you, each with its own rules.
+
+Assistente operativo su Telegram
+= Operations assistant on Telegram
+
+Gli scrivi come a un collega: richieste, foto, vocali.
+= Message it like a colleague: requests, photos, voice notes.
+
+Approvazione umana su ogni azione
+= Human approval on every action
+
+Nulla che tocchi clienti, prezzi o spesa parte senza il tuo ok.
+= Nothing that touches customers, prices or spend goes out without your OK.
+
+Report mensile
+= Monthly report
+
+Il riepilogo di cosa ha fatto il sistema nel mese.
+= A summary of what the system did during the month.
+
+Supporto via email
+= Email support
+
+Ti rispondiamo entro un giorno lavorativo.
+= We reply within one business day.
+
+Avvio in 3–5 giorni
+= Up and running in 3–5 days
+
+Dalla call al primo flusso attivo.
+= From the call to the first live workflow.
+
+Workflow su misura
+= Custom workflows
+
+Cominciamo
+= Let's start
+
+Il più scelto
+= Most popular
+
+Il grosso del lavoro operativo, sotto controllo.
+= Most of your operational work, under control.
+
+Campagne, automazioni e segmenti su Klaviyo.
+= Campaigns, automations and segments on Klaviyo.
+
+Cruscotto settimanale
+= Weekly dashboard
+
+I numeri della settimana in un solo colpo d'occhio.
+= The week's numbers at a glance.
+
+Supporto prioritario (48 ore)
+= Priority support (48 hours)
+
+Risposta entro 48 ore, prima delle altre richieste.
+= A reply within 48 hours, ahead of other requests.
+
+Configurazione a cura nostra
+= Setup handled by us
+
+Colleghiamo noi canali e strumenti.
+= We connect your channels and tools.
+
+Parliamone
+= Let's talk
+
+Più fronti aperti contemporaneamente, senza perderne uno.
+= Several fronts open at once, without losing track of any.
+
+Sorveglianza e auto-riparazione
+= Monitoring and self-repair
+
+Se un flusso si rompe, il sistema lo segnala e prova a ripararlo.
+= If a workflow breaks, the system flags it and tries to fix it.
+
+Avvio guidato di due ore
+= Two-hour guided onboarding
+
+Una sessione con noi per mettere tutto in moto.
+= A session with us to get everything running.
+
+Il sistema intero, per aziende con più canali, mercati o punti vendita.
+= The whole system, for companies with multiple channels, markets or retail locations.
+
+su misura
+= custom
+
+Supporto dedicato su Telegram
+= Dedicated support on Telegram
+
+Un canale diretto con noi, senza passare dall'email.
+= A direct line to us, no email needed.
+
+Sviluppo di workflow su misura
+= Custom workflow development
+
+Flussi costruiti sul vostro modo di lavorare.
+= Workflows built around the way you work.
+
+Revisione mensile con noi
+= Monthly review with us
+
+Ogni mese guardiamo insieme cosa migliorare.
+= Every month we review together what to improve.
+
+Ogni pacchetto comprende l'assistente su Telegram e l'approvazione umana: nessuna azione conseguente parte senza che una persona l'abbia vista.
+= Every package includes the Telegram assistant and human approval: no action with consequences goes out unless a person has seen it.
+
+Come leggere i pacchetti
+= How to read the packages
+
+Workflow attivo
+= Active workflow
+
+Un lavoro che si ripete e che il sistema svolge al posto tuo, con le sue regole: aggiornare le schede, preparare i post, rispondere alle richieste. Il numero dice quanti ne gestisce insieme.
+= A repetitive task the system handles for you, with its own rules: updating listings, preparing posts, answering inquiries. The number tells you how many it runs at the same time.
+
+In ogni pacchetto, quello che tocca clienti, prezzi o spesa si ferma e aspetta la tua approvazione su Telegram.
+= In every package, anything that touches customers, prices or spend stops and waits for your approval on Telegram.
+
+Cosa affidare
+= What to hand over
+
+Lo scegliamo insieme nella call di 20 minuti, partendo dai dieci servizi.
+= We choose it together on the 20-minute call, starting from the ten services.
+
+I dieci servizi
+= The ten services
+
+Quattro aree, un solo sistema. Da qui scegliamo insieme cosa affidare a Octagon.
+= Four areas, one system. From here we choose together what to hand over to Octagon.
+
+Ordini, catalogo, prezzi e richieste
+= Orders, catalog, prices and inquiries
+
+Recensioni, traduzioni e upsell, senza app
+= Reviews, translations and upsells, no apps
+
+Schede, prezzi, scorte e recensioni
+= Listings, prices, inventory and reviews
+
+Google e assistenti AI, in più lingue
+= Google and AI assistants, in multiple languages
+
+Concorrenti e prezzi, ogni lunedì
+= Competitors and prices, every Monday
+
+Piano editoriale e pubblicazione
+= Content plan and publishing
+
+Meta, Google, TikTok e Amazon Ads
+= Meta, Google, TikTok and Amazon Ads
+
+Foto prodotto e video brevi
+= Product photos and short videos
+
+Risposte e preventivi in cinque lingue
+= Replies and quotes in five languages
+
+Landing page, Shopify, app su misura
+= Landing pages, Shopify, custom apps
+
+Componibile
+= Mix and match
+
+Aggiunte
+= Add-ons
+
+Si aggiungono a qualsiasi pacchetto, e si tolgono allo stesso modo.
+= Add them to any package, and remove them just as easily.
+
+Contenuti AI
+= AI content
+
+Testi, immagini e video per i canali, prodotti ogni giorno e consegnati in bozza
+= Copy, images and videos for your channels, produced daily and delivered as drafts
+
+Il tuo ok: prima di ogni pubblicazione.
+= Your OK: before anything is published.
+
+Foto prodotto, scene e video brevi creati in sede, nei vincoli del marchio
+= Product photos, scenes and short videos created in-house, within your brand guidelines
+
+Il tuo ok: prima dell'uso di ogni contenuto.
+= Your OK: before any asset is used.
+
+Analisi e report
+= Analytics and reports
+
+Riepilogo giornaliero, report settimanale con concorrenti, prezzi e recensioni, e gli indicatori che scegliete voi
+= Daily summary, weekly report on competitors, prices and reviews, plus the KPIs you choose
+
+Il tuo ok: non serve, è solo lettura.
+= Your OK: not needed, it's read-only.
+
+Su preventivo
+= On quote
+
+Google e assistenti AI, in più lingue, a lotti approvati da te
+= Google and AI assistants, in multiple languages, in batches you approve
+
+Il tuo ok: a ogni lotto di modifiche.
+= Your OK: on every batch of changes.
+
+Piano editoriale, pubblicazione e catalogo shop su tre o quattro canali
+= Content plan, publishing and shop catalog on three or four channels
+
+Il tuo ok: prima che ogni post esca.
+= Your OK: before each post goes live.
+
+Meta, Google, TikTok e Amazon Ads dentro un limite di spesa. Budget pubblicitario a parte
+= Meta, Google, TikTok and Amazon Ads within a spending limit. Ad budget billed separately
+
+Il tuo ok: a ogni variazione di budget.
+= Your OK: on every budget change.
+
+Store Amazon gestito nello stesso sistema del negozio
+= Amazon store run in the same system as your online store
+
+Il tuo ok: su prezzi, schede e spesa in Amazon Ads.
+= Your OK: on prices, listings and Amazon Ads spend.
+
+Negozio senza app
+= App-free store
+
+Le app a pagamento di Shopify sostituite dal sistema
+= Paid Shopify apps replaced by the system
+
+Il tuo ok: a ogni modifica al negozio.
+= Your OK: on every change to the store.
+
+Progetto e costruzione
+= Design and build
+
+Il sito
+= Your website
+
+Da solo, oppure insieme a un pacchetto di automazione — in quel caso sconta il 20%.
+= On its own, or together with an automation package — in which case it's 20% off.
+
+5–10 giorni
+= 5–10 days
+
+10–18 giorni
+= 10–18 days
+
+Una pagina sola, costruita per far fare una cosa sola: vendere un prodotto, raccogliere richieste, presentare un marchio. Strategia, testi, design e SEO li facciamo noi.
+= A single page, built to get one thing done: sell a product, collect inquiries, introduce a brand. We handle strategy, copy, design and SEO.
+
+Chiamata di impostazione e struttura
+= Kick-off call and structure
+
+Testi scritti da noi
+= Copy written by us
+
+Disegnata prima per il telefono
+= Designed mobile-first
+
+SEO di pagina e anteprime social
+= On-page SEO and social previews
+
+Due giri di revisioni
+= Two rounds of revisions
+
+Analytics collegato
+= Analytics connected
+
+Il negozio completo, da zero fino a online. Tema su misura, catalogo, pagamenti, regole di spedizione e i flussi email di Klaviyo: il primo giorno si vende.
+= The complete store, from scratch to live. Custom theme, catalog, payments, shipping rules and Klaviyo email flows: you're selling from day one.
+
+Tema e identità del marchio
+= Theme and brand identity
+
+Fino a 50 prodotti configurati
+= Up to 50 products set up
+
+Pagamenti, spedizioni e imposte
+= Payments, shipping and taxes
+
+Flussi email con Klaviyo
+= Email flows with Klaviyo
+
+SEO e prestazioni di caricamento
+= SEO and load performance
+
+Sessione di consegna e formazione
+= Handover and training session
+
+Applicazione su misura
+= Custom application
+
+definito sul progetto
+= defined per project
+
+su preventivo
+= on quote
+
+Quando serve qualcosa che un modello non copre: cruscotti, sistemi di prenotazione, strumenti interni. Si definisce insieme prima di cominciare.
+= When you need something a template doesn't cover: dashboards, booking systems, internal tools. We define it together before we start.
+
+Incontro iniziale e specifica tecnica
+= Kick-off meeting and technical spec
+
+Next.js e Tailwind CSS
+= Next.js and Tailwind CSS
+
+Postgres o il backend che preferite
+= Postgres or the backend you prefer
+
+Integrazioni AI su richiesta
+= AI integrations on request
+
+Messa online e rilasci automatici
+= Go-live and automated releases
+
+Codice sorgente e documentazione
+= Source code and documentation
+
+Su misura
+= Custom
+
+Nessuno di questi vi somiglia?
+= None of these fit?
+
+Se il lavoro che si ripete da voi non entra in un pacchetto, si parte da una chiamata e si scrive una proposta apposta.
+= If your repetitive work doesn't fit a package, we start with a call and write a proposal just for you.
+
+Prenota una call
+= Book a call
+
+# JSON-LD del listino
+Listino OCTAGON
+= OCTAGON price list
+
+Pacchetti
+= Packages
+
+Starter · avvio
+= Starter · setup
+
+Starter · canone
+= Starter · monthly fee
+
+Growth · avvio
+= Growth · setup
+
+Growth · canone
+= Growth · monthly fee
+
+Scale · avvio
+= Scale · setup
+
+Scale · canone
+= Scale · monthly fee
+
+Enterprise · avvio
+= Enterprise · setup
+
+Costo di avvio una tantum, 5 workflow attivi
+= One-time setup fee, 5 active workflows
+
+Costo di avvio una tantum, 15 workflow attivi
+= One-time setup fee, 15 active workflows
+
+Costo di avvio una tantum, 24 workflow attivi
+= One-time setup fee, 24 active workflows
+
+Canone mensile
+= Monthly fee
+
+mese
+= month
+
+Da €3.999 di avvio, canone su misura, 38 workflow attivi
+= From €3,999 setup, custom monthly fee, 38 active workflows
+
+Testi, immagini e video per i canali, consegnati in bozza
+= Copy, images and videos for your channels, delivered as drafts
+
+Foto prodotto, scene e video brevi creati in sede
+= Product photos, scenes and short videos created in-house
+
+Riepilogo giornaliero e report settimanale
+= Daily summary and weekly report
+
+Siti e negozi
+= Websites and stores
+
+Una pagina costruita per un solo obiettivo
+= A page built for a single goal
+
+Il negozio completo, da zero fino a online
+= The complete store, from scratch to live
+
+# ---------- pagine servizio ----------
+Servizio · Vendere
+= Service · Sell
+
+Servizio · Farsi trovare
+= Service · Get found
+
+Servizio · Comunicare
+= Service · Communicate
+
+Servizio · Costruire
+= Service · Build
+
+Vedi il listino
+= See pricing
+
+01 · Cosa fa
+= 01 · What it does
+
+Il lavoro che prende in carico
+= The work it takes on
+
+02 · Dove serve il tuo ok
+= 02 · Where your OK is needed
+
+Decidi tu
+= You decide
+
+Nessuna azione
+= No actions
+
+03 · Cosa sostituisce
+= 03 · What it replaces
+
+03 · Dove esce
+= 03 · Where it goes out
+
+Al posto di
+= Instead of
+
+Come lavora
+= How it works
+
+con te.
+= with you.
+
+Il sistema prepara
+= The system prepares
+
+Gli agenti preparano il lavoro sui canali che usi già.
+= The agents prepare the work on the channels you already use.
+
+Le regole lo controllano
+= Rules check it
+
+Limiti scritti nel codice fermano ciò che esce dai margini.
+= Limits written in code stop anything outside your margins.
+
+Tu dai l'ok
+= You give the OK
+
+Su Telegram: approvi o rifiuti. Senza ok, nulla parte.
+= On Telegram: approve or reject. Without your OK, nothing goes out.
+
+Esegue e registra
+= It executes and logs
+
+Quello che approvi esce, e resta traccia di ogni scelta.
+= What you approve goes out, and every choice stays on record.
+
+Il sistema raccoglie
+= The system collects
+
+Dati letti con regolarità dai canali e dal mercato.
+= Data read regularly from your channels and the market.
+
+Ordina e confronta
+= It sorts and compares
+
+Concorrenti, prezzi e risultati messi in fila.
+= Competitors, prices and results, lined up.
+
+Ti arriva il report
+= The report reaches you
+
+Ogni lunedì, chiaro, senza cruscotti da interpretare.
+= Every Monday, clear, with no dashboards to decode.
+
+Le proposte che ne nascono passano dal controllo.
+= Any proposals that come out of it go through the approval step.
+
+Solo lettura: il sistema non esegue azioni
+= Read-only: the system takes no actions
+
+Dieci servizi, un solo sistema.
+= Ten services, one system.
+
+da dove si comincia?
+= where do we start?
+
+Una call di 20 minuti. Ti diciamo cosa prende in carico il sistema, e cosa no.
+= A 20-minute call. We tell you what the system takes on, and what it doesn't.
+
+Cosa fa:
+= What it does:
+
+Gestione store Amazon con agenti AI · OCTAGON
+= Amazon store management with AI agents · OCTAGON
+
+Gestione dello store Amazon con agenti AI
+= Amazon store management with AI agents
+
+Schede, prezzi, Amazon Ads e recensioni gestiti nello stesso sistema del tuo negozio Shopify, con il tuo ok.
+= Listings, pricing, Amazon Ads and reviews managed in the same system as your Shopify store, with your OK.
+
+Serve il tuo ok: prezzi, schede, spesa in Amazon Ads.
+= Your OK needed: prices, listings, Amazon Ads spend.
+
+Analisi di mercato settimanale · OCTAGON
+= Weekly market analysis · OCTAGON
+
+Analisi di mercato, ogni lunedì
+= Market analysis, every Monday
+
+Concorrenti, prezzi, recensioni e risultati raccolti dal sistema e consegnati in un report ogni lunedì. Solo lettura, nessuna azione.
+= Competitors, prices, reviews and results collected by the system and delivered in a report every Monday. Read-only, no actions.
+
+Analisi di mercato:
+= Market analysis:
+
+Automazione operativa con agenti AI · OCTAGON
+= Operations automation with AI agents · OCTAGON
+
+Automazione operativa con agenti AI
+= Operations automation with AI agents
+
+Ordini, catalogo, prezzi, documenti e richieste preparati da agenti AI. Prezzi, pubblicazioni e invii ai clienti partono solo con il tuo ok.
+= Orders, catalog, prices, documents and inquiries prepared by AI agents. Prices, publishing and messages to customers go out only with your OK.
+
+Serve il tuo ok: prezzi, pubblicazioni, invii ai clienti.
+= Your OK needed: prices, publishing, messages to customers.
+
+Automazione operativa:
+= Operations automation:
+
+Campagne Meta, Google, TikTok e Amazon Ads · OCTAGON
+= Meta, Google, TikTok and Amazon Ads campaigns · OCTAGON
+
+Campagne Meta, Google, TikTok e Amazon Ads
+= Meta, Google, TikTok and Amazon Ads campaigns
+
+Campagne su Meta, Google, TikTok e Amazon Ads seguite dentro un limite di spesa fissato da te. Ogni variazione di budget passa dal tuo ok.
+= Campaigns on Meta, Google, TikTok and Amazon Ads, managed within a spending limit you set. Every budget change goes through your OK.
+
+Serve il tuo ok: ogni variazione di budget.
+= Your OK needed: every budget change.
+
+Campagne:
+= Ad campaigns:
+
+Servizio clienti e traduzioni con agenti AI · OCTAGON
+= Customer service and translation with AI agents · OCTAGON
+
+Servizio clienti e traduzioni con agenti AI
+= Customer service and translation with AI agents
+
+Bozze di risposta, preventivi e testi tradotti in cinque lingue, preparati dal sistema. Ogni risposta parte solo dopo il tuo ok.
+= Draft replies, quotes and copy translated into five languages, prepared by the system. Every reply goes out only after your OK.
+
+Serve il tuo ok: ogni risposta prima dell'invio.
+= Your OK needed: every reply before it's sent.
+
+Servizio clienti e traduzioni:
+= Customer service and translation:
+
+Foto e video di prodotto creati in sede · OCTAGON
+= Product photos and videos created in-house · OCTAGON
+
+Foto e video di prodotto, creati in sede
+= Product photos and videos, created in-house
+
+Foto e video del tuo marchio creati sulla nostra infrastruttura, senza abbonamenti per immagine.
+= Photos and videos of your brand created on our own infrastructure, with no per-image subscriptions.
+
+Serve il tuo ok: ogni contenuto prima dell'uso.
+= Your OK needed: every asset before it's used.
+
+Foto e video in sede:
+= In-house photo and video:
+
+SEO e visibilità sugli assistenti AI · OCTAGON
+= SEO and visibility on AI assistants · OCTAGON
+
+SEO e visibilità sugli assistenti AI
+= SEO and visibility on AI assistants
+
+Pagine e dati strutturati per Google, ChatGPT, Gemini e Perplexity, in più lingue. Ogni modifica approvata da te.
+= Pages and structured data for Google, ChatGPT, Gemini and Perplexity, in multiple languages. Every change approved by you.
+
+Serve il tuo ok: ogni lotto di modifiche.
+= Your OK needed: every batch of changes.
+
+SEO e visibilità AI:
+= SEO and AI visibility:
+
+Negozio Shopify senza app a pagamento · OCTAGON
+= Shopify store without paid apps · OCTAGON
+
+Negozio Shopify senza app a pagamento
+= A Shopify store without paid apps
+
+Recensioni, traduzioni, upsell, moduli e chat svolti dal sistema al posto delle app a pagamento. Ogni modifica al negozio passa dal tuo ok.
+= Reviews, translations, upsells, forms and chat handled by the system instead of paid apps. Every change to the store goes through your OK.
+
+Serve il tuo ok: ogni modifica al negozio.
+= Your OK needed: every change to the store.
+
+Negozio Shopify:
+= Shopify store:
+
+Siti, negozi Shopify e app su misura · OCTAGON
+= Websites, Shopify stores and custom apps · OCTAGON
+
+Siti, negozi Shopify e app su misura
+= Websites, Shopify stores and custom apps
+
+Landing page, negozi Shopify e applicazioni su misura, collegati allo stesso sistema di agenti AI. Ogni rilascio passa dal tuo ok.
+= Landing pages, Shopify stores and custom applications, connected to the same AI agent system. Every release goes through your OK.
+
+Serve il tuo ok: ogni rilascio.
+= Your OK needed: every release.
+
+Siti, negozi e app:
+= Websites, stores and apps:
+
+Social e shop gestiti con agenti AI · OCTAGON
+= Social media and shop managed by AI agents · OCTAGON
+
+Social e shop gestiti con agenti AI
+= Social media and shop managed by AI agents
+
+Piano editoriale, pubblicazione su Instagram, Facebook, TikTok e LinkedIn e catalogo shop sincronizzato. Ogni post esce solo con il tuo ok.
+= Content plan, publishing on Instagram, Facebook, TikTok and LinkedIn, and a synced shop catalog. Every post goes live only with your OK.
+
+Serve il tuo ok: ogni post prima che esca.
+= Your OK needed: every post before it goes live.
+
+Social e shop:
+= Social and shop:
+
+# dati strutturati
+Italia
+= Italy
+
+Spagna
+= Spain
+
+Stati Uniti
+= United States
+
+# ---------- note legali: parti comuni ----------
+Ultimo aggiornamento
+= Last updated
+
+7 ottobre 2026
+= October 7, 2026
+
+@privacy.html: Titolare
+= Data controller
+
+@cookie.html: Titolare
+= Data controller
+
+@termini.html: Titolare
+= Provider
+
+In questa pagina
+= On this page
+
+Indice della pagina
+= Page contents
+
+Altre note legali
+= Other legal pages
+
+In
+= At a
+
+breve
+= glance
+
+Una domanda su questa pagina?
+= A question about this page?
+
+Scrivici: rispondiamo noi, una persona, non un modulo automatico.
+= Write to us: a person replies, not an automated form.
+
+Scrivi a info@theoctagonai.com
+= Write to info@theoctagonai.com
+
+Scrivi a
+= Write to
+
+# ---------- privacy ----------
+Informativa privacy · Octagon
+= Privacy policy · Octagon
+
+Come Octagon tratta i dati personali di chi visita il sito, chiede una demo o diventa cliente.
+= How Octagon processes the personal data of people who visit the site, request a demo or become clients.
+
+Note legali · Privacy
+= Legal · Privacy
+
+I tuoi dati,
+= Your data,
+
+spiegati per intero.
+= explained in full.
+
+Informativa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (GDPR) e del Codice privacy (D.Lgs. 196/2003). Scritta per essere letta, non solo firmata.
+= Notice under Articles 13 and 14 of Regulation (EU) 2016/679 (GDPR) and the Italian Privacy Code (Legislative Decree 196/2003). Written to be read, not just signed. This English version is provided for convenience; if it differs from the Italian version, the Italian version prevails.
+
+Chi tratta i tuoi dati
+= Who processes your data
+
+Quali dati raccogliamo
+= What data we collect
+
+Perché li usiamo e su quale base
+= Why we use it and on what legal basis
+
+Sei obbligato a darci i tuoi dati?
+= Do you have to give us your data?
+
+Chi altro vede i dati
+= Who else sees the data
+
+Trasferimenti fuori dall'Unione europea
+= Transfers outside the European Union
+
+Per quanto tempo li conserviamo
+= How long we keep it
+
+I dati che trattiamo per conto dei clienti
+= Data we process on behalf of clients
+
+I tuoi diritti
+= Your rights
+
+Come proteggiamo i dati
+= How we protect data
+
+Minori
+= Children
+
+Modifiche a questa informativa
+= Changes to this notice
+
+Il sito non usa cookie
+= The site uses no cookies
+
+né strumenti di tracciamento o pubblicità.
+= and no tracking or advertising tools.
+
+Raccogliamo i dati del
+= We collect data from the
+
+modulo demo
+= demo form
+
+solo per risponderti e preparare una proposta.
+= only to reply to you and prepare a proposal.
+
+Non vendiamo i dati e
+= We don't sell data and
+
+non li usiamo per marketing
+= we don't use it for marketing
+
+senza un consenso separato.
+= without separate consent.
+
+I fornitori negli Stati Uniti (Vercel, Resend) sono certificati nel
+= Our US providers (Vercel, Resend) are certified under the
+
+Puoi chiederci in ogni momento di
+= You can ask us at any time to
+
+vedere, correggere o cancellare
+= see, correct or delete
+
+i tuoi dati.
+= your data.
+
+Il titolare del trattamento è chi decide perché e come vengono usati i tuoi dati personali. Per questo sito e per i servizi di Octagon è:
+= The data controller is whoever decides why and how your personal data is used. For this website and for Octagon's services, the controller is:
+
+Octagon è uno studio di piccole dimensioni e non è tenuto a nominare un responsabile della protezione dei dati (DPO). Per qualsiasi richiesta sui tuoi dati scrivi all'indirizzo email qui sopra: ti risponde direttamente il titolare.
+= Octagon is a small studio and is not required to appoint a Data Protection Officer (DPO). For any request about your data, write to the email address above: the controller will reply to you directly.
+
+Quando visiti il sito
+= When you visit the site
+
+Il server che ospita il sito registra in automatico alcuni dati tecnici di ogni richiesta: indirizzo IP, data e ora, pagina richiesta, tipo di browser e di dispositivo, eventuali errori. Servono a far funzionare il sito e a proteggerlo da abusi. Non li usiamo per profilarti e non li incrociamo con altri dati.
+= The server hosting the site automatically logs some technical data for each request: IP address, date and time, requested page, browser and device type, and any errors. This data is needed to run the site and protect it from abuse. We don't use it to profile you and we don't combine it with other data.
+
+Il sito
+= The site
+
+non usa cookie
+= does not use cookies
+
+, non usa strumenti di statistica o pubblicità e non carica risorse da servizi di terze parti: anche i caratteri tipografici sono ospitati sul nostro dominio. I dettagli sono nella
+= , does not use analytics or advertising tools, and does not load resources from third-party services: even the fonts are hosted on our own domain. Details are in the
+
+Quando chiedi una demo
+= When you request a demo
+
+Con il modulo “Prenota una demo” ci invii il tuo
+= With the “Book a demo” form you send us your
+
+nome
+= name
+
+e la tua
+= and your
+
+email di lavoro
+= work email
+
+, che sono obbligatori, e se vuoi il nome della tua
+= , which are required, and optionally the name of your
+
+attività
+= business
+
+e una descrizione del
+= and a description of the
+
+lavoro che si ripete
+= repetitive work
+
+. Ti chiediamo di non inserire nella descrizione dati personali di altre persone né dati particolari (salute, opinioni politiche o religiose e simili): per capire il tuo caso non servono.
+= . Please do not include other people's personal data or special categories of data (health, political or religious opinions and the like) in the description: we don't need them to understand your case.
+
+Quando ci scrivi o diventi cliente
+= When you write to us or become a client
+
+Se ci contatti via email, WhatsApp o Telegram trattiamo i dati che ci comunichi e quelli necessari per risponderti. Se diventi cliente trattiamo anche i dati per la fatturazione e la gestione del contratto (nome o ragione sociale, partita IVA, indirizzo, recapiti di chi lavora con noi).
+= If you contact us by email, WhatsApp or Telegram, we process the data you share with us and the data needed to reply. If you become a client, we also process data for invoicing and contract management (name or company name, VAT number, address, contact details of the people who work with us).
+
+Finalità
+= Purpose
+
+Dati
+= Data
+
+Base giuridica (GDPR)
+= Legal basis (GDPR)
+
+Far funzionare il sito e proteggerlo
+= Running and protecting the site
+
+Dati tecnici di navigazione
+= Technical browsing data
+
+Legittimo interesse alla sicurezza e al funzionamento del sito (art. 6.1.f)
+= Legitimate interest in the security and operation of the site (Art. 6(1)(f))
+
+Rispondere alla richiesta di demo e preparare una proposta
+= Responding to your demo request and preparing a proposal
+
+Dati del modulo e della corrispondenza
+= Form and correspondence data
+
+Misure precontrattuali richieste da te (art. 6.1.b)
+= Pre-contractual measures taken at your request (Art. 6(1)(b))
+
+Erogare i servizi e gestire il rapporto
+= Providing the services and managing the relationship
+
+Dati di contatto e di fatturazione
+= Contact and billing data
+
+Esecuzione del contratto (art. 6.1.b)
+= Performance of a contract (Art. 6(1)(b))
+
+Adempiere agli obblighi fiscali e contabili
+= Meeting tax and accounting obligations
+
+Dati di fatturazione
+= Billing data
+
+Obbligo di legge (art. 6.1.c)
+= Legal obligation (Art. 6(1)(c))
+
+Difendere i nostri diritti in caso di contestazioni
+= Defending our rights in case of disputes
+
+Dati necessari al caso
+= Data relevant to the case
+
+Legittimo interesse (art. 6.1.f)
+= Legitimate interest (Art. 6(1)(f))
+
+Non usiamo i tuoi dati per inviarti newsletter o pubblicità, non li vendiamo e non li cediamo a terzi per i loro scopi. Se un giorno volessimo farlo, ti chiederemmo prima un consenso separato e facoltativo.
+= We don't use your data to send you newsletters or advertising, we don't sell it and we don't pass it on to third parties for their own purposes. If we ever wanted to, we would first ask for your separate, optional consent.
+
+Non prendiamo decisioni basate unicamente su trattamenti automatizzati che producano effetti giuridici su di te o che ti riguardino in modo analogo (art. 22 GDPR): ogni richiesta viene letta e valutata da una persona.
+= We do not make decisions based solely on automated processing that produce legal effects concerning you or similarly significantly affect you (Art. 22 GDPR): every request is read and assessed by a person.
+
+No. Per navigare il sito non devi fornire nulla. Nome ed email sono necessari solo se vuoi che rispondiamo alla tua richiesta di demo: senza di essi non possiamo ricontattarti. Gli altri campi del modulo sono facoltativi.
+= No. You don't need to provide anything to browse the site. Name and email are needed only if you want us to reply to your demo request: without them we can't get back to you. The other form fields are optional.
+
+I dati sono trattati da Octagon. Per alcune attività ci appoggiamo a fornitori che li trattano per nostro conto, solo per il servizio richiesto e in base a un accordo sul trattamento dei dati (art. 28 GDPR):
+= Data is processed by Octagon. For some activities we rely on providers that process it on our behalf, only for the service requested and under a data processing agreement (Art. 28 GDPR):
+
+(Stati Uniti): ospita il sito e registra i dati tecnici di navigazione.
+= (United States): hosts the site and logs technical browsing data.
+
+(Plus Five Five, Inc., Stati Uniti): inoltra a Octagon via email le richieste inviate con il modulo demo.
+= (Plus Five Five, Inc., United States): forwards the requests submitted through the demo form to Octagon by email.
+
+Il fornitore della nostra
+= The provider of our
+
+casella di posta
+= mailbox
+
+, dove ricevi e conserviamo la corrispondenza.
+= , where we receive and store correspondence.
+
+, dove riceviamo e conserviamo la corrispondenza.
+= , where we receive and store correspondence.
+
+, solo se scegli di scriverci lì: in quel caso si applica anche l'informativa privacy di Telegram.
+= , only if you choose to write to us there: in that case Telegram's privacy policy also applies.
+
+(WhatsApp Ireland Limited, gruppo Meta), solo se scegli di scriverci lì dal pulsante del sito: in quel caso si applica anche l'informativa privacy di WhatsApp.
+= (WhatsApp Ireland Limited, Meta group), only if you choose to write to us there using the button on the site: in that case WhatsApp's privacy policy also applies.
+
+Il nostro
+= Our
+
+commercialista
+= accountant
+
+, per i soli dati di fatturazione dei clienti.
+= , for client billing data only.
+
+Possiamo comunicare i dati alle autorità solo quando la legge lo impone.
+= We may disclose data to authorities only when required by law.
+
+Vercel e Resend hanno sede negli Stati Uniti. Entrambe sono certificate nell'ambito dell'
+= Vercel and Resend are based in the United States. Both are certified under the
+
+, riconosciuto adeguato dalla Commissione europea con la decisione del 10 luglio 2023 (art. 45 GDPR). Puoi verificare la certificazione sul sito ufficiale
+= , recognized as adequate by the European Commission in its decision of July 10, 2023 (Art. 45 GDPR). You can verify the certification on the official website
+
+: per il periodo limitato previsto dai registri del fornitore di hosting, poi cancellati in automatico.
+= : for the limited period set by the hosting provider's logs, then deleted automatically.
+
+Richieste di demo e corrispondenza
+= Demo requests and correspondence
+
+che non portano a un contratto: 12 mesi dall'ultimo contatto, poi cancellate.
+= that don't lead to a contract: 12 months from the last contact, then deleted.
+
+Dati contrattuali e di fatturazione
+= Contract and billing data
+
+: 10 anni dalla chiusura dell'esercizio, come richiesto dalla legge (art. 2220 del Codice civile).
+= : 10 years from the end of the financial year, as required by law (Art. 2220 of the Italian Civil Code).
+
+Se ci chiedi di cancellare i tuoi dati prima di queste scadenze lo facciamo, salvo quelli che la legge ci obbliga a conservare.
+= If you ask us to delete your data before these deadlines, we will, except for data the law requires us to keep.
+
+Quando i sistemi di Octagon lavorano per un cliente (per esempio rispondono ai suoi clienti, aggiornano annunci o preparano email) possono trattare dati personali di persone terze. Per quei dati il titolare è il cliente e Octagon agisce come
+= When Octagon's systems work for a client (for example, replying to the client's customers, updating listings or preparing emails), they may process personal data of third parties. For that data the controller is the client, and Octagon acts as
+
+responsabile del trattamento
+= data processor
+
+(art. 28 GDPR), secondo un accordo scritto che indica dati, finalità, misure di sicurezza e fornitori coinvolti.
+= (Art. 28 GDPR), under a written agreement that specifies the data, purposes, security measures and providers involved.
+
+Le azioni che contano passano dall'approvazione di una persona prima di essere eseguite, e i controlli su prezzi, limiti di spesa e regole sono scritti nel codice.
+= Actions that matter require a person's approval before they are carried out, and the checks on prices, spending limits and rules are written in code.
+
+In qualsiasi momento puoi chiederci di:
+= At any time you can ask us to:
+
+sapere se trattiamo tuoi dati e riceverne una copia (accesso, art. 15);
+= confirm whether we process your data and receive a copy of it (access, Art. 15);
+
+correggerli o completarli (rettifica, art. 16);
+= correct or complete it (rectification, Art. 16);
+
+cancellarli (art. 17) o limitarne l'uso (art. 18);
+= delete it (Art. 17) or restrict its use (Art. 18);
+
+riceverli in un formato leggibile da un computer o farli trasmettere a un altro titolare (portabilità, art. 20);
+= receive it in a machine-readable format or have it transmitted to another controller (portability, Art. 20);
+
+opporti al trattamento basato sul nostro legittimo interesse (opposizione, art. 21).
+= object to processing based on our legitimate interest (objection, Art. 21).
+
+. Rispondiamo senza costi entro un mese, come previsto dal GDPR. Per proteggere i tuoi dati potremmo chiederti di confermare la tua identità.
+= . We reply free of charge within one month, as required by the GDPR. To protect your data, we may ask you to confirm your identity.
+
+Se ritieni che il trattamento violi la normativa puoi proporre reclamo al
+= If you believe the processing breaches the law, you can lodge a complaint with the
+
+Garante per la protezione dei dati personali
+= Italian Data Protection Authority (Garante per la protezione dei dati personali)
+
+o all'autorità del Paese dell'UE in cui vivi o lavori.
+= or with the supervisory authority of the EU country where you live or work.
+
+Il sito è servito solo in HTTPS. L'accesso ai dati è limitato a chi lavora per Octagon e ne ha bisogno, con credenziali personali e autenticazione a più fattori dove disponibile. Teniamo il minimo indispensabile e cancelliamo ciò che non serve più.
+= The site is served over HTTPS only. Access to data is limited to people who work for Octagon and need it, with personal credentials and multi-factor authentication where available. We keep the bare minimum and delete what is no longer needed.
+
+Il sito e i servizi sono rivolti a imprese e professionisti. Non raccogliamo consapevolmente dati di minori di 14 anni: se ci accorgiamo di averne ricevuti, li cancelliamo.
+= The site and services are intended for businesses and professionals. We do not knowingly collect data from children under 14: if we find we have received any, we delete it.
+
+Se cambiamo il modo in cui trattiamo i dati, ad esempio aggiungendo un nuovo fornitore, aggiorniamo questa pagina e la data in alto. Le modifiche importanti le segnaliamo anche sul sito. Versione in vigore dal 7 ottobre 2026.
+= If we change the way we process data, for example by adding a new provider, we update this page and the date at the top. We also flag important changes on the site. Version in force from October 7, 2026.
+
+# ---------- cookie ----------
+Il sito di Octagon non usa cookie, strumenti di tracciamento né servizi di terze parti. Ecco come verificarlo.
+= The Octagon website uses no cookies, tracking tools or third-party services. Here's how to check.
+
+Note legali · Cookie
+= Legal · Cookies
+
+Nessun cookie.
+= No cookies.
+
+Davvero.
+= Really.
+
+Cookie policy ai sensi dell'art. 122 del Codice privacy e delle Linee guida del Garante del 10 giugno 2021.
+= Cookie policy under Art. 122 of the Italian Privacy Code and the Italian Data Protection Authority's Guidelines of June 10, 2021. This English version is provided for convenience; if it differs from the Italian version, the Italian version prevails.
+
+Che cosa sono i cookie
+= What cookies are
+
+Quali cookie usa questo sito
+= Which cookies this site uses
+
+Servizi di terze parti
+= Third-party services
+
+Come puoi verificarlo
+= How you can check
+
+Come gestire i cookie nel browser
+= How to manage cookies in your browser
+
+Se un giorno cambiasse
+= If this ever changes
+
+Questo sito
+= This site
+
+né la memoria locale del browser.
+= or the browser's local storage.
+
+Nessuno strumento
+= No tools
+
+di statistica, pubblicità o social.
+= for analytics, advertising or social media.
+
+Caratteri, immagini e codice sono
+= Fonts, images and code are
+
+ospitati sul nostro dominio
+= hosted on our own domain
+
+Per questo
+= That's why
+
+non serve un banner
+= no banner is needed
+
+per il consenso.
+= for consent.
+
+I cookie sono piccoli file di testo che un sito salva nel browser per ricordare informazioni tra una pagina e l'altra o tra una visita e la successiva. Funzionano in modo simile anche altri strumenti, come la memoria locale del browser (
+= Cookies are small text files that a website stores in your browser to remember information between pages or between visits. Other tools work in a similar way, such as the browser's local storage (
+
+), i pixel di tracciamento e i caratteri o i video caricati da altri siti. In questa pagina li chiamiamo tutti “cookie”.
+= ), tracking pixels, and fonts or videos loaded from other sites. On this page we call them all “cookies”.
+
+Nessuno.
+= None.
+
+theoctagonai.com non installa cookie e non salva informazioni nella memoria del tuo browser: né cookie tecnici, né di statistica, né di profilazione o pubblicità.
+= theoctagonai.com does not set cookies or store information in your browser's storage: no technical cookies, no analytics cookies, no profiling or advertising cookies.
+
+Categoria
+= Category
+
+Usati?
+= Used?
+
+Note
+= Notes
+
+Tecnici e di sessione
+= Technical and session
+
+Il sito funziona senza ricordare nulla di te.
+= The site works without remembering anything about you.
+
+Statistici (analytics)
+= Statistics (analytics)
+
+Nessuno strumento di misurazione delle visite.
+= No visitor measurement tools.
+
+Profilazione e pubblicità
+= Profiling and advertising
+
+Nessun pixel di social network o di piattaforme pubblicitarie.
+= No social network or ad platform pixels.
+
+Contenuti di terze parti
+= Third-party content
+
+Caratteri, immagini e codice sono tutti ospitati sul nostro dominio.
+= Fonts, images and code are all hosted on our own domain.
+
+Per questo non vedi un banner dei cookie: secondo le
+= That's why you don't see a cookie banner: under the
+
+Linee guida del Garante del 10 giugno 2021
+= Italian Data Protection Authority's Guidelines of June 10, 2021
+
+, il consenso serve solo per i cookie non tecnici, e qui non ce ne sono.
+= , consent is required only for non-technical cookies, and there are none here.
+
+Il sito non incorpora video, mappe, pulsanti social o caratteri caricati da altri server. L'unico fornitore coinvolto quando visiti una pagina è
+= The site does not embed videos, maps, social buttons or fonts loaded from other servers. The only provider involved when you visit a page is
+
+, che ospita il sito e registra i dati tecnici di ogni richiesta, come l'indirizzo IP, per farlo funzionare e proteggerlo. Vercel non installa cookie sulle pagine pubbliche di questo sito. I dettagli sono nell'
+= , which hosts the site and logs technical data for each request, such as the IP address, to run and protect it. Vercel does not set cookies on the public pages of this site. Details are in the
+
+Se segui un link verso un altro sito o servizio, come Telegram o WhatsApp, valgono le sue regole sui cookie.
+= If you follow a link to another site or service, such as Telegram or WhatsApp, its own cookie rules apply.
+
+Non devi fidarti sulla parola. Apri gli strumenti per sviluppatori del browser (F12 su computer), vai su
+= You don't have to take our word for it. Open your browser's developer tools (F12 on a computer), go to
+
+Applicazione
+= Application
+
+@cookie.html: o
+= or
+
+Archiviazione
+= Storage
+
+e guarda le voci Cookie e Memoria locale per theoctagonai.com: sono vuote. Nella scheda
+= and check the Cookies and Local Storage entries for theoctagonai.com: they are empty. In the
+
+Rete
+= Network
+
+vedrai solo richieste verso il nostro dominio.
+= tab you'll see only requests to our own domain.
+
+Anche se questo sito non ne usa, puoi bloccare o cancellare i cookie di tutti i siti dalle impostazioni del browser:
+= Even though this site doesn't use any, you can block or delete cookies for all sites in your browser settings:
+
+Se in futuro aggiungessimo strumenti che usano cookie non tecnici, come statistiche non anonime o pixel pubblicitari, prima aggiorneremo questa pagina e chiederemo il tuo consenso con un banner, lasciandoti la possibilità di rifiutare con la stessa facilità con cui accetti. Versione in vigore dal 7 ottobre 2026.
+= If in the future we add tools that use non-technical cookies, such as non-anonymous statistics or advertising pixels, we will first update this page and ask for your consent with a banner, letting you refuse as easily as you accept. Version in force from October 7, 2026.
+
+# ---------- termini ----------
+Termini di servizio · Octagon
+= Terms of service · Octagon
+
+Le condizioni d'uso del sito di Octagon e le condizioni generali dei servizi di automazione e web creation.
+= Octagon's website terms of use and the general terms of its automation and web creation services.
+
+Note legali · Termini
+= Legal · Terms
+
+Le regole del
+= The rules of
+
+lavoro insieme.
+= working together.
+
+Condizioni d'uso del sito e condizioni generali dei servizi Octagon. Brevi dove possibile, precise dove serve.
+= Website terms of use and general terms for Octagon's services. Short where possible, precise where needed. This English version is provided for convenience; if it differs from the Italian version, the Italian version prevails.
+
+Di cosa parlano questi termini
+= What these terms cover
+
+Le informazioni sul sito
+= Information on the site
+
+Come nasce l'accordo
+= How the agreement is formed
+
+I servizi di automazione
+= Automation services
+
+Siti e applicazioni su misura
+= Custom websites and applications
+
+Cosa ti chiediamo
+= What we ask of you
+
+Piattaforme di terze parti
+= Third-party platforms
+
+Responsabilità
+= Liability
+
+Pagamenti
+= Payments
+
+Proprietà intellettuale del sito
+= Intellectual property of the site
+
+Riservatezza e dati personali
+= Confidentiality and personal data
+
+Legge applicabile e foro
+= Governing law and jurisdiction
+
+Il sito presenta i servizi:
+= The site presents the services:
+
+vale la proposta scritta
+= the written proposal
+
+che firmi.
+= you sign is what counts.
+
+Automazione:
+= Automation:
+
+costo di avvio e canone mensile
+= setup fee and monthly fee
+
+, disdicibile passati i primi tre mesi.
+= , cancellable after the first three months.
+
+Ogni azione che conta passa da te
+= Every action that matters goes through you
+
+: le approvazioni sono decisioni tue.
+= : approvals are your decisions.
+
+Siti su misura: al saldo puoi
+= Custom websites: once paid in full, you can
+
+usare e modificare liberamente
+= freely use and modify
+
+il lavoro consegnato.
+= the delivered work.
+
+Servizi pensati per
+= Services designed for
+
+imprese e professionisti
+= businesses and professionals
+
+, regolati dalla legge italiana.
+= , governed by Italian law.
+
+Questi termini regolano l'uso del sito theoctagonai.com e, insieme alla proposta commerciale che firmi, i servizi offerti da
+= These terms govern the use of the theoctagonai.com website and, together with the commercial proposal you sign, the services offered by
+
+che opera con il marchio Octagon (“Octagon”, “noi”).
+= trading as Octagon (“Octagon”, “we”, “us”).
+
+I servizi sono rivolti a
+= The services are intended for
+
+. Se agisci come consumatore restano comunque validi tutti i diritti che ti riconosce il Codice del consumo (D.Lgs. 206/2005), e nessuna clausola di questi termini li limita.
+= . If you act as a consumer, all the rights granted to you by the Italian Consumer Code (Legislative Decree 206/2005) remain fully valid, and no clause in these terms limits them.
+
+Se la proposta firmata e questi termini dicono cose diverse, vale la proposta.
+= If the signed proposal and these terms say different things, the proposal prevails.
+
+Descrizioni, esempi e prezzi pubblicati sul sito servono a presentare Octagon. Non sono un'offerta vincolante: il contenuto preciso del servizio, i tempi e il prezzo sono quelli della proposta scritta che ti inviamo. I prezzi del
+= Descriptions, examples and prices published on the site are meant to present Octagon. They are not a binding offer: the exact content of the service, the timing and the price are those in the written proposal we send you. Prices in the
+
+sono espressi in euro,
+= are in euros,
+
+IVA esclusa
+= excluding VAT
+
+Gli esempi di lavoro descritti sul sito (la “settimana”, le richieste su Telegram e simili) illustrano come funziona il sistema e non promettono risultati specifici per la tua attività.
+= The work examples described on the site (the “week”, the requests on Telegram and the like) illustrate how the system works and do not promise specific results for your business.
+
+Di solito si parte da una demo. Se ha senso andare avanti ti inviamo una
+= We usually start with a demo. If it makes sense to go ahead, we send you a
+
+proposta scritta
+= written proposal
+
+con servizi, workflow inclusi, tempi, prezzo e condizioni di pagamento. L'accordo si conclude quando accetti la proposta per iscritto, anche via email.
+= with services, included workflows, timing, price and payment terms. The agreement is concluded when you accept the proposal in writing, including by email.
+
+Come si paga
+= How payment works
+
+I pacchetti di automazione hanno un
+= Automation packages have a
+
+costo di avvio una tantum
+= one-time setup fee
+
+, per progettazione e configurazione, e poi un
+= , for design and configuration, followed by a
+
+canone mensile
+= monthly fee
+
+per l'esercizio, la sorveglianza e la manutenzione. Le aggiunte si attivano e si disattivano su base mensile.
+= for operation, monitoring and maintenance. Add-ons are activated and deactivated on a monthly basis.
+
+Durata e disdetta
+= Term and cancellation
+
+Il canone ha una durata minima di
+= The monthly fee has a minimum term of
+
+tre mesi
+= three months
+
+. Passati i primi tre mesi puoi disdire quando vuoi, con le modalità e il preavviso indicati nella proposta. Il costo di avvio copre lavoro già svolto e non viene rimborsato.
+= . After the first three months you can cancel whenever you like, in the manner and with the notice stated in the proposal. The setup fee covers work already done and is non-refundable.
+
+Il controllo resta a te
+= You stay in control
+
+I sistemi di Octagon preparano il lavoro e ti chiedono l'approvazione prima di ogni azione che conta: pubblicare, inviare, cambiare un prezzo, spendere.
+= Octagon's systems prepare the work and ask for your approval before every action that matters: publishing, sending, changing a price, spending.
+
+Le azioni approvate sono decisioni tue
+= Approved actions are your decisions
+
+: prima di approvare controlla quello che ti viene proposto. I contenuti prodotti dall'AI possono contenere errori, ed è proprio per questo che passano da te.
+= : check what is proposed to you before approving it. AI-generated content may contain errors, and that is exactly why it goes through you.
+
+I controlli deterministici concordati, come prezzi minimi, limiti di spesa e regole del marchio, sono scritti nel codice e li manteniamo attivi per tutta la durata del servizio.
+= The agreed deterministic checks, such as minimum prices, spending limits and brand rules, are written in code, and we keep them active for the entire duration of the service.
+
+Per landing page, negozi Shopify e applicazioni su misura i tempi del listino sono indicativi e partono da quando riceviamo tutto il materiale necessario (testi da approvare, immagini, accessi). Sono compresi i giri di revisione indicati nella proposta; le richieste che vanno oltre si concordano a parte.
+= For landing pages, Shopify stores and custom applications, the timelines in the price list are indicative and start when we receive all the necessary material (copy to approve, images, access). The rounds of revisions stated in the proposal are included; requests beyond them are agreed separately.
+
+Salvo accordi diversi nella proposta, quando il lavoro è saldato ricevi i diritti per usare e modificare liberamente il sito o l'applicazione realizzati per te. Restano di Octagon gli strumenti, i componenti e i metodi che usiamo anche per altri clienti.
+= Unless otherwise agreed in the proposal, once the work is paid in full you receive the rights to freely use and modify the website or application built for you. Octagon retains the tools, components and methods that we also use for other clients.
+
+Darci gli accessi e le informazioni che servono, e tenerli aggiornati.
+= Give us the access and information we need, and keep them up to date.
+
+Avere i diritti su testi, immagini, marchi e dati che ci affidi, e usarli nel rispetto della legge.
+= Hold the rights to the copy, images, trademarks and data you entrust to us, and use them lawfully.
+
+Rispettare le regole delle piattaforme collegate al servizio, come Shopify, Klaviyo, Vinted o Telegram.
+= Comply with the rules of the platforms connected to the service, such as Shopify, Klaviyo, Vinted or Telegram.
+
+Non usare i servizi per attività illecite, spam o contenuti ingannevoli.
+= Not use the services for unlawful activities, spam or misleading content.
+
+I servizi si collegano a piattaforme di altri (negozi online, marketplace, email marketing, messaggistica). Le loro condizioni, i loro prezzi e la loro disponibilità non dipendono da noi. Se una piattaforma cambia regole o interfacce adattiamo i workflow nel più breve tempo possibile, ma non rispondiamo dei disservizi della piattaforma.
+= The services connect to third-party platforms (online stores, marketplaces, email marketing, messaging). Their terms, prices and availability do not depend on us. If a platform changes its rules or interfaces, we adapt the workflows as quickly as possible, but we are not liable for the platform's outages.
+
+Lavoriamo con cura professionale e sorvegliamo i sistemi che gestiamo. Nei limiti consentiti dalla legge, e salvo i casi di dolo o colpa grave (art. 1229 del Codice civile), la nostra responsabilità per danni legati ai servizi è limitata all'importo che ci hai pagato nei 12 mesi precedenti al fatto. Non rispondiamo delle conseguenze di azioni che hai approvato tu né dei mancati guadagni indiretti.
+= We work with professional care and monitor the systems we manage. To the extent permitted by law, and except in cases of willful misconduct or gross negligence (Art. 1229 of the Italian Civil Code), our liability for damages related to the services is limited to the amount you paid us in the 12 months preceding the event. We are not liable for the consequences of actions you approved or for indirect loss of profits.
+
+Il sito è offerto così com'è: facciamo il possibile perché sia sempre disponibile e corretto, ma possono capitare interruzioni o imprecisioni.
+= The site is provided as is: we do our best to keep it available and accurate at all times, but interruptions or inaccuracies may occur.
+
+Modalità e scadenze di pagamento sono indicate nella proposta. In caso di ritardo, tra imprese si applicano gli interessi previsti dal D.Lgs. 231/2002. Se un pagamento resta in sospeso oltre 30 giorni dalla scadenza possiamo sospendere il servizio dopo avertelo comunicato per iscritto.
+= Payment methods and due dates are stated in the proposal. In case of late payment between businesses, the interest provided for by Legislative Decree 231/2002 applies. If a payment remains outstanding more than 30 days after its due date, we may suspend the service after notifying you in writing.
+
+Testi, grafica, immagini, logo e codice di questo sito appartengono a Octagon o sono usati con licenza. Puoi condividere i link alle pagine, ma non puoi copiarne i contenuti per altri usi senza il nostro permesso scritto. I caratteri tipografici sono distribuiti con licenza SIL Open Font License.
+= The copy, graphics, images, logo and code of this site belong to Octagon or are used under license. You may share links to the pages, but you may not copy their content for other uses without our written permission. The fonts are distributed under the SIL Open Font License.
+
+Trattiamo come riservate le informazioni sulla tua attività che conosciamo lavorando insieme e le usiamo solo per erogare il servizio. Quando i nostri sistemi trattano dati personali dei tuoi clienti agiamo come responsabile del trattamento, con un accordo scritto ai sensi dell'art. 28 del GDPR. Il resto è spiegato nell'
+= We treat as confidential the information about your business that we learn while working together, and we use it only to provide the service. When our systems process personal data of your customers, we act as a data processor under a written agreement pursuant to Art. 28 GDPR. The rest is explained in the
+
+Questi termini sono regolati dalla legge italiana. Per le controversie tra imprese è competente il foro del luogo in cui ha sede il titolare. Se sei un consumatore è competente il giudice del luogo in cui risiedi.
+= These terms are governed by Italian law. For disputes between businesses, the court of the place where the provider has its registered office has jurisdiction. If you are a consumer, the court of the place where you reside has jurisdiction.
+
+Puoi aggiornare questi termini solo con un accordo scritto; noi possiamo aggiornare questa pagina, ma le modifiche non si applicano ai contratti già in corso senza il tuo consenso. Versione in vigore dal 7 ottobre 2026.
+= These terms can be amended for an existing agreement only in writing; we may update this page, but changes do not apply to contracts already in progress without your consent. Version in force from October 7, 2026.
+
+# ---------- script: tutte le pagine ----------
+[js:*]
+'Chiudi il menu'
+= 'Close menu'
+
+'Apri il menu'
+= 'Open menu'
+
+[js:pricing.html]
+const GO='/#demo'
+= const GO='/en#demo'
+
+'/?piano='
+= '/en?piano='
+
+[js:index.html]
+'Fatto. Il nuovo prezzo è online, e la decisione è registrata.'
+= 'Done. The new price is live, and the decision is logged.'
+
+'Ok, lascio €42,00. Nessuna modifica.'
+= 'OK, keeping €42.00. No changes.'
+
+text: 'Nuovo prezzo della giacca'
+= text: 'New jacket price'
+
+v.toFixed(2).replace('.', ',')
+= v.toFixed(2)
+
+label: 'Prezzo minimo'
+= label: 'Minimum price'
+
+`Supera la regola (minimo €${r}). La proposta arriva a te su Telegram.`
+= `It passes the rule (minimum €${r}). The proposal reaches you on Telegram.`
+
+`Fermata dalla regola: €38 è sotto il minimo di €${r}. Non arriva nemmeno a te, e resta nel registro.`
+= `Stopped by the rule: €38 is below the €${r} minimum. It never even reaches you, and it stays in the log.`
+
+item: 'Prezzo giacca €38'
+= item: 'Jacket price €38'
+
+text: 'Aumento budget campagna Meta'
+= text: 'Meta campaign budget increase'
+
+'/giorno'
+= '/day'
+
+label: 'Limite di spesa giornaliero'
+= label: 'Daily spending limit'
+
+`Resta sotto il limite di €${r} al giorno. La proposta arriva a te su Telegram.`
+= `It stays under the €${r} daily limit. The proposal reaches you on Telegram.`
+
+`Fermata dalla regola: €60 al giorno supera il tuo limite di €${r}. Nessuna spesa parte.`
+= `Stopped by the rule: €60 a day exceeds your €${r} limit. No spend goes out.`
+
+item: 'Budget Meta €60/g'
+= item: 'Meta budget €60/day'
+
+toLocaleTimeString('it-IT'
+= toLocaleTimeString('en-GB'
+
+>Approva</button>
+= >Approve</button>
+
+>Rifiuta</button>
+= >Reject</button>
+
+' · fermata dalla regola'
+= ' · stopped by the rule'
+
+' · approvata da te'
+= ' · approved by you'
+
+' · rifiutata da te'
+= ' · rejected by you'
+
+'Approvata. Il sistema la esegue e la registra.'
+= 'Approved. The system carries it out and logs it.'
+
+'Rifiutata. Nulla cambia, e resta traccia della tua scelta.'
+= 'Rejected. Nothing changes, and your choice stays on record.'
+
+>Nuova proposta</button>
+= >New proposal</button>
+
+t: 'Il tuo canale', tech: 'Telegram · approvazioni'
+= t: 'Your channel', tech: 'Telegram · approvals'
+
+'Da qui chiedi, ricevi le proposte e approvi o rifiuti. Ogni azione con una conseguenza passa da un tuo messaggio.'
+= 'This is where you ask, receive proposals and approve or reject them. Every action with a consequence goes through a message from you.'
+
+'Non devi imparare un\'app nuova: lavori da una chat.'
+= 'No new app to learn: you work from a chat.'
+
+s: 'Regole', t: 'I guardrail', tech: 'Controlli scritti nel codice'
+= s: 'Rules', t: 'The guardrails', tech: 'Checks written in code'
+
+'Prezzi minimi, limiti di spesa e regole di marchio sono controlli deterministici nel codice, non valutazioni del modello.'
+= 'Minimum prices, spending limits and brand rules are deterministic checks in code, not model judgments.'
+
+'Una proposta fuori dai tuoi limiti viene fermata prima ancora di arrivare a te.'
+= 'A proposal outside your limits is stopped before it even reaches you.'
+
+t: 'L\'orchestrazione'
+= t: 'Orchestration'
+
+'workflow costruiti, 38 attivi ogni giorno'
+= 'workflows built, 38 active every day'
+
+'Coordina i flussi: chi fa cosa, in che ordine, con quali dati. I workflow si sorvegliano e, se qualcosa si rompe, provano a ripararsi.'
+= 'It coordinates the workflows: who does what, in what order, with which data. Workflows monitor themselves and, if something breaks, try to repair themselves.'
+
+'Il lavoro ripetuto parte da solo, senza che tu debba ricordartelo.'
+= 'Repetitive work starts on its own, without you having to remember it.'
+
+s: 'Agenti', t: 'Gli agenti'
+= s: 'Agents', t: 'The agents'
+
+'agenti specializzati'
+= 'specialized agents'
+
+'Agenti che leggono il contesto e preparano il lavoro: contenuti, prezzi, catalogo, risposte. Ognuno ha un mestiere preciso.'
+= 'Agents that read the context and prepare the work: content, prices, catalog, replies. Each one has a specific job.'
+
+'Ricevi lavoro pronto da approvare, non bozze da rifare.'
+= 'You get work ready to approve, not drafts to redo.'
+
+s: 'Memoria', t: 'La memoria'
+= s: 'Memory', t: 'Memory'
+
+'Memoria vettoriale del contesto: il sistema ritrova informazioni e lavori passati quando servono.'
+= 'Vector memory of the context: the system retrieves information and past work when it is needed.'
+
+'Meno cose da rispiegare ogni volta.'
+= 'Fewer things to explain again every time.'
+
+s: 'Storico', t: 'Lo storico'
+= s: 'History', t: 'The history'
+
+'Il registro di azioni, proposte e decisioni.'
+= 'The log of actions, proposals and decisions.'
+
+'Sai sempre cosa è stato fatto, quando, e cosa hai approvato.'
+= 'You always know what was done, when, and what you approved.'
+
+s: 'Code', t: 'Le code di lavoro'
+= s: 'Queues', t: 'Work queues'
+
+'Mette in fila il lavoro quando arrivano tante richieste insieme e lo smaltisce in ordine.'
+= 'It lines up the work when many requests arrive at once and clears it in order.'
+
+'Nei giorni pieni non si perde niente.'
+= 'Nothing gets lost on busy days.'
+
+t: 'Il perimetro', tech: 'Docker · infrastruttura propria'
+= t: 'The perimeter', tech: 'Docker · own infrastructure'
+
+'Tutti i servizi girano in container, su infrastruttura gestita da Octagon.'
+= 'All services run in containers, on infrastructure managed by Octagon.'
+
+'Il sistema non è affittato a una piattaforma generica: è nostro, e lo controlliamo.'
+= 'The system isn\'t rented from a generic platform: it\'s ours, and we control it.'
+
+<b>Per te</b>
+= <b>For you</b>
+
+new Intl.DateTimeFormat('it-IT', { timeZone: 'UTC'
+= new Intl.DateTimeFormat('en-GB', { timeZone: 'UTC'
+
+'<option value="">Scegli l\'orario</option>'
+= '<option value="">Choose a time</option>'
+
+'<option value="">Prima il giorno</option>'
+= '<option value="">Pick a day first</option>'
+
+'Scrivi il tuo nome.'
+= 'Please enter your name.'
+
+"Serve un'email valida, per esempio nome@azienda.it."
+= "Please enter a valid email, for example name@company.com."
+
+'Scegli il giorno della call.'
+= 'Choose the day of the call.'
+
+"Scegli l'orario."
+= "Choose a time."
+
+'Invio in corso…'
+= 'Sending…'
+
+} alle ${timeSel.value}`
+= } at ${timeSel.value}`
+
+`Grazie${name ? ', ' + name.replace(/[<>&]/g, '') : ''}. Richiesta ricevuta per ${when} (ora italiana). Ti abbiamo mandato un riepilogo per email: ti confermiamo la call entro un giorno lavorativo.`
+= `Thank you${name ? ', ' + name.replace(/[<>&]/g, '') : ''}. Request received for ${when} (Italian time). We've sent you a summary by email, and we'll confirm the call within one business day.`
+
+`Invio non riuscito. Riprova tra poco oppure scrivici a <a href="mailto:${MAIL}?subject=Richiesta%20demo">${MAIL}</a> o <a href="${document.querySelector('.wa-fab').href}" target="_blank" rel="noopener">su WhatsApp</a>.`
+= `Sending failed. Please try again shortly, or write to us at <a href="mailto:${MAIL}?subject=Demo%20request">${MAIL}</a> or <a href="${document.querySelector('.wa-fab').href}" target="_blank" rel="noopener">on WhatsApp</a>.`

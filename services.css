@@ -5,7 +5,7 @@
 .crumbs a{color:var(--ink-3);text-decoration:none}
 .crumbs a:hover{color:var(--teal)}
 .crumbs li+li::before{content:"/";margin-right:8px;color:var(--line)}
-.sv-head h1{font-size:clamp(44px,7vw,100px);max-width:13ch}
+.sv-head h1{font-size:clamp(40px,5.6vw,80px);max-width:15ch;text-wrap:balance}
 .sv-head h1 .s{display:block;color:var(--teal)}
 .sv-head .lede{margin-top:24px;max-width:52ch}
 .sv-head .ctas{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
@@ -69,6 +69,7 @@
 .sv-areas a:hover{color:var(--teal)}
 .sv-areas a[aria-current]{color:var(--ink-3);pointer-events:none}
 .sv-areas a[aria-current]::after{content:"questa pagina";font:500 11px/1.6 var(--f-mono);letter-spacing:.1em;text-transform:uppercase}
+html[lang=en] .sv-areas a[aria-current]::after{content:"this page"}
 @media (max-width:900px){.sv-areas{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.sv-areas{grid-template-columns:1fr}}
 
