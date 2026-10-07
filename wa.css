@@ -19,7 +19,7 @@
 .lang{display:inline-flex;align-items:center;gap:2px;padding:4px;margin-left:auto;border-radius:999px;background:rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(16,20,24,.08);flex:none}
 .lang a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:36px;padding:0 10px;border-radius:999px;font:600 12.5px/1 'Public Sans','Helvetica Neue',Arial,sans-serif;letter-spacing:.08em;color:#3A414A;text-decoration:none;transition:background .2s,color .2s}
 .lang a:hover{background:rgba(16,20,24,.06);color:#101418}
-.lang a[aria-current]{background:#101418;color:#fff}
+.lang a[aria-current]{background:linear-gradient(135deg,#166B61 0%,#1F8A78 100%);color:#fff;box-shadow:0 6px 16px -8px rgba(31,122,116,.9)}
 .lang a:focus-visible{outline:3px solid #8C7CE0;outline-offset:2px}
 .nav-in>.lang+.nav-cta{margin-left:0}
 .links a,.nav-cta{white-space:nowrap}
